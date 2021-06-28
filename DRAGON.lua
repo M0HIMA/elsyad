@@ -13348,19 +13348,19 @@ end
 
 if text == "بوت" then  
 local msg_id = msg.id_/2097152/0.5
-Namebot = (database:get(bot_id.. Name:Bot ) or 'افايره')
+Namebot = (database:get(bot_id..'Name:Bot') or 'الصياد')
 local DRAGON_Msg = {
- اسمي   ..Namebot..  يا قلبي 🤤💚 ,
- اسمي  ..Namebot..  يا روحي🙈❤️ ,
- اسمي   ..Namebot..  يعمري🌚🌹 ,
- اسمي   ..Namebot..  يا قمر 🐭🤍 ,
- اسمي   ..Namebot..  يامزه 🥺❤️ ,
- اسمي   ..Namebot..  يعم 😒 ,
- مقولت اسمي  ..Namebot..  في اي 🙄 ,
- اسمي الكيوت  ..Namebot..  🌝💘 ,
- اسمي   ..Namebot..  ياحياتي🧸♥️ ,
- اسمي   ..Namebot..  يوتكه🙈🍑 ,
- انا  ..Namebot..  إلى عمرو مهاب كابوس الكلاب 🦇 ,
+'اسمي  '..Namebot..' يا قلبي 🤤💚',
+'اسمي '..Namebot..' يا روحي🙈❤️',
+'اسمي  '..Namebot..' يعمري🌚🌹',
+'اسمي  '..Namebot..' يا قمر 🐭🤍',
+'اسمي  '..Namebot..' يامزه 🥺❤️',
+'اسمي  '..Namebot..' يعم 😒',
+'مقولت اسمي '..Namebot..' في اي 🙄',
+'اسمي الكيوت '..Namebot..' 🌝💘',
+'اسمي  '..Namebot..' ياحياتي🧸♥️',
+'اسمي  '..Namebot..' يوتكه🙈🍑',
+'انا '..Namebot..' إلى عمرو مهاب كابوس الكلاب 🦇',
 }
 local Text = [[
  ]]..DRAGON_Msg[math.random(#DRAGON_Msg)]..[[ 
@@ -13372,10 +13372,10 @@ local Text = [[
  agwa = agwa:gsub("%@", "")
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text =    مطور البوت 𖠕  ,url="t.me/"..agwa}},
-{{text =    اضف البوت الي مجموعتك 𖠕  ,url="t.me/"..us.."?startgroup=start"}},
+{{text = '  مطور البوت 𖠕 ',url="t.me/"..agwa}},
+{{text = '  اضف البوت الي مجموعتك 𖠕 ',url="t.me/"..us.."?startgroup=start"}},
 }
-https.request("https://api.telegram.org/bot"..token.. /sendPhoto?chat_id=  .. msg.chat_id_ ..  &photo=https://t.me/ ..us.. &caption=  .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..us..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
 
