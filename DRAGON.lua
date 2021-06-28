@@ -11488,20 +11488,19 @@ end
 end
 
 if text then 
-list = {'ده بوت'}
+list = {'بيف'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[ياحلولي هو كان فاكرني انسان ولا ايي 😹](t.me/SO_ALSIYAD)')
+send(msg.chat_id_,msg.id_, '[خدوني معاكم بيف ..🙄💔](t.me/SO_ALSIYAD)')
 return false
 end
 end
 end
-
 if text then 
 list = {'سلام عليكم'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[مــولاااي ..🖤🌚](t.me/SO_ALSIYAD)') 
+send(msg.chat_id_,msg.id_, '[مولاي هات السبحه ..🖤🌚](t.me/SO_ALSIYAD)') 
 return false
 end
 end
@@ -12923,7 +12922,7 @@ Msᴀɢ ~ #msgs
 .𖣂 𝗖𝗛 - @SO_ALSIYAD ♦
 ]],
 [[
-金 - 𝓾??𝓮𝓻??𝓪𝓶𝓮 . #username ⸙ 
+金 - 𝓾𝓼𝓮𝓻??𝓪𝓶𝓮 . #username ⸙ 
 金 - 𝓼𝓽𝓪𝓼𝓽  . #stast ⸙ 
 金 - ??𝓭 . #id ⸙ 
 金 - 𝓰𝓶𝓪𝓼 . #gmas ⸙ 
@@ -13348,7 +13347,7 @@ end
 
 if text == "بوت" then  
 local msg_id = msg.id_/2097152/0.5
-Namebot = (database:get(bot_id..'Name:Bot') or 'الصياد')
+Namebot = (database:get(bot_id..'Name:Bot') or 'افايره')
 local DRAGON_Msg = {
 'اسمي  '..Namebot..' يا قلبي 🤤💚',
 'اسمي '..Namebot..' يا روحي🙈❤️',
@@ -13378,6 +13377,7 @@ keyboard.inline_keyboard = {
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..us..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
+
 -----------
 if text ==("مسح") and Mod(msg) and tonumber(msg.reply_to_message_id_) > 0 then
 DeleteMessage(msg.chat_id_,{[0] = tonumber(msg.reply_to_message_id_),msg.id_})   
@@ -14191,7 +14191,7 @@ local Teext =[[
 ♦قائمه منع الملصقات
 ♦مسح قائمه المنع
 ♦المحذوفين
-◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
+◁━━━━◈𝐀𝐋𝐒𝐘𝐀??◈━━━━▷
 ♦مسح  امر + الامر القديم  
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
 ♦الاوامر المضافه ( لعرض الاوامر المضافه ) 
