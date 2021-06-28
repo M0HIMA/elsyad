@@ -13345,7 +13345,6 @@ DRAGONdx(msg.chat_id_, msg.id_, ' ♡ ايدي المجموعة ← ( '..msg.cha
 end 
 getChannelFull(msg.chat_id_, gpinfo, nil) 
 end
-
 if text == "بوت" or text == 'البوت' then
 local Namebot = (database:get(bot_id..'Name:Bot') or 'الصياد')
 local DRAGON_Msg = {
@@ -14529,7 +14528,7 @@ local Teext =[[
 ♦تنزيل ←من زبي 
 ♦تاك للمتناكين
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
-♦[𝐀𝐋𝐒𝐘𝐀𝐃 ](t.me/SO_ALSIYAD)♦
+♦[𝐀𝐋𝐒𝐘??𝐃 ](t.me/SO_ALSIYAD)♦
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
