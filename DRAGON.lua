@@ -11488,19 +11488,20 @@ end
 end
 
 if text then 
-list = {'بيف'}
+list = {'ده بوت'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[خدوني معاكم بيف ..🙄💔](t.me/SO_ALSIYAD)')
+send(msg.chat_id_,msg.id_, '[ياحلولي هو كان فاكرني انسان ولا ايي 😹](t.me/SO_ALSIYAD)')
 return false
 end
 end
 end
+
 if text then 
 list = {'سلام عليكم'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[مولاي هات السبحه ..🖤🌚](t.me/SO_ALSIYAD)') 
+send(msg.chat_id_,msg.id_, '[مــولاااي ..🖤🌚](t.me/SO_ALSIYAD)') 
 return false
 end
 end
@@ -12922,7 +12923,7 @@ Msᴀɢ ~ #msgs
 .𖣂 𝗖𝗛 - @SO_ALSIYAD ♦
 ]],
 [[
-金 - 𝓾𝓼𝓮𝓻??𝓪𝓶𝓮 . #username ⸙ 
+金 - 𝓾??𝓮𝓻??𝓪𝓶𝓮 . #username ⸙ 
 金 - 𝓼𝓽𝓪𝓼𝓽  . #stast ⸙ 
 金 - ??𝓭 . #id ⸙ 
 金 - 𝓰𝓶𝓪𝓼 . #gmas ⸙ 
@@ -13345,38 +13346,20 @@ end
 getChannelFull(msg.chat_id_, gpinfo, nil) 
 end
 
-if text == "بوت" then  
-local msg_id = msg.id_/2097152/0.5
-Namebot = (database:get(bot_id..Name:Bot ) or  الصياد )
+if text == "بوت" or text == 'البوت' then
+local Namebot = (database:get(bot_id..'Name:Bot') or 'الصياد')
 local DRAGON_Msg = {
- اسمي   ..Namebot..  يا قلبي 🤤💚 ,
- اسمي  ..Namebot..  يا روحي🙈❤️ ,
- اسمي   ..Namebot..  يعمري🌚🌹 ,
- اسمي   ..Namebot..  يا قمر 🐭🤍 ,
- اسمي   ..Namebot..  يامزه 🥺❤️ ,
- اسمي   ..Namebot..  يعم 😒 ,
- مقولت اسمي  ..Namebot..  في اي 🙄 ,
- اسمي الكيوت  ..Namebot..  🌝💘 ,
- اسمي   ..Namebot..  ياحياتي🧸♥️ ,
- اسمي   ..Namebot..  يوتكه🙈🍑 ,
- انا  ..Namebot..  إلى عمرو مهاب كابوس الكلاب 🦇 ,
+'اسمي  '..Namebot..' يا قلبي 🤤💚',
+'اسمي '..Namebot..' يا روحي🙈❤️',
+'اسمي  '..Namebot..' يعمري🌚🌹',
+'اسمي  '..Namebot..' يا قمر 🐭🤍',
+'اسمي  '..Namebot..' يامزه 🥺❤️',
+'اسمي  '..Namebot..' يعم 😒',
+'مقولت اسمي '..Namebot..' في اي 🙄',
+'اسمي الكيوت '..Namebot..' 🌝💘',
+'اسمي  '..Namebot..' ياحياتي🧸♥️',
+'اسمي  '..Namebot..' يوتكه🙈🍑',
 }
-local Text = [[
- ]]..DRAGON_Msg[math.random(#DRAGON_Msg)]..[[ 
- 
-]]
-
- us = database:get(id_server..":token_username")
- agwa = database:get(id_server..":SUDO:USERNAME")
- agwa = agwa:gsub("%@", "")
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text =    مطور البوت 𖠕  ,url="t.me/"..agwa}},
-{{text =    اضف البوت الي مجموعتك 𖠕  ,url="t.me/"..us.."?startgroup=start"}},
-}
-https.request("https://api.telegram.org/bot"..token.. /sendPhoto?chat_id=  .. msg.chat_id_ ..  &photo=https://t.me/ ..us.. &caption=  .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-return false
-end
 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)]
 local function getpro(extra, result, success)
