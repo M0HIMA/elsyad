@@ -13347,7 +13347,7 @@ end
 
 if text == "بوت" then  
 local msg_id = msg.id_/2097152/0.5
-Namebot = (database:get(bot_id.. Name:Bot ) or  افايره )
+Namebot = (database:get(bot_id.. Name:Bot )
 local DRAGON_Msg = {
  اسمي   ..Namebot..  يا قلبي 🤤💚 ,
  اسمي  ..Namebot..  يا روحي🙈❤️ ,
