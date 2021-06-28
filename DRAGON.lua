@@ -13378,7 +13378,6 @@ keyboard.inline_keyboard = {
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..us..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
-
 -----------
 if text ==("مسح") and Mod(msg) and tonumber(msg.reply_to_message_id_) > 0 then
 DeleteMessage(msg.chat_id_,{[0] = tonumber(msg.reply_to_message_id_),msg.id_})   
