@@ -13347,7 +13347,7 @@ end
 
 if text == "بوت" then  
 local msg_id = msg.id_/2097152/0.5
-Namebot = (database:get(bot_id..'Name:Bot') or 'افايره')
+Namebot = (database:get(bot_id..'Name:Bot') or 'الصياد')
 local DRAGON_Msg = {
 'اسمي  '..Namebot..' يا قلبي 🤤💚',
 'اسمي '..Namebot..' يا روحي🙈❤️',
@@ -13374,8 +13374,16 @@ keyboard.inline_keyboard = {
 {{text = '  مطور البوت 𖠕 ',url="t.me/"..agwa}},
 {{text = '  اضف البوت الي مجموعتك 𖠕 ',url="t.me/"..us.."?startgroup=start"}},
 }
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..us..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-return false
+
+Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)]
+local function getpro(extra, result, success)
+if result.photos_[0] then
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_,Namebot, msg.id_, msg.id_, "md")
+else
+send(msg.chat_id_, msg.id_,Namebot, 1, 'md')
+end
+end
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil)
 end
 
 -----------
@@ -14191,7 +14199,7 @@ local Teext =[[
 ♦قائمه منع الملصقات
 ♦مسح قائمه المنع
 ♦المحذوفين
-◁━━━━◈𝐀𝐋𝐒𝐘𝐀??◈━━━━▷
+◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
 ♦مسح  امر + الامر القديم  
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
 ♦الاوامر المضافه ( لعرض الاوامر المضافه ) 
