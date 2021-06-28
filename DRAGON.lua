@@ -7694,6 +7694,7 @@ end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
 end
+
 if text == 'جلب المطورين' then 
 local list = database:smembers(bot_id..'Sudo:User') 
 local t = '{"users":['   
@@ -7727,6 +7728,9 @@ end
 end 
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
 end
+
+
+
 if text and text:match("^حظر @(.*)$") and Mod(msg) then
 local username = text:match("^حظر @(.*)$")
 if database:get(bot_id..'Lock:kick'..msg.chat_id_) and not Constructor(msg) then
@@ -12437,7 +12441,7 @@ Msᴀɢ ~ #msgs
 𖤍 |↶ #id    ꙰🇪🇬.
 𖤍 |↶ #username    ꙰🇪🇬.
 𖤍 |↶ #msgs    ꙰🇪🇬.
-𖤍 |↶ #stast    ꙰??🇬.
+𖤍 |↶ #stast    ꙰🇪🇬.
 𖤍 |↶ 𝗖𝗛 - @SO_ALSIYAD ♦
 ]],
 [[
@@ -12887,7 +12891,7 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 𝗖𝗛 - @SO_ALSIYAD ♦
 ]],
 [[
-➜𝗨𝗦??????𝗔𝗠𝗘 : #username
+➜𝗨𝗦????𝗡𝗔𝗠𝗘 : #username
 ➜𝗠𝗘𝗦𝗦??𝗚𝗘𝗦 : #msgs
 ➜𝗦𝗧𝗔𝗧𝗦 : #stast
 ➜𝗜𝗗 : #id
