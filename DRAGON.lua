@@ -309,7 +309,7 @@ function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1398830949) then  
 var = 'مبرمج السورس¹'
 elseif tonumber(user_id) == tonumber(859213488) then
-var = 'مبرمج السورس²'
+var = 'مبرمج السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
@@ -925,6 +925,7 @@ if start then
 keyboard = start
 else
 keyboard = {
+{'◁━━━━◈المطور◈━━━━▷'},
 {'مبرمج السورس', ' محمد ابرهيم'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
 {'قناة السورس','بوت التواصل'},
@@ -2725,7 +2726,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ◍D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁¹𖣌 ',url="t.me/mo1ibrahim"},{text = ' ◍D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁²𖣌 ',url="t.me/Dev_Ah8"}},
+{{text = '  ◍D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁¹ ',url="t.me/mo1ibrahim"},{text = ' ◍D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁² ',url="t.me/Dev_Ah8"}},
 {{text = '  ◍ M𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻𝚂 𖣌 ', url="t.me/SO_ALSIYAD"}},
 {{text = '   ²₀²₁ ˝₀₄˝₁₃ | ₁₂:₀₀ 𝙿𝙼  ', url="t.me/SO_ALSIYAD"}},
 }https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SO_ALSIYAD&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -3998,7 +3999,7 @@ if result.id_ == tonumber(50) then
 send(msg.chat_id_, msg.id_, " ♡ لا يمكنك حظر المبرمج عياد عام \n")
 return false 
 end
-usertext = '\n ♡ العضو ← ['..result.title_..'](t.me/'..(username or 'DV_POWER1')..')'
+usertext = '\n ♡ العضو ← ['..result.title_..'](t.me/'..(username or '500')..')'
 status  = '\n ♡ تم حظره عام من الجروبات'
 texts = usertext..status
 database:sadd(bot_id..'GBan:User', result.id_)
