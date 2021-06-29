@@ -13619,30 +13619,21 @@ end
 getChannelFull(msg.chat_id_, gpinfo, nil) 
 end
 
-if text == "بوت" or text == 'البوت' then
-local Namebot = (database:get(bot_id..'Name:Bot') or 'الصياد')
-local DRAGON_Msg = {
-'اسمي  '..Namebot..' يا قلبي 🤤💚',
-'اسمي '..Namebot..' يا روحي🙈❤️',
-'اسمي  '..Namebot..' يعمري🌚🌹',
-'اسمي  '..Namebot..' يا قمر 🐭🤍',
-'اسمي  '..Namebot..' يامزه 🥺❤️',
-'اسمي  '..Namebot..' يعم 😒',
-'مقولت اسمي '..Namebot..' في اي 🙄',
-'اسمي الكيوت '..Namebot..' 🌝💘',
-'اسمي  '..Namebot..' ياحياتي🧸♥️',
-'اسمي  '..Namebot..' يوتكه🙈🍑',
+if text == '.ع' or text == 'بوت' or text == 'البوت' then
+local Text = [[
+اسمي  ]].. Name_Bot..[[ يا قلبي🔥🌚.
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '💌مطور البوت', url = "https://t.me/"..UserName_Dev}
+},
+{
+{text = '💌اضف البوت لمجموعتك', url="https://t.me/"..User_Bot.."?startgroup=new"}
+},
 }
-
-Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)]
-local function getpro(extra, result, success)
-if result.photos_[0] then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_,Namebot, msg.id_, msg.id_, "md")
-else
-send(msg.chat_id_, msg.id_,Namebot, 1, 'md')
-end
-end
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil)
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AKJA0&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 -----------
