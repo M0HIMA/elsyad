@@ -6878,7 +6878,7 @@ if text == 'مسح المزز' and Mod(msg) then
 database:del(bot_id..'Tele:User'..msg.chat_id_)
 send(msg.chat_id_, msg.id_, ' ♡ تم تنزيل جميع المزز بالجروب')
 end
-if text == ("تاك للمزز") and Mod(msg) then
+if text == ("تاك للخنازير") and Mod(msg) then
 local list = database:smembers(bot_id..'Tele:User'..msg.chat_id_)
 t = "\n ♡ قائمة مزز الجروب \n◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷\n"
 for k,v in pairs(list) do
@@ -6943,28 +6943,28 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 -----------------------------------------------------
-if text == 'مسح الاكساس' and Mod(msg) then
+if text == 'مسح ابخنازير' and Mod(msg) then
 database:del(bot_id..'Zahf:User'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, ' ♡ تم تنزيل جميع االاكساس')
+send(msg.chat_id_, msg.id_, ' ♡ تم تنزيل جميع االخنازير')
 end
-if text == ("تاك للاكساس") and Mod(msg) then
+if text == ("تاك للخنازير") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♡ قائمة كساس الجروب \n◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷\n"
+t = "\n ♡ قائمة خنازير الجروب \n◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
-t = t..""..k.."← االكس  [@"..username.."]\n"
+t = t..""..k.."← الخنزير  [@"..username.."]\n"
 else
-t = t..""..k.."← الكس "..v.."\n"
+t = t..""..k.."← الخنزير "..v.."\n"
 end
 end
 if #list == 0 then
-t = " ♡ لا يوجد كس"
+t = " ♡ لا يوجد خنزير"
 end
 send(msg.chat_id_, msg.id_, t)
 end
 ---------
-if text == ("رفع كس") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
+if text == ("رفع خنزير") and tonumber(msg.reply_to_message_id_) ~= 0 and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local SO_ALSIYAD = database:get(bot_id..'text:ch:user')
 if SO_ALSIYAD then
@@ -6982,7 +6982,7 @@ function start_function(extra, result, success)
 database:sadd(bot_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n ♡ العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'SO_ALSIYAD')..')'
-local  statuss  = '\n ♡ تم رفع كس في الجروب\n'
+local  statuss  = '\n ♡ تم رفع خنزير في الجروب\n'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
 end
@@ -6990,7 +6990,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 
-if (text == ("تنزيل كس")) and msg.reply_to_message_id_ and Mod(msg) then
+if (text == ("تنزيل خنزير")) and msg.reply_to_message_id_ and Mod(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local SO_ALSIYAD = database:get(bot_id..'text:ch:user')
 if SO_ALSIYAD then
@@ -7004,7 +7004,7 @@ function start_function(extra, result, success)
 database:srem(bot_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n ♡ العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'SO_ALSIYAD')..')'
-status  = '\n ♡ تم تنزيل كس من الجروب\n'
+status  = '\n ♡ تم تنزيل خنزير من الجروب\n'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -11488,10 +11488,220 @@ end
 end
 
 if text then 
-list = {'بيف'}
+list = {'كسمك'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[خدوني معاكم بيف ..🙄💔](t.me/SO_ALSIYAD)')
+send(msg.chat_id_,msg.id_, '[كسمين ءمكك بطل شتايم😹🤦🏻‍♀💔](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'ولد'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[يله يبنلوسخه من هنا 💔😒](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'بنت'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[خدي يروحي اموااه 💋](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'بوسه'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[انت ولد ولا بنت ؟](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'بيي'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[نت غدار هتسيبني لمين 🥺](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'😹'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[فقلبي الضحككة دي بحبقق جمدد 🥺❤️](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'😂'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[فقلبي الضحككة دي بحبقق جمدد 🥺❤️](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'مشي'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[امشي وراهه م حــوار 😹💔](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'مين'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[مين](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'احا'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[عيب يوثـخ اتلم شـويهه 🙄](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'ماشي'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[امشي وراهه متصدعـنااش 😹💔](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'جيت'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[نورت يعمري 🥺❤️](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'يستا'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[قابلتك ع البسطه 😂❤](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'خخخ'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[متشخرش يخول 🙂](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'منين'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[من مكان ما ف ارض الله الواسعه عندك اعتراض 😹😒](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'اسمك'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[عهعهعههه اسمي [مـــــوون😹👊 ]](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'حبيبتي'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[ف الخـاص مش ههـناا](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'صباح الخير'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[صباحي قمـر بيك 🌚❤️](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'باي'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[خد يعم رايح فين هتسيبني لمين 🥺😹❤️](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'مخنوق'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[اقرء قرأن.](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'سيفي'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[ءحه كفايه شقط سيب لغيرك 😹💔](t.me/SO_ALSIYAD)') 
+return false
+end
+end
+end
+
+if text then 
+list = {'خلصه'}
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+send(msg.chat_id_,msg.id_, '[سرسجي نت ياض 💔😂](t.me/SO_ALSIYAD)')
 return false
 end
 end
@@ -11500,7 +11710,7 @@ if text then
 list = {'سلام عليكم'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[مولاي هات السبحه ..🖤🌚](t.me/SO_ALSIYAD)') 
+send(msg.chat_id_,msg.id_, '[مولاااااي..🖤🌚](t.me/SO_ALSIYAD)') 
 return false
 end
 end
@@ -14506,8 +14716,8 @@ local Teext =[[
 ♦رفع + تنزيل ← حمار
 ♦تاك للحمير
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
-♦رفع + تنزيل ← مزه
-♦تاك للمزز
+رفع + تنزيل ← خنزي
+♦تاك للخنازير
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
 ♦رفع + تنزيل ← وتكه
 ♦تاك للوتكات
@@ -14523,6 +14733,9 @@ local Teext =[[
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
 ♦رفع + تنزيل ← خاين
 ♦تاك للخاينين
+◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
+♦رفع + تنزيل ← رقاصه
+♦تاك للرقاصات
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
 ♦رفع  ← علي زبي
 ♦تنزيل ←من زبي 
