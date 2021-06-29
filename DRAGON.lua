@@ -7004,7 +7004,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 -----------------------------------------------------
-if text == 'مسح الخنازير' and Mod(msg) then
+if text == 'مسح ابخنازير' and Mod(msg) then
 database:del(bot_id..'Zahf:User'..msg.chat_id_)
 send(msg.chat_id_, msg.id_, ' ♡ تم تنزيل جميع االخنازير')
 end
