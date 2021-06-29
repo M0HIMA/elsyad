@@ -2912,7 +2912,7 @@ send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')
 return false 
 end
 
-if text == "كتابات" or text == "٥٠" or text == "٥٥" then 
+if text == "كتابات" or text == "حك" or text == "قص" then 
 local TWEET_Msg = { 
 "‏من ترك أمرهُ لله، أعطاه الله فوق ما يتمنَّاه💙 ", 
 "‏من علامات جمال المرأة .. بختها المايل ! ",
@@ -7004,7 +7004,7 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 -----------------------------------------------------
-if text == 'مسح ابخنازير' and Mod(msg) then
+if text == 'مسح الخنازير' and Mod(msg) then
 database:del(bot_id..'Zahf:User'..msg.chat_id_)
 send(msg.chat_id_, msg.id_, ' ♡ تم تنزيل جميع االخنازير')
 end
