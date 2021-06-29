@@ -2693,13 +2693,13 @@ end
 end,nil)   
 end
 
-if text == 'مبرمج السورس' or text == 'حمو' or text == 'هيما' then
+if text == 'محمد ابراهيم' or text == 'حمو' or text == 'هيما' then
 local Text = [[
-[DEV MOHAMED](t.me/mo1ibrahim)
+[مطور سورس الصياد وبوت 𝖒𝖔𝖔𝖓 مشغول الآن يرُجى ترك رسالة نصية له في الخاص ..☏(t.me/mo1ibrahim)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'مبرمج السورس',url="t.me/mo1ibrahim"}},
+{{text = '༄𝐷𝑒𝑣 𝙼𝙾𝙷𝙰𝙼𝙴𝙳',url="t.me/mo1ibrahim"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/mo1ibrahim&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2718,22 +2718,17 @@ end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local msg_id = msg.id_/2097152/0.5
 local Text = [[
-    ╭━━━━━━❲𝐀𝐋𝐒𝐘𝐀𝐃❳━━━━━━╮
+    ╭━━━━━━❲¹𝐀𝐋𝐒𝐘𝐀𝐃¹❳━━━━━━╮
     ☞𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 
     ☞ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 
-    ╰━━━━━━❲𝐀𝐋𝐒𝐘𝐀𝐃━━━━━━╯
+    ╰━━━━━━❲¹𝐀𝐋𝐒𝐘𝐀𝐃¹﴿━━━━━━╯
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ◍D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁¹𖣌 ',url="t.me/mo1ibrahim"},{text = ' ◍ D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁² 𖣌 ',url="t.me/Dev_Ah8"}},
-{{text = '  ◍M𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻𝚂𖣌 ', url="t.me/SO_ALSIYAD"}},
+{{text = '  ◍D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁¹𖣌 ',url="t.me/mo1ibrahim"},{text = ' ◍D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁²𖣌 ',url="t.me/Dev_Ah8"}},
+{{text = '  ◍ M𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻𝚂 𖣌 ', url="t.me/SO_ALSIYAD"}},
 {{text = '   ²₀²₁ ˝₀₄˝₁₃ | ₁₂:₀₀ 𝙿𝙼  ', url="t.me/SO_ALSIYAD"}},
 }https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SO_ALSIYAD&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-
-if text == "توكن البوت" or text == 'التوكن' and SudoBot(msg) then
-https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' ..token)
-send(msg.chat_id_, msg.id_,' تم ارسال توكن البوت في الخاص')
 end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
