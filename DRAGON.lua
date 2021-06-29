@@ -2693,14 +2693,16 @@ end
 end,nil)   
 end
 
-if text == 'محمد ابراهيم' or text == 'حمو' then
-local msg_id = msg.id_/2097152/0.5
+if text == 'مبرمج السورس' or text == 'حمو' or text == 'هيما' then
 local Text = [[
-  مطور سورس الصياد وبوت 𝖒𝖔𝖔𝖓 مشغول الآن يرُجى ترك رسالة نصية له في الخاص ..☏
+[DEV MOHAMED](t.me/mo1ibrahim)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = '  ༄𝐷𝑒𝑣 𝙼𝙾𝙷𝙰𝙼𝙴𝙳  ',url="t.me/mo1ibrahim"}},}
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/hr_ba_1&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+keyboard.inline_keyboard = {
+{{text = 'مبرمج السورس',url="t.me/mo1ibrahim"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/mo1ibrahim&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'احمد المصري' or text == "احمد" then
@@ -2723,8 +2725,8 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ◍ D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁¹ 𖣌 ',url="t.me/mo1ibrahim"},{text = ' ◍ D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁² 𖣌 ',url="t.me/Dev_Ah8"}},
-{{text = '  ◍ M𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻𝚂 𖣌 ', url="t.me/SO_ALSIYAD"}},
+{{text = '  ◍D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁¹𖣌 ',url="t.me/mo1ibrahim"},{text = ' ◍ D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁² 𖣌 ',url="t.me/Dev_Ah8"}},
+{{text = '  ◍M𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻𝚂𖣌 ', url="t.me/SO_ALSIYAD"}},
 {{text = '   ²₀²₁ ˝₀₄˝₁₃ | ₁₂:₀₀ 𝙿𝙼  ', url="t.me/SO_ALSIYAD"}},
 }https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SO_ALSIYAD&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
@@ -2969,7 +2971,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'العاب الصياد' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
+if text == 'العاب الصياد' or text == 'العاب مبرمجه' or text == 'العاب متطوره' then  
 local Text = [[  
  ♦ اهلا في قائمه الالعاب المتطوره سورس الصياد  ♦ 
 تفضل اختر لعبه من القائمه 
