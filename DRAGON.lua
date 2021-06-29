@@ -928,7 +928,7 @@ else
 keyboard = {
 {'المطور'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'}
-{'قص', 'كت'},
+{'قص','كت'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
 {'نسبه الكره','نسبه الحب'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
@@ -9064,7 +9064,7 @@ else
 sehuser = '🔐'
 end
 if not database:get(bot_id..'Cick:Me'..msg.chat_id_) then
-kickme = '🔓'
+kickme = '??'
 else
 kickme = '🔐'
 end
@@ -13246,7 +13246,7 @@ Msᴀɢ ~ #msgs
 [[
 𝐓𝐓• 𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
 𝐓𝐓• 𝐌𝐬𝐠𝐒 𖠰 #msgs .
-𝐓𝐓• 𝐔𝐬𝐞𝐫𝐍?? 𖠰 #username .
+𝐓𝐓• 𝐔𝐬𝐞𝐫𝐍𝐚 𖠰 #username .
 𝐓𝐓• 𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
 𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
 𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
@@ -14997,7 +14997,7 @@ keyboard.inline_keyboard = {
 {text = ' القائمة الرئيسيه ', callback_data="/add"},
 },
 {
-{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝙻𝚂??𝚈𝙰𝙳', url="t.me/SO_ALSIYAD"},
+{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝙻𝚂𝙸𝚈𝙰𝙳', url="t.me/SO_ALSIYAD"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
