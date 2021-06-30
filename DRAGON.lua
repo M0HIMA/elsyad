@@ -3447,6 +3447,17 @@ Text = '\n♡ بالتاكيد تم تعطيل امر غنيلي'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
+if text == "غنيلي" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(3,200); 
+local Text ='تم اختيار المقطع الصوتي لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '༄𝐷𝑒𝑣 𝙼𝙾𝙷𝙰𝙼𝙴𝙳.',url="t.me/mo1ibrahim"}}, 
+{{text = '✰ SＯＵＲＣＥ✰.',url="t.me/SO_ALSIYAD"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/Ccckkc/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 if text == 'تفعيل نسبه الحب' and Manager(msg) then   
 if database:get(bot_id..'Cick:lov'..msg.chat_id_) then
 Text = ' ♡ تم تفعيل نسبه الحب'
@@ -15645,4 +15656,8 @@ end
 
 end -- end new msg dev.mr sofi 
 end -- end callback dev.mr sofi
-' ' end ' '
+
+
+
+
+
