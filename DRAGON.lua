@@ -884,8 +884,9 @@ end
 if DevSoFi(msg) then
 local bl = 'انت الان المطور الاساسي في البوت \n سورس الصياد\n يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/SO_ALSIYAD)'
 local keyboard = {
-{'الاحصائيات','المطور','الثانوين'},
-{'محمد ابرهيم',' احمد المصري'},
+{'مبرمج السورس'},
+{'الاحصائيات'},
+{'المطور','الثانوين'},
 {'قناه السورس','بوت تواصل'},
 {'اضف رد عام','حذف رد عام'},
 {'اضف رد متعدد','حذف رد متعدد'},
@@ -903,6 +904,7 @@ local keyboard = {
 {'الاشتراك الاجباري ','وضع قناة الاشتراك '},
 {'تفعيل البوت الخدمي ','تعطيل البوت الخدمي '},
 {'تنظيف الجروبات ','تنظيف المشتركين '},
+{'جلب المشتركين'},
 {'جلب نسخه الاحتياطيه'},
 {'تحديث السورس ','الاصدار'},
 {'معلومات السيرفر'},
@@ -925,7 +927,9 @@ if start then
 keyboard = start
 else
 keyboard = {
-{'المطور'},
+{'المبرمج'},
+{'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
+{'قناه السورس','بوت التواصل'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
 {'نسبه الكره', 'نسبه الحب'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
@@ -937,7 +941,7 @@ keyboard = {
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
 {'انصحنى','كتابات'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
-{'انا مين'},
+{'المطور','انا مين'},
 }
 end
 send_inline_key(msg.chat_id_, msg.id_, keyboard) 
@@ -2981,16 +2985,16 @@ send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')
 return false 
 end
 
-if text == 'قناة السورس' then
-local Text = [[ 
-[CH](t.me/SO_ALSIYAD)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '  𖣘 ⁽SＯＵＲＣＥ₎ 𖣘', url="t.me/SO_ALSIYAD"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+if text == 'قناه السورس' or text == 'قناة السورس' or text == 'القناه' then
+local Text = [[
+[✰ 𝐀𝐋𝐒𝐘𝐀𝐃 💌 ✰](t.me/SO_ALSIYAD)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '✰ SＯＵＲＣＥ✰',url="t.me/SO_ALSIYAD"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SO_ALSIYAD&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == '◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷' then
@@ -3008,16 +3012,16 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'بوت التواصل' then
-local Text = [[ 
-[TWL](t.me/TW_MOHAMED_BOT)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '  ❨ TＷＡＳＯＬ ♦  ❩', url="t.me/TW_MOHAMED_BOT"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+if text == 'بوت تواصل' or text == 'بوت التواصل' or text == 'للتواصل' then
+local Text = [[
+[✰ 𝐀𝐋𝐒𝐘𝐀𝐃 ✰](t.me/SO_ALSIYAD)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '✰TＷＡＳＯＬ💌✰',url="t.me/TW_MOHAMED_BOT"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/TW_MOHAMED_BOT&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'مبرمج السورس' or text == 'مطور السورس' or text == 'محمد' then
@@ -13199,7 +13203,7 @@ Msᴀɢ ~ #msgs
 𓄼🇪🇬 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
 𓄼🇪🇬 𝑺𝒕𝒂𝒔𝒕 : #stast    ☥
 𓄼🇪🇬 𝒊𝒅 : #id ‌‌‏⚚
-𓄼🇪🇬 𝑮𝒂𝒎𝒆𝑺 : #edit ⚚
+𓄼🇪🇬 𝑮𝒂𝒎??𝑺 : #edit ⚚
 𓄼🇪🇬 𝑴𝒔𝒈𝒔 : #msgs 𓆊
 𓄼🇪🇬 𝗖𝗛 - @SO_ALSIYAD ♦
 ]],
@@ -14805,7 +14809,7 @@ local Teext =[[
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
 ♦رفع + تنزيل ← قلبي
 ♦تاك لقلبي
-◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
+◁━━━━◈𝐀𝐋𝐒𝐘??𝐃◈━━━━▷
 ♦رفع + تنزيل ← بقره
 ♦تاك للبقرات
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
