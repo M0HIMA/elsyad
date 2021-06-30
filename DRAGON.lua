@@ -884,9 +884,8 @@ end
 if DevSoFi(msg) then
 local bl = 'انت الان المطور الاساسي في البوت \n سورس الصياد\n يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/SO_ALSIYAD)'
 local keyboard = {
-{'مبرمج السورس'},
-{'الاحصائيات'},
-{'المطور','الثانوين'},
+{'الاحصائيات','المطور','الثانوين'},
+{'محمد ابرهيم',' احمد المصري'},
 {'قناه السورس','بوت تواصل'},
 {'اضف رد عام','حذف رد عام'},
 {'اضف رد متعدد','حذف رد متعدد'},
@@ -904,7 +903,6 @@ local keyboard = {
 {'الاشتراك الاجباري ','وضع قناة الاشتراك '},
 {'تفعيل البوت الخدمي ','تعطيل البوت الخدمي '},
 {'تنظيف الجروبات ','تنظيف المشتركين '},
-{'جلب المطورين','جلب المشتركين'},
 {'جلب نسخه الاحتياطيه'},
 {'تحديث السورس ','الاصدار'},
 {'معلومات السيرفر'},
@@ -2726,7 +2724,7 @@ local Text = [[
     ╭━━━━━━❲𝐀𝐋𝐒𝐘𝐀𝐃❳━━━━━━╮
     ☞𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 
     ☞ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 
-   ╰━━━━━━❲𝐀𝐋𝐒𝐘𝐀𝐃━━━━━━╯
+    ╰━━━━━━❲𝐀𝐋𝐒𝐘𝐀𝐃━━━━━━╯
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -2983,16 +2981,16 @@ send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')
 return false 
 end
 
-if text == 'قناه السورس' or text == 'قناة السورس' or text == 'القناه' then
-local Text = [[
-[✰ 𝐀𝐋𝐒𝐘𝐀𝐃 💌 ✰](t.me/SO_ALSIYAD)
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '✰ SＯＵＲＣＥ✰',url="t.me/SO_ALSIYAD"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SO_ALSIYAD&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+if text == 'قناة السورس' then
+local Text = [[ 
+[CH](t.me/SO_ALSIYAD)
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '  𖣘 ⁽SＯＵＲＣＥ₎ 𖣘', url="t.me/SO_ALSIYAD"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == '◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷' then
@@ -3010,19 +3008,19 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'بوت تواصل' or text == 'بوت التواصل' or text == 'للتواصل' then
-local Text = [[
-[✰ 𝐀𝐋𝐒𝐘𝐀𝐃 ✰](t.me/SO_ALSIYAD)
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '✰TＷＡＳＯＬ💌✰',url="t.me/TW_MOHAMED_BOT"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/TW_MOHAMED_BOT&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+if text == 'بوت التواصل' then
+local Text = [[ 
+[TWL](t.me/TW_MOHAMED_BOT)
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '  ❨ TＷＡＳＯＬ ♦  ❩', url="t.me/TW_MOHAMED_BOT"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'مبرمج السورس' or text == 'مطور السورس' or text == 'المبرمج' then
+if text == 'مبرمج السورس' or text == 'مطور السورس' or text == 'محمد' then
 local Text = [[
 [✰مشغول الآن يرُجى ترك رسالة نصية له في الخاص ..☏](t.me/mo1ibrahim)
 ]]
@@ -3446,17 +3444,6 @@ else
 Text = '\n♡ بالتاكيد تم تعطيل امر غنيلي'
 end
 send(msg.chat_id_, msg.id_,Text) 
-end
-if text == "غنيلي" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
-ght = math.random(3,200); 
-local Text ='تم اختيار المقطع الصوتي لك' 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '༄𝐷𝑒𝑣 𝙼𝙾𝙷𝙰𝙼𝙴𝙳.',url="t.me/mo1ibrahim"}}, 
-{{text = '✰ SＯＵＲＣＥ✰.',url="t.me/SO_ALSIYAD"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/Ccckkc/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'تفعيل نسبه الحب' and Manager(msg) then   
 if database:get(bot_id..'Cick:lov'..msg.chat_id_) then
@@ -10881,16 +10868,21 @@ if text and text:match("^قول (.*)$") then
 local Textxt = text:match("^قول (.*)$")
 send(msg.chat_id_, msg.id_, '['..Textxt..']')
 end
-if text == "غنيلي" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
-ght = math.random(3,200); 
-local Text ='تم اختيار المقطع الصوتي لك' 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '༄𝐷𝑒𝑣 𝙼𝙾𝙷𝙰𝙼𝙴𝙳.',url="t.me/mo1ibrahim"}}, 
-{{text = '✰ SＯＵＲＣＥ✰.',url="t.me/SO_ALSIYAD"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/Ccckkc/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+if text == "غنيلي" and not database:get(bot_id.."sing:for:me"..msg.chat_id_) then
+data,res = https.request('https://black-source.tk/BlackTeAM/audios.php')
+if res == 200 then
+audios = json:decode(data)
+if audios.Info == true then
+local Text ='♡تم اختيار المقطع الصوتي لك'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '𝐀𝐋𝐒𝐘𝐀𝐃.',url="t.me/SO_ALSIYAD"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+end
+end
 end
 if text == "كلمني" then
 rpl = {"ها هلاو","انطق","كول"};
@@ -12318,17 +12310,17 @@ local List = {
 ➼ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .♡
 ➼ : 𝑆𝑇𝐴S𝑇 𖠀 #stast .♡ 
 ➼ : 𝐸𝐷𝐼𝑇  𖠀 #edit .♡
-➼ : 𝗖?? - @SO_ALSIYAD ♦.
+➼ : 𝗖𝗛 - @SO_ALSIYAD ♦.
 ]],
 [[
 ▽ ¦❀• USER ➭ ⁞ #username .
-▽ ¦❀• 𝙼??𝙶𝚂 ➬ ⁞  #msgs  .
+▽ ¦❀• 𝙼𝚂𝙶𝚂 ➬ ⁞  #msgs  .
 ▽ ¦❀• STAT ➬ ⁞ #stast  .
 ▽ ¦❀• 𝙸𝙳  ➬ ⁞ #id  .
 ▽ ¦❀• 𝗖𝗛 - @SO_ALSIYAD ♦.
 ]],
 [[
-• ❉ 𝑼𝑬𝑺 : #username ‌‌‏.
+• ❉ 𝑼??𝑺 : #username ‌‌‏.
 • ❉ 𝑺𝑻𝑨 : #stast .
 • ❉ 𝑰𝑫 : #id  ‌‌‏.
 • ❉  𝑴𝑺𝑮 : #msgs 𓆊.
@@ -14816,7 +14808,7 @@ local Teext =[[
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
 ♦رفع + تنزيل ← بقره
 ♦تاك للبقرات
-◁━━━━◈𝐀𝐋𝐒𝐘??𝐃◈━━━━▷
+◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
 ♦رفع + تنزيل ← ارمله
 ♦تاك للارامل
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
@@ -15090,7 +15082,6 @@ local Teext =[[
 ♦ مميزات الخاصه بسورس ♦
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
 كت تويت ⇜ تويت 
-قص⇜ بوستات ⇜ حك
 انصحني ⇜ انصحنى⇜انصح 
 الصراحه ⇜ صراحه 
 كتابات ⇜قصيده ⇜حكمه
@@ -15656,6 +15647,17 @@ end
 
 end -- end new msg dev.mr sofi 
 end -- end callback dev.mr sofi
+
+
+
+
+
+
+
+
+
+
+
 
 
 
