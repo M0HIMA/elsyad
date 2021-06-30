@@ -3020,16 +3020,16 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'قناه السورس' then
-local Text = [[ 
-[𝙲𝙷 ـ 𝐀𝐋𝐒𝐘𝐀𝐃](t.me/SO_ALSIYAD)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '  𖣘 ⁽قنـاه الـمـطوريـن₎ 𖣘', url="t.me/US_ALSIYAD"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+if text == 'مبرمج السورس' or text == 'مطور السورس' or text == 'محمد' then
+local Text = [[
+[✰مشغول الآن يرُجى ترك رسالة نصية له في الخاص ..☏](t.me/mo1ibrahim)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '༄𝐷𝑒𝑣 𝙼𝙾𝙷𝙰𝙼𝙴𝙳',url="t.me/mo1ibrahim"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/mo1ibrahim&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'العاب الصياد' or text == 'العاب مبرمجه' or text == 'العاب متطوره' then  
@@ -6433,7 +6433,7 @@ send(msg.chat_id_, msg.id_, ' ♡ تم مسح جميع الكلاب')
 end
 if text == ("تاك للكلاب") and Mod(msg) then
 local list = database:smembers(bot_id..'Modde:User'..msg.chat_id_)
-t = "\n ♡ قائمه كلاب الجروب \n◁━━━━◈𝐀𝐋??𝐘𝐀𝐃◈━━━━▷\n"
+t = "\n ♡ قائمه كلاب الجروب \n◁━━━━◈??𝐋??𝐘𝐀𝐃◈━━━━▷\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9279,15 +9279,18 @@ return false end
 end
 
 if text == 'المطور' or text == 'مطور' then
-local TEXT_SUDO = database:get(bot_id..'TEXT_SUDO')
-if TEXT_SUDO then 
-send(msg.chat_id_, msg.id_,TEXT_SUDO)
-else
 tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result) 
-local Name = '['..result.first_name_..'](tg://user?id='..result.id_..')'
-sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
+ 
+ local msg_id = msg.id_/2097152/0.5
+local Text = [[
+ المطور
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {{{text = '   ⁽'..result.first_name_..'₎  ',url="t.me/"..result.username_}},}
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
-end
+
+
 end
 ---------------------
 
@@ -12759,7 +12762,7 @@ Msᴀɢ ~ #msgs
 [[
 𓁷⁦⁦ - 𝙪𝙚𝙨 †: #username 𓀀 .
 𓁷 - 𝙢𝙨𝙜 † : #msgs 𓀀 .
-𓁷 - 𝙨𝙩𝙖 †: #stast 𓀀  .
+𓁷 - 𝙨𝙩?? †: #stast 𓀀  .
 𓁷 - 𝙞𝙙 †: #id 𓀀 .
 𓁷 - 𝗖𝗛 - @SO_ALSIYAD ♦
 ]],
@@ -14814,7 +14817,7 @@ local Teext =[[
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
 ♦رفع + تنزيل ← حمار
 ♦تاك للحمير
-◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
+◁━━━━◈𝐀𝐋𝐒𝐘??𝐃◈━━━━▷
 رفع + تنزيل ← خنزي
 ♦تاك للخنازير
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
