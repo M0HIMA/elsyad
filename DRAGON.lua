@@ -2992,7 +2992,7 @@ keyboard.inline_keyboard = {
 {{text = '✰ SＯＵＲＣＥ✰',url="t.me/SO_ALSIYAD"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/mo1ibrahim&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SO_ALSIYAD&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == '◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷' then
@@ -3019,7 +3019,7 @@ keyboard.inline_keyboard = {
 {{text = '✰TＷＡＳＯＬ💌✰',url="t.me/TW_MOHAMED_BOT"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/mo1ibrahim&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/TW_MOHAMED_BOT&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'مبرمج السورس' or text == 'مطور السورس' or text == 'المبرمج' then
@@ -3429,23 +3429,16 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dat
 send(msg.chat_id_, msg.id_,' ♡ بواسطه ← ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SO_ALSIYAD')..') \n ♡ تـم فتح المعرفات ')
 end,nil)   
 end
-if text == 'تفعيل غنيلي' and CoSu(msg) then   
-if database:get(bot_id..'sing:for:me'..msg.chat_id_) then
-Text = '♡ تم تفعيل امر غنيلي الان ارسل غنيلي'
-database:del(bot_id..'sing:for:me'..msg.chat_id_)  
-else
-Text = '♡ بالتاكيد تم تفعيل امر غنيلي تستطيع ارسال غنيلي'
-end
-send(msg.chat_id_, msg.id_,Text) 
-end
-if text == 'تعطيل غنيلي' and CoSu(msg) then  
-if not database:get(bot_id..'sing:for:me'..msg.chat_id_) then
-database:set(bot_id..'sing:for:me'..msg.chat_id_,true)  
-Text = '\n♡ تم تعطيل امر غنيلي'
-else
-Text = '\n♡ بالتاكيد تم تعطيل امر غنيلي'
-end
-send(msg.chat_id_, msg.id_,Text) 
+if text == "غنيلي" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(3,200); 
+local Text ='تم اختيار المقطع الصوتي لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'ghost.',url="t.me/G500t"}}, 
+{{text = 'Alamy.',url="t.me/j333x"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/Ccckkc/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'تفعيل نسبه الحب' and Manager(msg) then   
 if database:get(bot_id..'Cick:lov'..msg.chat_id_) then
@@ -12755,7 +12748,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 - ايديڪ  ⁞ #id 💘 ٬
-- يوزرڪ القميل ⁞ #username 💘 ٬
+- يوزرڪ القميل ⁞ #username ?? ٬
 - رسائلڪ  الطيفهہَ ⁞ #msgs 💘 ٬
 - رتبتڪ الحلوه ⁞ #stast  💘٬
 - سحڪاتڪ الفول ⁞ #edit 💘 ٬
@@ -13202,7 +13195,7 @@ Msᴀɢ ~ #msgs
 𓄼🇪🇬 𝑺𝒕𝒂𝒔𝒕 : #stast    ☥
 𓄼🇪🇬 𝒊𝒅 : #id ‌‌‏⚚
 𓄼🇪🇬 𝑮𝒂𝒎𝒆𝑺 : #edit ⚚
-𓄼🇪🇬 𝑴𝒔𝒈𝒔 : #msgs 𓆊
+𓄼🇪🇬 𝑴𝒔𝒈𝒔 : #msgs ??
 𓄼🇪🇬 𝗖𝗛 - @SO_ALSIYAD ♦
 ]],
 [[
