@@ -10889,8 +10889,8 @@ ght = math.random(3,200);
 local Text ='تم اختيار المقطع الصوتي لك' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '༄𝐷𝑒𝑣 𝙼𝙾𝙷𝙰𝙼𝙴𝙳.',url="t.me/mo1ibrahim"}}, 
-{{text = '✰ SＯＵＲＣＥ✰.',url="t.me/SO_ALSIYAD"}}, 
+{{text = 'ghost.',url="t.me/G500t"}}, 
+{{text = 'Alamy.',url="t.me/j333x"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/Ccckkc/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12295,7 +12295,7 @@ local List = {
 🇪🇬 ꙰  - 𝗖𝗛 - @SO_ALSIYAD ♦.
 ]],
 [[
-🌯 ¦✙• 𝒖𝒔𝒆𝒓𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪🇬
+🌯 ¦✙• 𝒖𝒔𝒆𝒓𝒏𝒂𝒎?? ➢ ⁞  #username 🇪🇬
 🌯 ¦✙• 𝒎𝒔𝒈𝒔 ➢ ⁞  #msgs  📝
 🌯 ¦✙• 𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
 🌯 ¦✙• 𝒊𝒅 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
@@ -12733,7 +12733,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
- 𝗨𝗦𝗘𝗥 ⟿ #username  « 
+ 𝗨??𝗘𝗥 ⟿ #username  « 
  𝗠𝗦??𝗦 ⟿  #msgs  « 
  𝗦𝗧𝗔 ⟿ #stast  « 
  𝗜𝗗  ⟿ #id  « 
