@@ -10884,21 +10884,16 @@ if text and text:match("^قول (.*)$") then
 local Textxt = text:match("^قول (.*)$")
 send(msg.chat_id_, msg.id_, '['..Textxt..']')
 end
-if text == "غنيلي" and not database:get(bot_id.."sing:for:me"..msg.chat_id_) then
-data,res = https.request('https://black-source.tk/BlackTeAM/audios.php')
-if res == 200 then
-audios = json:decode(data)
-if audios.Info == true then
-local Text ='♡تم اختيار المقطع الصوتي لك'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '𝐀𝐋𝐒𝐘𝐀𝐃.',url="t.me/SO_ALSIYAD"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-end
-end
+if text == "غنيلي" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(3,200); 
+local Text ='تم اختيار المقطع الصوتي لك' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '༄𝐷𝑒𝑣 𝙼𝙾𝙷𝙰𝙼𝙴𝙳.',url="t.me/mo1ibrahim"}}, 
+{{text = '✰ SＯＵＲＣＥ✰.',url="t.me/SO_ALSIYAD"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/Ccckkc/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == "كلمني" then
 rpl = {"ها هلاو","انطق","كول"};
