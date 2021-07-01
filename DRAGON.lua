@@ -10656,26 +10656,6 @@ local audio = database:get(bot_id.."Add:Rd:Sudo:Audio"..text)
 ------------------------------------------------------------------------
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
-send(msg.chat_id_, msg.id_, '\n  ✯  ارسل الكلمه تريد اضافتها')
-database:set(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
-database:set(bot_id.."botss:DRAGON:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
-database:sadd(bot_id.."botss:DRAGON:List:Rd:Sudo", text)
-return false end
-end
-
-if text and not database:get(bot_id..'Reply:Sudo'..msg.chat_id_) then
-if not database:sismember(bot_id..'Spam:Texting'..msg.sender_user_id_,text) then
-local anemi = database:get(bot_id.."Add:Rd:Sudo:Gif"..text)   
-local veico = database:get(bot_id.."Add:Rd:Sudo:vico"..text)   
-local stekr = database:get(bot_id.."Add:Rd:Sudo:stekr"..text)     
-local text1 = database:get(bot_id.."Add:Rd:Sudo:Text"..text)   
-local photo = database:get(bot_id.."Add:Rd:Sudo:Photo"..text)
-local video = database:get(bot_id.."Add:Rd:Sudo:Video"..text)
-local document = database:get(bot_id.."Add:Rd:Sudo:File"..text)
-local audio = database:get(bot_id.."Add:Rd:Sudo:Audio"..text)
-------------------------------------------------------------------------
-if text and text:match("^(.*)$") then
-if database:get(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
 send(msg.chat_id_, msg.id_, '\n ♡ ارسل الكلمه تريد اضافتها')
 database:set(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
 database:set(bot_id.."botss:DRAGON:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
@@ -12624,7 +12604,7 @@ local List = {
 • 🇪🇬 - 𝙸𝙳 « #id  🍭
 • 🇪🇬 - 𝙼𝚂𝙶𝚂 « #msgs  🍭
 • 🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
-• 🇪?? - 𝗖𝗛 - @SO_ALSIYAD ♦.
+• 🇪🇬 - 𝗖𝗛 - @SO_ALSIYAD ♦.
 ]],
 [[
 • USE ➤  #username .
@@ -12685,7 +12665,7 @@ Msᴀɢ ~ #msgs
 ➜𝗠𝗘𝗦𝗦𝗔𝗚𝗘𝗦 : #msgs
 ➜𝗦𝗧𝗔𝗧𝗦 : #stast
 ➜𝗜𝗗 : #id
-➜𝗖𝗛 - @SO_ALSIYAD 💞.
+➜𝗖𝗛 - @SO_ALSIYAD ??.
 ]],
 [[
 ⌔┇Msgs : #msgs.
