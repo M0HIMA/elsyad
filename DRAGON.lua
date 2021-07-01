@@ -3443,21 +3443,21 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dat
 send(msg.chat_id_, msg.id_,' ♡ بواسطه ← ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SO_ALSIYAD')..') \n ♡ تـم فتح المعرفات ')
 end,nil)   
 end
-if text == 'تفعيل مغني' and CoSu(msg) then   
+if text == 'تفعيل غنيلي' and CoSu(msg) then   
 if database:get(bot_id..'sing:for:me'..msg.chat_id_) then
-Text = '♡ تم تفعيل امر مغني الان ارسل مغني'
+Text = '♡ تم تفعيل امر غنيلي الان ارسل غنيلي'
 database:del(bot_id..'sing:for:me'..msg.chat_id_)  
 else
-Text = '♡ بالتاكيد تم تفعيل امر مغني تستطيع ارسال مغني'
+Text = '♡ بالتاكيد تم تفعيل امر غنيلي تستطيع ارسال غنيلي'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
-if text == 'تعطيل مغني' and CoSu(msg) then  
+if text == 'تعطيل غنيلي' and CoSu(msg) then  
 if not database:get(bot_id..'sing:for:me'..msg.chat_id_) then
 database:set(bot_id..'sing:for:me'..msg.chat_id_,true)  
-Text = '\n♡ تم تعطيل امر مغني'
+Text = '\n♡ تم تعطيل امر غنيلي'
 else
-Text = '\n♡ بالتاكيد تم تعطيل امر مغني'
+Text = '\n♡ بالتاكيد تم تعطيل امر غنيلي'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -15114,7 +15114,7 @@ local Teext =[[
 كتابات ⇜قصيده ⇜حكمه
 رزله⇜هينه⇜هيني⇜رزلي
 بتكره دا⇜بتحبو⇜بتحب دا
-تفعيل مغني ⇜مغني
+تفعيل غنيلي ⇜غنيلي
 بوسي⇜بوسه⇜مصي⇜مصه
 تفعيل الاله حاسبه ⇜احسب+ الرقم
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
