@@ -7688,6 +7688,16 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 
+if text ==('رفع مميز عام') and faeder11(msg) then
+function raf_reply(extra, result, success)
+faederdx1:sadd(FAEDER..'bot:vpall:',result.sender_user_id_)
+Send_Options(msg,result.sender_user_id_,"reply","❅∫ تم رفعه مميز عام𓍢\n❅∫ بواسطه ، "..renk_faeder(msg).."\n")
+end 
+if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
+else
+getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
+end end
+
 if text == 'جلب المطورين' then 
 local list = database:smembers(bot_id..'Sudo:User') 
 local t = '{"users":['   
@@ -13087,7 +13097,7 @@ Msᴀɢ ~ #msgs
 - 𝗖𝗛 - @SO_ALSIYAD ♦
 ]],
 [[
-⚕𝙐𝙎𝙀𝙍??𝘼𝙈𝙀 : #username
+⚕𝙐𝙎𝙀𝙍??𝘼??𝙀 : #username
 ⚕𝙈𝙀𝙎𝙎??𝙂𝙀𝙎 : #msgs
 ⚕𝙎𝙏𝘼𝙏𝙎 : #stast
 ⚕𝙄𝘿 : #id
