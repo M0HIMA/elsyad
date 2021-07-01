@@ -7688,16 +7688,6 @@ tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumbe
 return false
 end
 
-if text ==('رفع مميز عام') and faeder11(msg) then
-function raf_reply(extra, result, success)
-faederdx1:sadd(FAEDER..'bot:vpall:',result.sender_user_id_)
-Send_Options(msg,result.sender_user_id_,"reply","❅∫ تم رفعه مميز عام𓍢\n❅∫ بواسطه ، "..renk_faeder(msg).."\n")
-end 
-if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
-else
-getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
-end end
-
 if text == 'جلب المطورين' then 
 local list = database:smembers(bot_id..'Sudo:User') 
 local t = '{"users":['   
@@ -9319,7 +9309,7 @@ tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result)
  
  local msg_id = msg.id_/2097152/0.5
 local Text = [[
- المطور
+✰ مطور البوت يقمري لو حابب تتواصل معاهه 💌
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = '   ⁽'..result.first_name_..'₎  ',url="t.me/"..result.username_}},}
@@ -10631,11 +10621,11 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ★ لا تستطيع استخدام البوت \n  ★ يرجى الاشتراك بالقناه اولا \n  ★ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'  ✯  لا تستطيع استخدام البوت \n   ✯  يرجى الاشتراك بالقناه اولا \n   ✯  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
-send(msg.chat_id_, msg.id_,' ★ ارسل الكلمه تريد اضافتها')
+send(msg.chat_id_, msg.id_,'  ✯  ارسل الكلمه تريد اضافتها')
 database:set(bot_id..'Set:Rd'..msg.sender_user_id_..':'..msg.chat_id_,true)
 return false 
 end
@@ -10645,14 +10635,34 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,' ★ لا تستطيع استخدام البوت \n  ★ يرجى الاشتراك بالقناه اولا \n  ★ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'  ✯  لا تستطيع استخدام البوت \n   ✯  يرجى الاشتراك بالقناه اولا \n   ✯  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
-send(msg.chat_id_, msg.id_,' ★ ارسل الكلمه تريد حذفها')
+send(msg.chat_id_, msg.id_,'  ✯  ارسل الكلمه تريد حذفها')
 database:set(bot_id..'Set:On'..msg.sender_user_id_..':'..msg.chat_id_,true)
 return false 
 end
+if text and not database:get(bot_id..'Reply:Sudo'..msg.chat_id_) then
+if not database:sismember(bot_id..'Spam:Texting'..msg.sender_user_id_,text) then
+local anemi = database:get(bot_id.."Add:Rd:Sudo:Gif"..text)   
+local veico = database:get(bot_id.."Add:Rd:Sudo:vico"..text)   
+local stekr = database:get(bot_id.."Add:Rd:Sudo:stekr"..text)     
+local text1 = database:get(bot_id.."Add:Rd:Sudo:Text"..text)   
+local photo = database:get(bot_id.."Add:Rd:Sudo:Photo"..text)
+local video = database:get(bot_id.."Add:Rd:Sudo:Video"..text)
+local document = database:get(bot_id.."Add:Rd:Sudo:File"..text)
+local audio = database:get(bot_id.."Add:Rd:Sudo:Audio"..text)
+------------------------------------------------------------------------
+if text and text:match("^(.*)$") then
+if database:get(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
+send(msg.chat_id_, msg.id_, '\n  ✯  ارسل الكلمه تريد اضافتها')
+database:set(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
+database:set(bot_id.."botss:DRAGON:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
+database:sadd(bot_id.."botss:DRAGON:List:Rd:Sudo", text)
+return false end
+end
+
 if text and not database:get(bot_id..'Reply:Sudo'..msg.chat_id_) then
 if not database:sismember(bot_id..'Spam:Texting'..msg.sender_user_id_,text) then
 local anemi = database:get(bot_id.."Add:Rd:Sudo:Gif"..text)   
@@ -12614,7 +12624,7 @@ local List = {
 • 🇪🇬 - 𝙸𝙳 « #id  🍭
 • 🇪🇬 - 𝙼𝚂𝙶𝚂 « #msgs  🍭
 • 🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
-• 🇪🇬 - 𝗖𝗛 - @SO_ALSIYAD ♦.
+• 🇪?? - 𝗖𝗛 - @SO_ALSIYAD ♦.
 ]],
 [[
 • USE ➤  #username .
@@ -13097,7 +13107,7 @@ Msᴀɢ ~ #msgs
 - 𝗖𝗛 - @SO_ALSIYAD ♦
 ]],
 [[
-⚕𝙐𝙎𝙀𝙍??𝘼??𝙀 : #username
+⚕𝙐𝙎𝙀𝙍??𝘼𝙈𝙀 : #username
 ⚕𝙈𝙀𝙎𝙎??𝙂𝙀𝙎 : #msgs
 ⚕𝙎𝙏𝘼𝙏𝙎 : #stast
 ⚕𝙄𝘿 : #id
