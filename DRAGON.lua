@@ -2999,19 +2999,19 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SO_ALSIYAD&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == '◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷' or text == 'قناة السورس' or text == 'القناه' then
-local Text = [[
+if text == '◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷' then
+local Text = [[ 
 ♦من أحسن السورسات على التليجرام سورس الصياد♦
 بجد سورس أمان جدا وفي مميزات جامده
 تع نصب بوتك عندنا لو محظور
 خش على تواصل هيدخلك لروم التواصل 
 ]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '✰ SＯＵＲＣＥ✰',url="t.me/SO_ALSIYAD"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SO_ALSIYAD&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = '  𖣘 ⁽SＯＵＲＣＥ₎ 𖣘', url="t.me/SO_ALSIYAD"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == '✰━━━•™المبرمج•━━━✰' or text == '٧٩٥٤٨' or text == '٦٧٥٣' then
@@ -7237,7 +7237,7 @@ send(msg.chat_id_, msg.id_, ' ♡ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك لبناتي") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♡ قائمة بناتي الجروب \n◁━━━━◈𝐀??𝐒𝐘𝐀𝐃◈━━━━▷\n"
+t = "\n ♡ قائمة بناتي الجروب \n◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
