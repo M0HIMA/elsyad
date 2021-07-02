@@ -9309,7 +9309,7 @@ tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result)
  
  local msg_id = msg.id_/2097152/0.5
 local Text = [[
-✰ مطور البوت يقمري لو حابب تتواصل معاهه  ☟
+✰ مطور البوت يقمري لو حابب تتواصل معاهه ●
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = '   ⁽'..result.first_name_..'₎  ',url="t.me/"..result.username_}},}
@@ -12228,7 +12228,7 @@ local List = {
 𓁷 - 𝗖𝗛 - @SO_ALSIYAD 💞.
 ]],
 [[
-𖡋 𝐔𝐒𝐄 #username 
+?? 𝐔𝐒𝐄 #username 
 𖡋 𝐌𝐒𝐆 #msgs 
 𖡋 𝐒𝐓𝐀 #stast 
 𖡋 𝐈𝐃 #id 
