@@ -927,7 +927,7 @@ if start then
 keyboard = start
 else
 keyboard = {
-{'✰━━━المبرمج━━━✰'},
+{'✰ ◐ مبرمج السورس ◐ ✰'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
 {'قناه السورس','بوت التواصل'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
@@ -3012,7 +3012,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == '✰━━━━المبرمج━━━━✰' or text == '٧٩٥٤٨' or text == '٦٧٥٣' then
+if text == '✰ ◐ مبرمج السورس ◐ ✰' or text == '٧٩٥٤٨' or text == '٦٧٥٣' then
 local Text = [[
 [✰مشغول الآن يرُجى ترك رسالة نصية له في الخاص لو حابب تتواصل معاه ..☏](t.me/mo1ibrahim)
 ]]
@@ -9309,7 +9309,7 @@ tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result)
  
  local msg_id = msg.id_/2097152/0.5
 local Text = [[
-✰ مطور البوت يقمري لو حابب تتواصل معاهه ●
+ المطور
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = '   ⁽'..result.first_name_..'₎  ',url="t.me/"..result.username_}},}
@@ -11307,29 +11307,6 @@ end
 send(msg.chat_id_, msg.id_, Text) 
 end
 
-if text == 'تفعيل ردود السورس' then
-if "x" == "c"  then
-send(msg.chat_id_, msg.id_,'◍ عليك الاشتراك بقناة السورس \n ◍ قناة السورس - [@SO_ALSIYAD] ') 
-return false
-end
-if not Owner(msg) then
-return send(msg.chat_id_,msg.id_,'*◍اهلا عزيزي \n عذرا الامر يخص - مدير - منشئ*')
-end   
-redis:del(bot_id..'Queen:Reply:Manager'..msg.chat_id_)  
-return send(msg.chat_id_, msg.id_,'◍ تم تفعيل الردود') 
-end
-if text == 'تعطيل ردود السورس' then
-if "x" == "c"  then
-send(msg.chat_id_, msg.id_,'◍ عليك الاشتراك بقناة السورس \n ◍ قناة السورس - [@SO_ALSIYAD] ') 
-return false
-end
-if not Owner(msg) then
-return send(msg.chat_id_,msg.id_,'*◍اهلا عزيزي \n عذرا الامر يخص - مدير - منشئ*')
-end  
-redis:set(bot_id..'Queen:Reply:Manager'..msg.chat_id_,true)  
-return send(msg.chat_id_, msg.id_,'◍ تم تعطيل الردود' ) 
-end
-
 if text == 'تفعيل الردود' and Manager(msg) then   
 if database:get(bot_id..'Reply:Manager'..msg.chat_id_) then
 Text = ' ♡ تم تفعيل الردود'
@@ -12228,7 +12205,7 @@ local List = {
 𓁷 - 𝗖𝗛 - @SO_ALSIYAD 💞.
 ]],
 [[
-?? 𝐔𝐒𝐄 #username 
+𖡋 𝐔𝐒𝐄 #username 
 𖡋 𝐌𝐒𝐆 #msgs 
 𖡋 𝐒𝐓𝐀 #stast 
 𖡋 𝐈𝐃 #id 
