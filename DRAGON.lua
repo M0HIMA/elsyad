@@ -929,7 +929,7 @@ if start then
 keyboard = start
 else
 keyboard = {
-{'✰ مبرمج السورس ✰'},
+{'✰━━━المبرمج━━━✰'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
 {'قناه السورس','بوت التواصل'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
@@ -3014,7 +3014,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == '✰ مبرمج السورس ✰' or text == '٧٩٥٤٨' or text == '٦٧٥٣' then
+if text == '✰━━━━المبرمج━━━━✰' or text == '٧٩٥٤٨' or text == '٦٧٥٣' then
 local Text = [[
 [✰مشغول الآن يرُجى ترك رسالة نصية له في الخاص لو حابب تتواصل معاه ..☏](t.me/mo1ibrahim)
 ]]
