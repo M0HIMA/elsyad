@@ -310,6 +310,8 @@ if tonumber(user_id) == tonumber(1398830949) then
 var = 'مبرمج السورس¹'
 elseif tonumber(user_id) == tonumber(859213488) then
 var = 'مبرمج السورس'
+if tonumber(user_id) == tonumber(1791666758) then  
+var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
@@ -927,7 +929,7 @@ if start then
 keyboard = start
 else
 keyboard = {
-{'✰━━━المبرمج━━━✰'},
+{'✰━━━•™المبرمج•━━━✰'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
 {'قناه السورس','بوت التواصل'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
@@ -2997,22 +2999,22 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SO_ALSIYAD&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == '◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷' then
-local Text = [[ 
+if text == '◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷' or text == 'قناة السورس' or text == 'القناه' then
+local Text = [[
 ♦من أحسن السورسات على التليجرام سورس الصياد♦
 بجد سورس أمان جدا وفي مميزات جامده
 تع نصب بوتك عندنا لو محظور
 خش على تواصل هيدخلك لروم التواصل 
 ]]
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '  𖣘 ⁽SＯＵＲＣＥ₎ 𖣘', url="t.me/SO_ALSIYAD"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '✰ SＯＵＲＣＥ✰',url="t.me/SO_ALSIYAD"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SO_ALSIYAD&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == '✰━━━━المبرمج━━━━✰' or text == '٧٩٥٤٨' or text == '٦٧٥٣' then
+if text == '✰━━━•™المبرمج•━━━✰' or text == '٧٩٥٤٨' or text == '٦٧٥٣' then
 local Text = [[
 [✰مشغول الآن يرُجى ترك رسالة نصية له في الخاص لو حابب تتواصل معاه ..☏](t.me/mo1ibrahim)
 ]]
@@ -4233,7 +4235,7 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ♡ لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(50) then  
+if tonumber(userid) == tonumber(1791666758) then  
 send(msg.chat_id_, msg.id_, " ♡ لا تسطيع كتم المبرمج عياد عام")
 return false 
 end
@@ -7235,7 +7237,7 @@ send(msg.chat_id_, msg.id_, ' ♡ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك لبناتي") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♡ قائمة بناتي الجروب \n◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷\n"
+t = "\n ♡ قائمة بناتي الجروب \n◁━━━━◈𝐀??𝐒𝐘𝐀𝐃◈━━━━▷\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -11653,7 +11655,7 @@ if text then
 list = {'كسمك'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[كسمين ءمكك بطل شتايم😹🤦🏻‍♀💔](t.me/SO_ALSIYAD)') 
+send(msg.chat_id_,msg.id_, '[كسمين ءمكك بطل شتايم??🤦🏻‍♀💔](t.me/SO_ALSIYAD)') 
 return false
 end
 end
@@ -12223,7 +12225,7 @@ local List = {
 [[
 𓁷⁦⁦ - 𝙪𝙚𝙨 †: #username 𓀀 .
 𓁷 - 𝙢𝙨𝙜 † : #msgs 𓀀 .
-𓁷 - 𝙨𝙩𝙖 †: #stast 𓀀  .
+𓁷 - ??𝙩𝙖 †: #stast 𓀀  .
 𓁷 - 𝙞𝙙 †: #id 𓀀 .
 𓁷 - 𝗖𝗛 - @SO_ALSIYAD 💞.
 ]],
