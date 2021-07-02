@@ -310,8 +310,6 @@ if tonumber(user_id) == tonumber(1398830949) then
 var = 'مبرمج السورس¹'
 elseif tonumber(user_id) == tonumber(859213488) then
 var = 'مبرمج السورس'
-if tonumber(user_id) == tonumber(1791666758) then  
-var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
@@ -4235,7 +4233,7 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ♡ لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(1791666758) then  
+if tonumber(userid) == tonumber(50) then  
 send(msg.chat_id_, msg.id_, " ♡ لا تسطيع كتم المبرمج عياد عام")
 return false 
 end
@@ -11655,7 +11653,7 @@ if text then
 list = {'كسمك'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[كسمين ءمكك بطل شتايم??🤦🏻‍♀💔](t.me/SO_ALSIYAD)') 
+send(msg.chat_id_,msg.id_, '[كسمين ءمكك بطل شتايم😹🤦🏻‍♀💔](t.me/SO_ALSIYAD)') 
 return false
 end
 end
@@ -12225,7 +12223,7 @@ local List = {
 [[
 𓁷⁦⁦ - 𝙪𝙚𝙨 †: #username 𓀀 .
 𓁷 - 𝙢𝙨𝙜 † : #msgs 𓀀 .
-𓁷 - ??𝙩𝙖 †: #stast 𓀀  .
+𓁷 - 𝙨𝙩𝙖 †: #stast 𓀀  .
 𓁷 - 𝙞𝙙 †: #id 𓀀 .
 𓁷 - 𝗖𝗛 - @SO_ALSIYAD 💞.
 ]],
