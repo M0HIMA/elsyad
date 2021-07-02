@@ -929,8 +929,7 @@ if start then
 keyboard = start
 else
 keyboard = {
-{'✰━━━•™المبرمج•━━━✰'},
-{'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
+{'▷━━━━◈مبرمج السورس◈━━━━◁ '},
 {'قناه السورس','بوت التواصل'},
 {'◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷'},
 {'نسبه الكره', 'نسبه الحب'},
@@ -2924,7 +2923,7 @@ if text == "كتابات" or text == "حك" or text == "قص" then
 local TWEET_Msg = { 
 "‏من ترك أمرهُ لله، أعطاه الله فوق ما يتمنَّاه💙 ", 
 "‏من علامات جمال المرأة .. بختها المايل ! ",
-"‏ انك الجميع و كل من احتل قلبي🫀🤍",
+"‏ انك الجميع و كل من احتل قلبي🫀??",
 "‏ ‏ لقد تْعَمقتُ بكَ كَثيراً والمِيمُ لام .♥️",
 "‏ ‏ممكن اكون اختارت غلط بس والله حبيت بجد🖇️",
 "‏ علينا إحياء زَمن الرّسائل الورقيّة وسط هذه الفوضى الالكترونية العَارمة.♦💜",
@@ -3014,7 +3013,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == '✰━━━•™المبرمج•━━━✰' or text == '٧٩٥٤٨' or text == '٦٧٥٣' then
+if text == '◁━━━━◈مبرمج السورس◈━━━━▷' or text == '٧٩٥٤٨' or text == '٦٧٥٣' then
 local Text = [[
 [✰مشغول الآن يرُجى ترك رسالة نصية له في الخاص لو حابب تتواصل معاه ..☏](t.me/mo1ibrahim)
 ]]
@@ -12665,7 +12664,7 @@ Msᴀɢ ~ #msgs
 [[
 ➜𝗨𝗦??𝗥𝗡𝗔𝗠𝗘 : #username
 ➜𝗠𝗘𝗦𝗦𝗔𝗚𝗘𝗦 : #msgs
-➜𝗦𝗧𝗔𝗧𝗦 : #stast
+➜𝗦??𝗔𝗧𝗦 : #stast
 ➜𝗜𝗗 : #id
 ➜𝗖𝗛 - @SO_ALSIYAD 💞.
 ]],
