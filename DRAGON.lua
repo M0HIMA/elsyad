@@ -9309,7 +9309,7 @@ tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result)
  
  local msg_id = msg.id_/2097152/0.5
 local Text = [[
-✰ مطور البوت يقمري لو حابب تتواصل معاهه 💌
+✰ مطور البوت يقمري لو حابب تتواصل معاهه  ☟
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = '   ⁽'..result.first_name_..'₎  ',url="t.me/"..result.username_}},}
@@ -10615,21 +10615,44 @@ database:srem(bot_id..'List:Rd:Sudo', text)
 return false
 end
 end
-if text == 'اضف رد عام' and SecondSudo(msg) or text == '↫ اضف رد عام ⌁' and SecondSudo(msg) then
-database:set(DRAGON.."Abs:Add:AllRed"..msg.sender_user_id_,'SetAllRed')
-Dev_Abs(msg.chat_id_, msg.id_, 1, "◍حسنا ارسل الكلمه الان " ,  1, "md")
+if text == 'اضف رد عام' and DevSoFi(msg) then 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,' ★ لا تستطيع استخدام البوت \n  ★ يرجى الاشتراك بالقناه اولا \n  ★ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+end
 return false
 end
-if text and text:match("^(.*)$") then
-local SetAllRed = database:get(DRAGON.."Abs:Add:AllRed"..msg.sender_user_id_)
-if SetAllRed == 'SetAllRed' then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "◍ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n◍يمكنك اضافة الى النص ↫ ⤈\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n #username ↬ معرف المستخدم\n #msgs ↬ عدد الرسائل\n #name ↬ اسم المستخدم\n #id ↬ ايدي المستخدم\n #stast ↬ رتبة المستخدم\n #edit ↬ عدد السحكات\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n◍للخروج ارسل ↫ ( الغاء )\n ✓" ,  1, "md")
-database:set(DRAGON.."Abs:Add:AllRed"..msg.sender_user_id_,'SaveAllRed')
-database:set(DRAGON.."Abs:Add:AllText"..msg.sender_user_id_, text)
-database:sadd(DRAGON.."Abs:Sudo:AllRed",text)
-database:set(DRAGON.."DelSudoRep",text)
+send(msg.chat_id_, msg.id_,' ★ ارسل الكلمه تريد اضافتها')
+database:set(bot_id..'Set:Rd'..msg.sender_user_id_..':'..msg.chat_id_,true)
 return false 
-end end
+end
+if text == 'حذف رد عام' and DevSoFi(msg) then 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,' ★ لا تستطيع استخدام البوت \n  ★ يرجى الاشتراك بالقناه اولا \n  ★ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
+end
+send(msg.chat_id_, msg.id_,' ★ ارسل الكلمه تريد حذفها')
+database:set(bot_id..'Set:On'..msg.sender_user_id_..':'..msg.chat_id_,true)
+return false 
+end
+if text and not database:get(bot_id..'Reply:Sudo'..msg.chat_id_) then
+if not database:sismember(bot_id..'Spam:Texting'..msg.sender_user_id_,text) then
+local anemi = database:get(bot_id.."Add:Rd:Sudo:Gif"..text)   
+local veico = database:get(bot_id.."Add:Rd:Sudo:vico"..text)   
+local stekr = database:get(bot_id.."Add:Rd:Sudo:stekr"..text)     
+local text1 = database:get(bot_id.."Add:Rd:Sudo:Text"..text)   
+local photo = database:get(bot_id.."Add:Rd:Sudo:Photo"..text)
+local video = database:get(bot_id.."Add:Rd:Sudo:Video"..text)
+local document = database:get(bot_id.."Add:Rd:Sudo:File"..text)
+local audio = database:get(bot_id.."Add:Rd:Sudo:Audio"..text)
 ------------------------------------------------------------------------
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."botss:DRAGON:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
