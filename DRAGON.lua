@@ -9304,20 +9304,6 @@ send(msg.chat_id_, msg.id_," ❌ تم تعطيل الرابط")
 return false end
 end
 
-if text == 'المطور' or text == 'مطور' then
-tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result) 
- 
- local msg_id = msg.id_/2097152/0.5
-local Text = [[
- مطور البوت لو حابب تتواصل معاه يعمري💌
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {{{text = '   ⁽'..result.first_name_..'₎  ',url="t.me/"..result.username_}},}
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end,nil)
-
-
-end
 ---------------------
 
 if text == "تفعيل صورتي" or text == 'تفعيل الصوره' then
@@ -12245,7 +12231,7 @@ local List = {
 -›   ??𝗛 - @SO_ALSIYAD 🇪🇬 ꙰.
 ]],
 [[
-- UsEr🇪🇬 ꙰ #username
+- UsEr??🇬 ꙰ #username
 - StA🇪🇬 ꙰   #msgs
 - MsGs🇪🇬 ꙰ #stast
 - ID🇪🇬 ꙰  #id
@@ -12684,7 +12670,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 ➥• USE 𖦹 #username - 🇪🇬.
-➥• MSG 𖥳 #msgs  - 🇪🇬.
+➥• MSG 𖥳 #msgs  - 🇪??.
 ➥• STA 𖦹 #stast - 🇪🇬.
 ➥• iD 𖥳 #id - 🇪🇬.
 ➥• 𝗖𝗛 - @SO_ALSIYAD ♦.
@@ -13421,7 +13407,7 @@ if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false 
 sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n🇧🇱-𝒖𝒔𝒆𝒓   '..username..'\n 🇧🇱- 𝒎𝒔𝒈𝒔  '..Msguser..'\n 🇧🇱-𝒔𝒕𝒂𝒕𝒔  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n 🇧🇱-𝒊𝒅 '..msg.sender_user_id_..'\n🇧🇱- 𝗖𝗛 @SO_ALSIYAD\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n🇧🇱-𝒖𝒔𝒆𝒓   '..username..'\n 🇧🇱-𝒎𝒔𝒈𝒔  '..Msguser..'\n 🇧🇱-𝒔𝒕??𝒕𝒔  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n 🇧🇱-𝒊𝒅 '..msg.sender_user_id_..'\n🇧??- 𝗖??  @SO_ALSIYAD\n')
+send(msg.chat_id_, msg.id_,'[\n🇧🇱-𝒖𝒔𝒆𝒓   '..username..'\n 🇧🇱-𝒎𝒔𝒈𝒔  '..Msguser..'\n 🇧🇱-𝒔𝒕𝒂𝒕𝒔  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n 🇧🇱-𝒊𝒅 '..msg.sender_user_id_..'\n🇧??- 𝗖??  @SO_ALSIYAD\n')
 else
 send(msg.chat_id_, msg.id_, '\n ♡ الصوره ~⪼ ليس لديك صور في حسابك'..'[\n🇧🇱-𝒖𝒔𝒆𝒓  '..username..'\n 🇧🇱-𝒎𝒔𝒈𝒔  '..Msguser..'\n 🇧🇱-𝒊𝒅 '..msg.sender_user_id_..'\n🇧🇱- 𝗖𝗛 @SO_ALSIYAD\n')
 end 
@@ -13739,6 +13725,23 @@ database:incrby(bot_id..'Msg_User'..msg.chat_id_..':'..iduserr,numadded)
 send(msg.chat_id_, msg.id_," ♡ تم اضافة له {"..numadded..'} من الرسائل')  
 end
 
+if text == 'تفعيل الحمايه' and CoSu(msg) and msg.reply_to_message_id_ == 0 then  
+database:set(bot_id.."lock:Bot:kick"..msg.chat_id_,'kick')   
+database:set(bot_id..'Bot:Id:Photo'..msg.chat_id_,true)  
+database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood",'kick')   
+database:set(bot_id.."lock:Link"..msg.chat_id_,'del')   
+database:set(bot_id.."lock:forward"..msg.chat_id_,'del')   
+database:set(bot_id.."lock:Sticker"..msg.chat_id_,'del')   
+database:set(bot_id.."lock:Animation"..msg.chat_id_,'del')   
+database:set(bot_id.."lock:Video"..msg.chat_id_,'del')   
+database:set(bot_id..'lock:Fars'..msg.chat_id_,true)  
+database:set(bot_id..'lock:Fshar'..msg.chat_id_,true)  
+database:set(bot_id..'lock:edit'..msg.chat_id_,true)  
+database:set(bot_id..'lock:tagrvrbot'..msg.chat_id_,true) 
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)  
+send(msg.chat_id_, msg.id_,'\n♡تم قفل البوتات بالطرد\n♡تم وضع الايدي بدون صوره\n♡تم قفل التكرار بالطرد\n♡تم قفل الروابط\n♡تم قفل التوجيه\n♡تم قفل الملصقات\n♡تم قفل المتحركه\n♡تم قفل الفيديو\n♡تم قفل السب\n♡تم قفل التعديل\n♡تم قفل الفارسيه\n♡تم قفل التفليش\n\nتم تفعيل الحمايه بواسطه »>['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SOPOWERB0T')..')')   
+end,nil) 
+end
 ------------------------------------------------------------------------
 if database:get(bot_id.."gemadd:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
@@ -14752,7 +14755,7 @@ end
 local Teext =[[
 
 ♦اوامر الاعضاء كالتالي ↓
-◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
+◁━━━━◈??𝐋𝐒𝐘𝐀𝐃◈━━━━▷
 ♦عرض معلوماتك ↑↓
 ◁━━━━◈𝐀𝐋𝐒𝐘𝐀𝐃◈━━━━▷
 ♦ايديي ← اسمي 
