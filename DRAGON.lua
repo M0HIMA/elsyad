@@ -11806,6 +11806,23 @@ https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. ms
 end
 end
 
+if text and text:match("^كشف (.*)$") then 
+local userid = text:match("^كشف (.*)$") 
+function start_function(extra, result, success) 
+if userid then 
+tdcli_function ({ID = "GetUser",user_id_ = userid},function(extra,data)  
+local rtp = Rutba(userid,msg.chat_id_) 
+local username = ('[@'..data.username_..']' or 'لا يوجد') 
+local iduser = userid 
+send(msg.chat_id_, msg.id_,'  ⦁الايدي ↚ 「'..iduser..'」\n ⦁المعرف ↚ 「'..username..'」\n ⦁الرتبه ↚ 「'..rtp..'」\n ⦁نوع الكشف ↚ بالمعرف') 
+end,nil) 
+else 
+send(msg.chat_id_, msg.id_,'  ⦁المعرف غير صحيح') 
+end 
+end 
+tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil) 
+end
+
 if text and text:match("^انطق (.*)$") then   
 local textntk = text:match("^انطق (.*)$")   
 UrlAntk = https.request('https://apiabs.ml/Antk.php?abs='..URL.escape(textntk)..'')   
@@ -16272,7 +16289,7 @@ local Teext =[[
  ✰ مرحب بيك في الالعاب ✰ 
  اتبع الازرار إلى تحت في الاسفل ↓
 ♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ 
-[ ✰ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐒𝐈𝐘𝐀𝐃 ✰ ](t.me/SO_ALSIYAD)
+[ ✰ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐒??𝐘𝐀𝐃 ✰ ](t.me/SO_ALSIYAD)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
