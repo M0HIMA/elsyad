@@ -3061,7 +3061,7 @@ keyboard.inline_keyboard = {
 {{text = 'ᏟᎻ ՏΌႮᎡᏟᎬ', url = "https://t.me/SO_ALSIYAD"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token.. /sendPhoto?chat_id=  .. msg.chat_id_ ..  &photo=https://t.me/HAM09p/3738&caption=  .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/HAM09p/3738&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
@@ -3074,7 +3074,7 @@ keyboard.inline_keyboard = {
 {{text = '  ❨ ✰ 𝐓𝐄𝐀𝐒𝐎𝐋  ✰  ❩ ',url="t.me/TW_MOHAMED_BOT"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/F_R_M1/479&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/HAM09p/3760&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'حمو الكبير' or text == 'حمو' or text == 'هيما' or text == 'محمد ابراهيم' or text == 'حمو القمد' or text == 'حمو مبرمج السورس' or text == 'مطور السورس' or text == 'هيما' or text == 'حمو القامد' or text == 'صاحب الابليكيشن' or text == 'مبرمج السورس' or text == 'فين حمو'  or text == 'حمو فين'   then
@@ -16233,7 +16233,7 @@ local Teext =[[
 ♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ 
 ✰ مميزات الخاصه بسورس ✰
 ♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ 
-كت تويت ⇜ تويت 
+كت ⇜ تويت 
 عقاب ↜ عاقبني ↜ العقاب
  بوستات ↜ باد  
  اغاني ↜ افلام 
