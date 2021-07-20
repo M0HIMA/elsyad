@@ -3061,7 +3061,7 @@ keyboard.inline_keyboard = {
 {{text = 'ᏟᎻ ՏΌႮᎡᏟᎬ', url = "https://t.me/SO_ALSIYAD"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/HAMO0Op/5897&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/HAMO0Op/5876&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
@@ -15188,7 +15188,7 @@ end
 local Text =[[
 اتبع الازرار تحت ⇣
 واستمتع للأوامر 🕹️
-✰[ 𝚅𝙰𝙽 ](t.me/SO_ALSIYAD)✰
+✰[ 🅢🅨🅐🅓 ](t.me/SO_ALSIYAD)✰
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15271,7 +15271,7 @@ for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  `"..v.."` \n"
 end
-send(msg.chat_id_, msg.id_, t..'━━━━━━\nاضغط علي الاسم ليتم نسخه\n♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ \n ♢[ 𝚅𝙰𝙽 ](t.me/SO_ALSIYAD)♢ ')
+send(msg.chat_id_, msg.id_, t..'━━━━━━\nاضغط علي الاسم ليتم نسخه\n♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ \n ♢[ 🅢🅨🅐🅓 ](t.me/SO_ALSIYAD)♢ ')
 end
 
 if text == "تعطيل الابراج" and Manager(msg) then
@@ -15522,7 +15522,7 @@ local Teext =[[
 ✰الجهات
 ✰الاشعارات
 ♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ 
-✰[ 𝚅𝙰𝙽 ](t.me/SO_ALSIYAD)✰
+✰[ 🅢🅨🅐🅓 ](t.me/SO_ALSIYAD)✰
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15584,7 +15584,7 @@ local Teext =[[
 ✰اوامر التسليه
 ✰صورتي 
 ♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ 
-✰[ 𝚅𝙰𝙽 ](t.me/SO_ALSIYAD)✰
+✰[ 🅢🅨🅐🅓 ](t.me/SO_ALSIYAD)✰
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15656,7 +15656,7 @@ local Teext =[[
 ♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ 
 ✰الاوامر المضافه ( لعرض الاوامر المضافه ) 
 ♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ 
-✰[ 𝚅𝙰𝙽 ](t.me/SO_ALSIYAD)✰
+✰[ 🅢🅨🅐🅓 ](t.me/SO_ALSIYAD)✰
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15761,7 +15761,7 @@ local Teext =[[
 ✰الساعه
 ✰التاريخ
 ♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ 
-✰[ 𝚅𝙰𝙽 ](t.me/SO_ALSIYAD)✰
+✰[ 🅢🅨🅐🅓 ](t.me/SO_ALSIYAD)✰
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15856,7 +15856,7 @@ local Teext =[[
 ✰تفعيل/تعطيل المغادره
 ✰مسح الجروبات
 ♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ 
-✰[ 𝚅𝙰𝙽 ](t.me/SO_ALSIYAD)✰
+✰[ 🅢🅨🅐🅓 ](t.me/SO_ALSIYAD)✰
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15912,7 +15912,7 @@ local Teext =[[
 ✰شنو رئيك بهاي بالرد
 ✰تحب هذا
 ♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ 
-✰[ 𝚅𝙰𝙽 ](t.me/SO_ALSIYAD)✰
+✰[ 🅢🅨🅐🅓 ](t.me/SO_ALSIYAD)✰
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15995,7 +15995,7 @@ local Teext =[[
 ✰تنزيل ←من زبي 
 ✰تاك للمتناكين
 ♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ 
-✰[ 𝚅𝙰𝙽 ](t.me/SO_ALSIYAD)✰
+✰[ 🅢🅨🅐🅓 ](t.me/SO_ALSIYAD)✰
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16026,7 +16026,7 @@ end
 local Teext =[[
 اتبع الازرار تحت ⇣
 واستمتع للأوامر 🕹️
-✰[ 𝚅𝙰𝙽 ](t.me/SO_ALSIYAD)✰
+✰[ 🅢🅨🅐🅓 ](t.me/SO_ALSIYAD)✰
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16055,7 +16055,7 @@ end
 local Teext =[[
 اتبع الازرار تحت ⇣
 واستمتع للأوامر 🕹️
-✰[ 𝚅𝙰𝙽 ](t.me/SO_ALSIYAD)✰
+✰[ 🅢🅨🅐🅓 ](t.me/SO_ALSIYAD)✰
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
