@@ -11805,24 +11805,39 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/ffffaa/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 end
-
-if text and text:match("^كشف (.*)$") then 
-local userid = text:match("^كشف (.*)$") 
-function start_function(extra, result, success) 
-if userid then 
-tdcli_function ({ID = "GetUser",user_id_ = userid},function(extra,data)  
-local rtp = Rutba(userid,msg.chat_id_) 
-local username = ('[@'..data.username_..']' or 'لا يوجد') 
-local iduser = userid 
-send(msg.chat_id_, msg.id_,'  ⦁الايدي ↚ 「'..iduser..'」\n ⦁المعرف ↚ 「'..username..'」\n ⦁الرتبه ↚ 「'..rtp..'」\n ⦁نوع الكشف ↚ بالمعرف') 
-end,nil) 
-else 
-send(msg.chat_id_, msg.id_,'  ⦁المعرف غير صحيح') 
-end 
-end 
-tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil) 
+if text == "ثيم" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(1,25); 
+local Text ='اكتب ثيم وسيتم اختيار ثيم اخار' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'ثيم اخر', callback_data="ثيم"}},
+{{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/senddocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/gitt89/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-
+if text == 'ثيم' and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
+ght = math.random(1,25); 
+local Text ='اكتب ثيم وسيتم اختيار ثيم اخار' 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'ثيم اخر', callback_data="/added"}},
+{{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/senddocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/gitt89/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text and text:match('^الحساب (%d+)$') then
+local id = text:match('^الحساب (%d+)$')
+local text = 'اضغط لمشاهده الحساب'
+tdcli_function ({ID="SendMessage", chat_id_=msg.chat_id_, reply_to_message_id_=msg.id_, disable_notification_=0, from_background_=1, reply_markup_=nil, input_message_content_={ID="InputMessageText", text_=text, disable_web_page_preview_=1, clear_draft_=0, entities_={[0] = {ID="MessageEntityMentionName", offset_=0, length_=19, user_id_=id}}}}, dl_cb, nil)
+end
+local function oChat(chat_id,cb)
+tdcli_function ({
+ID = "OpenChat",
+chat_id_ = chat_id
+}, cb, nil)
+end
 if text and text:match("^انطق (.*)$") then   
 local textntk = text:match("^انطق (.*)$")   
 UrlAntk = https.request('https://apiabs.ml/Antk.php?abs='..URL.escape(textntk)..'')   
@@ -14142,7 +14157,7 @@ Msᴀɢ ~ #msgs
 [[
 ✶- 𝒔𝒕𝒂𓂅 #stast 𓍯↝❃ .
 ✶- 𝒖𝒔𝒆𝒓𓂅 #username 𓍯↝❃.
-✶- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯↝❃.
+✶- 𝒎𝒔??𝒆𓂅 #msgs 𓍯↝❃.
 ✶- 𝒊𝒅 𓂅 #id 𓍯↝❃.
 ✶- 𝗖𝗛 - @SO_ALSIYAD ↝❃.
 ]],
@@ -16289,7 +16304,7 @@ local Teext =[[
  ✰ مرحب بيك في الالعاب ✰ 
  اتبع الازرار إلى تحت في الاسفل ↓
 ♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ 
-[ ✰ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐒??𝐘𝐀𝐃 ✰ ](t.me/SO_ALSIYAD)
+[ ✰ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐒𝐈𝐘𝐀𝐃 ✰ ](t.me/SO_ALSIYAD)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
