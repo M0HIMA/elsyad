@@ -3050,18 +3050,20 @@ end,nil)
 end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == '"' then
 local Text =[[
-╭𖤍━┅⟞⟦[𝐀𝐋𝐒𝐘𝐀𝐃](t.me/SO_ALSIYAD)⟧⟝┉━𖤍╮
-  [⟦  ☞ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 ⟧](t.me/SO_ALSIYAD)
-  [⟦  ☞ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽  ⟧](t.me/SO_ALSIYAD)
-╰𖤍━┅⟞⟦[𝐀𝐋𝐒𝐘𝐀𝐃](t.me/SO_ALSIYAD)⟧⟝┉━𖤍╯
+╭𖤍━┅⟞⟦[Sꪮꪊ𝘳ᥴꫀ ᏉᎯꪀ](t.me/UU_VAN)⟧⟝┉━𖤍╮
+
+  [⟦ᎳᎬᏞᏟΌᎷᎬ ͲΌ ՏΌႮᎡᏟᎬ ᏙᎪΝ⟧](t.me/UU_VAN)
+
+╰𖤍━┅⟞⟦[Sꪮꪊ𝘳ᥴꫀ ᏉᎯꪀ](t.me/UU_VAN)⟧⟝┉━𖤍╯
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ᎠᎬᏙ 𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎 ', url = "https://t.me/H1_MA"}},
-{{text = 'ᏟᎻ ՏΌႮᎡᏟᎬ', url = "https://t.me/SO_ALSIYAD"}},
+{{text = ' ᎠᎬᏙ ᏴΌYᏦᎪ ', url = "https://t.me/uu_boy"}},
+{{text = 'ᎠᎬᏙ ՏΌႮᎡᏟᎬ ', url = "https://t.me/dev_van6"}},
+{{text = 'ᏟᎻ ՏΌႮᎡᏟᎬ', url = "https://t.me/UU_VAN"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/HAM09p/3738&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/F_R_M1/479&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
