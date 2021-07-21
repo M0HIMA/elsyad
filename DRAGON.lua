@@ -2756,7 +2756,7 @@ send(msg.chat_id_, msg.id_,' ♢ تم تحديث السورس')
 dofile('DRAGON.lua')  
 end
 
-if text == 'معلومات السيرفر' and DevSoFi(msg) then 
+if text == 'السيرفر' and DevSoFi(msg) then 
 send(msg.chat_id_, msg.id_, io.popen([[
 linux_version=`lsb_release -ds`
 memUsedPrc=`free -m | awk 'NR==2{printf "%sMB/%sMB {%.2f%}\n", $3,$2,$3*100/$2 }'`
@@ -7915,7 +7915,7 @@ send(msg.chat_id_, msg.id_, ' ♢ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للاكساس") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♢ قائمة كساس الجروب \n♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ \n"
+t = "\n ♢ قائمة كساس الجروب \n♢◁◈══ ??𝐈𝐘𝐀𝐃 ══◈▷ \n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -11811,17 +11811,6 @@ local Text ='اكتب ثيم وسيتم اختيار ثيم اخار'
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'ثيم اخر', callback_data="ثيم"}},
-{{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/senddocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/gitt89/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'ثيم' and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
-ght = math.random(1,25); 
-local Text ='اكتب ثيم وسيتم اختيار ثيم اخار' 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'ثيم اخر', callback_data="/added"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
