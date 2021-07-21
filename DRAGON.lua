@@ -3617,7 +3617,6 @@ end
 if text == 'التواصل'  then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
-[TWL](t.me/dev_van6)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
@@ -3629,7 +3628,6 @@ end
 
 if text == 'مبرمج السورس' then
 local Text = [[ 
-[𝐁𝐎𝐘𝐊𝐀](t.me/H1_MA)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
@@ -7915,7 +7913,7 @@ send(msg.chat_id_, msg.id_, ' ♢ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للاكساس") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ♢ قائمة كساس الجروب \n♢◁◈══ ??𝐈𝐘𝐀𝐃 ══◈▷ \n"
+t = "\n ♢ قائمة كساس الجروب \n♢◁◈══ 𝐒𝐈𝐘𝐀𝐃 ══◈▷ \n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -13295,7 +13293,7 @@ local List = {
 𖤍 |↶ #id    ꙰✰.
 𖤍 |↶ #username    ꙰✰.
 𖤍 |↶ #msgs    ꙰✰.
-𖤍 |↶ #stast    ꙰✰.
+?? |↶ #stast    ꙰✰.
 𖤍 |↶ 𝗖𝗛 - @SO_ALSIYAD ✰.
 ]],
 [[
