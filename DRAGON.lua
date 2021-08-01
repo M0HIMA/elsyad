@@ -3208,8 +3208,6 @@ end
 end
 end,nil)   
 end
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-local Text = [[
 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == '"' then
 local Text =[[
@@ -3225,7 +3223,7 @@ keyboard.inline_keyboard = {
 {{text = '〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠', url = "https://t.me/uu_regan"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/UU_M00N/3794&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/UU_M00N/3798&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
@@ -15542,7 +15540,7 @@ local List = {
 🇪🇬 - 𝄬 𝗖𝗛 - ↝@uu_regan↜ 🌏.
 ]],
 [[
-𓄼🇪🇬 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
+𓄼🇪🇬 𝑼𝒔𝒆𝒓𝑵??𝒎𝒆 : #username ♕
 𓄼🇪🇬 𝑺𝒕𝒂𝒔𝒕 : #stast    ☥
 𓄼🇪🇬 𝐢𝐝 : #id ‌‌‏⚚
 𓄼🇪🇬 𝑮𝒂𝒎𝒆𝑺 : #edit ⚚
