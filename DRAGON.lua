@@ -3209,21 +3209,25 @@ end
 end
 end,nil)   
 end
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == '"' then
-local Text =[[
-╭𖣘━┅⟞⟦[〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠](http://t.me/uu_regan)⟧⟝┉━𖣘╮
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
+local Text = [[
 
-    [⟦W𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠⟧](http://t.me/uu_regan)
+╭𖣘━┅⟞⟦[🦹‍♂ ᏟᎻ 🦹‍♂](http://t.me/uu_regan)⟧⟝┉━𖣘╮
 
-╰𖣘━┅⟞⟦[〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠](http://t.me/uu_regan)⟧⟝┉━𖣘╯
+    [⟦W𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 🦹‍♂ ᏟᎻ 🦹‍♂⟧](http://t.me/uu_regan)
+
+╰𖣘━┅⟞⟦[🦹‍♂ ᏟᎻ 🦹‍♂](http://t.me/uu_regan)⟧⟝┉━𖣘╯
+
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 〠ՏᎪYͲᎡᎪ〠', url = "https://t.me/SAYTRA55"}},
-{{text = '〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠', url = "https://t.me/uu_regan"}},
+{{text = '❨𖣘• ⁽𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎₎ •𖣘❩',url="t.me/mo1ibrahim"},{text = '❨𖣘• ⁽ՏᎪYͲᎡᎪ₎ •𖣘❩', url="t.me/SAYTRA55"}},
+{{text = '❨𖣘• ⁽🎌لشراء بوت🎌₎ •𖣘❩',url="t.me/SAYTRA55"}},
+{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》',url="t.me/uu_regan"}},
+{{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/UU_M00N/3794&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/uu_regan/84&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
@@ -3231,15 +3235,14 @@ local Text = [[
  𖠪 اهلا بك في سورس ريجان الجمدان 𖠪
  𖠪 عايز بوت بأسعار منسبه وبوت مميز كلمني 𖠪  
 ]]
-]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ❨𖣘• ⁽〠ՏᎪYͲᎡᎪ〠₎ •𖣘',url="t.me/SAYTRA55"}},
-{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》',url="t.me/uu_regan"}},
+{{text = ' ❨𖣘• ⁽ՏᎪYͲᎡᎪ •𖣘❩',url="t.me/SAYTRA55"}},
+{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》 ', url="t.me/uu_regan"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SAYTRA55&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/uu_regan&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'محمد ابراهيم' or text == 'حمو' or text == 'مبرمج السورس'  then
@@ -3249,7 +3252,7 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = ' ❨𖣘• ⁽ᯓ『𝒎.𝒊𝒃𝒓𝒂𝒉𝒊𝒎 ‏. 』𓆃₎ •𖣘❩',url="t.me/mo1ibrahim"}},
-{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》',url="t.me/uu_regan"}},
+{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》',url="t.me/uu_regan"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3262,8 +3265,8 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ❨𖣘• ⁽〠ՏᎪYͲᎡᎪ〠₎ •𖣘',url="t.me/SAYTRA55"}},
-{{text = '《〠𝐒𝐎𝐔𝐑𝐒𝐄 𝐑𝐄𝐆𝐀𝐍〠》',url="t.me/uu_regan"}},
+{{text = ' ❨𖣘• ⁽ՏᎪYͲᎡᎪ₎ •𖣘',url="t.me/SAYTRA55"}},
+{{text = '《🦹‍♂ ᏟᎻ 🦹‍♂》',url="t.me/uu_regan"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
