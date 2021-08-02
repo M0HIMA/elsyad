@@ -181,7 +181,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,859213488,٥٥٥,٥٥٥٥٥,٥٥٥٥,٥}   
+sudo_users = {SUDO,859213488,555,55555,5555,55}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -281,13 +281,13 @@ end
 function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(859213488) then  
 var = true 
-elseif tonumber(user_id) == tonumber(٥٥٥٥) then
+elseif tonumber(user_id) == tonumber(5555) then
 var = true  
-elseif tonumber(user_id) == tonumber(٥٥٥٥٥) then
+elseif tonumber(user_id) == tonumber(55555) then
 var = true  
-elseif tonumber(user_id) == tonumber(٥٥٥) then
+elseif tonumber(user_id) == tonumber(555) then
 var = true  
-elseif tonumber(user_id) == tonumber(٥٥) then
+elseif tonumber(user_id) == tonumber(55) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -323,13 +323,13 @@ end
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(859213488) then  
 var = 'مبرمج السورس'
-elseif tonumber(user_id) == tonumber(٥٥٥٥٥) then
+elseif tonumber(user_id) == tonumber(55555) then
 var = 'صاحب التليجرام'
-elseif tonumber(user_id) == tonumber(٥٥٥٥) then
+elseif tonumber(user_id) == tonumber(5555) then
 var = 'صاحب السورس'
-elseif tonumber(user_id) == tonumber(٥٥٥) then
+elseif tonumber(user_id) == tonumber(555) then
 var = 'مالك السورس'
-elseif tonumber(user_id) == tonumber(٥٥) then
+elseif tonumber(user_id) == tonumber(55) then
 var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
@@ -5536,19 +5536,19 @@ if tonumber(result.sender_user_id_) == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(٥٥٥٥) then  
+if tonumber(result.sender_user_id_) == tonumber(5555) then  
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع حظر صاحب السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(٥٥٥٥٥) then  
+if tonumber(result.sender_user_id_) == tonumber(55555) then  
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع حظر صاحب التليجرام عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(٥٥٥) then  
+if tonumber(result.sender_user_id_) == tonumber(555) then  
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع حظر مالك السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(٥٥) then  
+if tonumber(result.sender_user_id_) == tonumber(55) then  
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع حظر مطور السورس عام")
 return false 
 end
@@ -5594,15 +5594,15 @@ if result.id_ == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " ✰ لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(٥٥٥٥) then
+if result.id_ == tonumber(5555) then
 send(msg.chat_id_, msg.id_, " ✰ لا يمكنك حظر صاحب السورس \n")
 return false 
 end
-if result.id_ == tonumber(٥٥٥٥٥) then
+if result.id_ == tonumber(55555) then
 send(msg.chat_id_, msg.id_, "  لا يمكنك حظر صاحب التليجرام \n")
 return false 
 end
-if result.id_ == tonumber(٥٥٥) then
+if result.id_ == tonumber(555) then
 send(msg.chat_id_, msg.id_, " ?? لا يمكنك حظر مالك السورس \n")
 return false 
 end
@@ -5642,15 +5642,15 @@ if tonumber(userid) == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(٥٥٥٥) then  
+if tonumber(userid) == tonumber(5555) then  
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع حظر صاحب السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(٥٥٥٥٥) then  
+if tonumber(userid) == tonumber(55555) then  
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع حظر صاحب التليجرام عام")
 return false 
 end
-if tonumber(userid) == tonumber(٥٥٥) then  
+if tonumber(userid) == tonumber(555) then  
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع حظر مالك السورس عام")
 return false 
 end
@@ -5691,15 +5691,15 @@ if tonumber(result.sender_user_id_) == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(٥٥٥٥) then  
+if tonumber(result.sender_user_id_) == tonumber(5555) then  
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع كتم صاحب السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(٥٥٥٥٥) then  
+if tonumber(result.sender_user_id_) == tonumber(55555) then  
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع كتم صاحب التليجرام عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(٥٥٥) then  
+if tonumber(result.sender_user_id_) == tonumber(555) then  
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع كتم مالك السورس عام")
 return false 
 end
@@ -5744,15 +5744,15 @@ if result.id_ == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " ✰ لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(٥٥٥٥) then
+if result.id_ == tonumber(5555) then
 send(msg.chat_id_, msg.id_, " ✰ لا يمكنك كتم صاحب السورس \n")
 return false 
 end
-if result.id_ == tonumber(٥٥٥٥٥) then
+if result.id_ == tonumber(55555) then
 send(msg.chat_id_, msg.id_, " ✰ لا يمكنك كتم صاحب التليجرام \n")
 return false 
 end
-if result.id_ == tonumber(٥٥٥) then
+if result.id_ == tonumber(555) then
 send(msg.chat_id_, msg.id_, " ✰ لا يمكنك كتم مالك السورس \n")
 return false 
 end
@@ -5792,15 +5792,15 @@ if tonumber(userid) == tonumber(859213488) then
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(٥٥٥٥) then  
+if tonumber(userid) == tonumber(5555) then  
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع كتم صاحب السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(٥٥٥٥٥) then  
+if tonumber(userid) == tonumber(55555) then  
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع كتم صاحب التليجرام عام")
 return false 
 end
-if tonumber(userid) == tonumber(٥٥٥) then  
+if tonumber(userid) == tonumber(555) then  
 send(msg.chat_id_, msg.id_, " ✰ لا تسطيع كتم مالك السورس عام")
 return false 
 end
@@ -15123,7 +15123,7 @@ local List = {
 ➭- 𝒊𝒅 𓂅 #id 𓍯. 💕
 ]],
 [[
-⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑮𝒓𝒐𝒖𝒑 ★
+⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐??𝒆 𝑻𝒐 𝑮𝒓𝒐𝒖𝒑 ★
 • 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
 • 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
 • 🖤 | 𝑰𝑫 : #id ‌‌‏♕
