@@ -16891,7 +16891,7 @@ keyboard.inline_keyboard = {
 {text = 'قفل و القفل', callback_data="/help1"},{text = 'تعطيل و تفعيل', callback_data="/help2"},
 },
 {
-{text = '✰ SＯＵＲＣＥ✰, url="t.me/UU_MOON"},
+{text = '✰ SＯＵＲＣＥ✰', url="t.me/UU_MOON"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
