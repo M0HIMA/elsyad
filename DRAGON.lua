@@ -4324,7 +4324,7 @@ keyboard.inline_keyboard = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
-{{text = '✰¹𝐌ΘΘ𝐍¹✰', url="t.me/UU_MOON"}},
+{{text = '✰ SＯＵＲＣＥ✰', url="t.me/UU_MOON"}},
 {{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
 }  
 local msg_id = msg.id_/2097152/0.5  
@@ -16891,7 +16891,7 @@ keyboard.inline_keyboard = {
 {text = 'قفل و القفل', callback_data="/help1"},{text = 'تعطيل و تفعيل', callback_data="/help2"},
 },
 {
-{text = '✰¹𝐌ΘΘ𝐍¹✰', url="t.me/UU_MOON"},
+{text = '✰ SＯＵＲＣＥ✰, url="t.me/UU_MOON"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -16919,7 +16919,7 @@ keyboard.inline_keyboard = {
 {text = 'الاوامر🎡', callback_data="/help90"},
 },
 {
-{text = '✰¹𝐌ΘΘ𝐍¹✰', url="t.me/UU_MOON"},
+{text = '✰ SＯＵＲＣＥ✰', url="t.me/UU_MOON"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -17500,7 +17500,7 @@ local Teext =[[
  ✰تنزيل الكل 
 𖣘━┅┄⟞⟦✰ SＯＵＲＣＥ✰⟧⟝┄┉━??
  ✰اوامر التغير …
-𖣘━┅┄⟞⟦𝚂𝙾??𝚁𝙲𝙴 𝚅𝙸𝙺𝙸𝙽𝙶⟧⟝┄┉━𖣘
+𖣘━┅┄⟞⟦𝚂𝙾??𝚁𝙲𝙴 ¹𝐌ΘΘ𝐍¹⟧⟝┄┉━𖣘
  ✰تغير رد المطور + اسم
  ✰تغير رد المالك + اسم
  ✰تغير رد منشئ الاساسي + اسم
@@ -17811,7 +17811,7 @@ local Teext =[[
 ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ 
  ✰ اهلا بك عزيزي 🔊
  ✰ اوامر مطور الاساسي 👨🏼‍✈️
-•┉ • ┉ • ┉ 《𝚅𝙸𝙺𝙸𝙽𝙶》 ┉ • ┉ • ┉•
+•┉ • ┉ • ┉ 《¹𝐌ΘΘ𝐍¹》 ┉ • ┉ • ┉•
  ✰ تفعيل
  ✰ تعطيل
  ✰ مسح الاساسين
@@ -17821,7 +17821,7 @@ local Teext =[[
  ✰ مسح المطورين
  ✰ المطورين
  ✰ رفع | تنزيل مطور
-•┉ • ┉ • ┉ 《𝚅𝙸𝙺𝙸𝙽𝙶》 ┉ • ┉ • ┉•
+•┉ • ┉ • ┉ 《¹𝐌ΘΘ𝐍¹》 ┉ • ┉ • ┉•
  ✰ اسم البوت + غادر
  ✰ غادر
  ✰ اسم بوت + الرتبه
@@ -17833,13 +17833,13 @@ local Teext =[[
  ✰ مسح قائمه العام
  ✰ جلب النسخه
  ✰ رفع النسخه
-•┉ • ┉ • ┉ 《𝚅𝙸𝙺𝙸𝙽𝙶》 ┉ • ┉ • ┉•
+•┉ • ┉ • ┉ 《¹𝐌ΘΘ𝐍¹》 ┉ • ┉ • ┉•
  ✰ اذاعه خاص
  ✰ اذاعه
  ✰ اذاعه بالتوجيه
  ✰ اذاعه بالتوجيه خاص
  ✰ اذاعه بالتثبيت
-•┉ • ┉ • ┉ 《𝚅𝙸𝙺𝙸𝙽𝙶》 ┉ • ┉ • ┉•
+•┉ • ┉ • ┉ 《¹𝐌ΘΘ𝐍¹》 ┉ • ┉ • ┉•
  ✰ جلب نسخه البوت
  ✰ رفع نسخه البوت
  ✰ ضع عدد الاعضاء + العدد
@@ -17851,21 +17851,21 @@ local Teext =[[
  ✰ اضف/مسح رد عام
  ✰ الردود العامه
  ✰ مسح الردود العامه
-•┉ • ┉ • ┉ 《𝚅𝙸𝙺𝙸𝙽𝙶》 ┉ • ┉ • ┉•
+•┉ • ┉ • ┉ 《¹𝐌ΘΘ𝐍¹》 ┉ • ┉ • ┉•
  ✰ الاشتراك الاجباري
  ✰ تعطيل الاشتراك الاجباري
  ✰ تفعيل الاشتراك الاجباري
  ✰ مسح رساله الاشتراك
  ✰ تغير رساله الاشتراك
  ✰ تغير الاشتراك
-•┉ • ┉ • ┉ 《 𝚅𝙸𝙺𝙸𝙽𝙶》 ┉ • ┉ • ┉•
+•┉ • ┉ • ┉ 《 ¹𝐌ΘΘ𝐍¹》 ┉ • ┉ • ┉•
  ✰ الاحصائيات
  ✰ المشتركين
  ✰ المجموعات 
  ✰ تفعيل/تعطيل المغادره
  ✰ مسح الجروبات
-•┉ • ┉ • ┉ 《𝚅𝙸𝙺𝙸𝙽𝙶》 ┉ • ┉ • ┉•
-➫ .[🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙿𝙾𝚆𝙴𝚁.](t.me/sopowerb0t)➤
+•┉ • ┉ • ┉ 《¹𝐌ΘΘ𝐍¹》 ┉ • ┉ • ┉•
+➫ .[🖨┇✰ SＯＵＲＣＥ✰](t.me/UU_MOON)➤
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17885,7 +17885,7 @@ keyboard.inline_keyboard = {
 {text = '🔙 الاوامر الرئيسيه 🔙', callback_data="/help"},
 },
 {
-{text = '𓆩𝑷𝑶𝑾𝑬𝑹𓆪', url="t.me/sopowerb0t"},
+{text = '¹𝐌ΘΘ𝐍¹', url="t.me/UU_MOON"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17962,7 +17962,7 @@ keyboard.inline_keyboard = {
 {{text = 'لعبه كشف الكذب', callback_data="/help47"}},
 {{text = 'مريم', callback_data="/help36"},{text = 'عقاب', callback_data="/help42"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = '✰¹𝐌ΘΘ𝐍¹✰', url="t.me/UU_MOON"}},
+{{text = '✰ SＯＵＲＣＥ✰', url="t.me/UU_MOON"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -18071,14 +18071,14 @@ keyboard.inline_keyboard = {
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = '✰¹𝐌ΘΘ𝐍¹✰', url="t.me/UU_MOON"}},
+{{text = '✰ SＯＵＲＣＥ✰', url="t.me/UU_MOON"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 if Text == '/change-names' then
 local Teext =[[
     ❲اوامر الاعضاء ⇊❳  
- 𖣘━┅┄⟞⟦᪣𝚁𝙰𝙼𝙱??᪣⟧⟝┄┉━𖣘
+ 𖣘━┅┄⟞⟦¹𝐌ΘΘ𝐍¹⟧⟝┄┉━𖣘
  ✰   غنيلي ⌁ حساب العمر   
  ✰   صورتي ⌁ نسبه جمالي
  ✰   نقاطي
@@ -18108,7 +18108,7 @@ keyboard.inline_keyboard = {
 {text = '◗القائمه الرائسيه◖', callback_data="/change-id"},
 },
 {
-{text = '✰¹𝐌ΘΘ𝐍¹✰', url="t.me/UU_MOON"},
+{text = '✰ SＯＵＲＣＥ✰', url="t.me/UU_MOON"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -18147,7 +18147,7 @@ keyboard.inline_keyboard = {
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = '✰¹𝐌ΘΘ𝐍¹✰', url="t.me/UU_MOON"}},
+{{text = '✰ SＯＵＲＣＥ✰', url="t.me/UU_MOON"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -18246,7 +18246,7 @@ keyboard.inline_keyboard = {
 {text = 'الاوامر🎡', callback_data="/help12"},
 },
 {
-{text = '✰¹𝐌ΘΘ𝐍¹✰', url="t.me/UU_MOON"},
+{text = '✰ SＯＵＲＣＥ✰', url="t.me/UU_MOON"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
